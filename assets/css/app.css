@@ -15,7 +15,24 @@
   --color-g-orange:      #F0995A;
   --color-g-border:      #E5E7EB;
   --color-g-border2:     #C4C6D0;
+  --color-g-mint-soft:   #F0FDF9;
+  --color-g-mint-bright: #63F8C7;
 
   /* Font */
   --font-sans: "Readex Pro", sans-serif;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+}
+
+/* ── Scroll Reveal Animation ───────────────────────────── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }

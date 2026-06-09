@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دراهم — الأسئلة الشائعة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/output.css" />
+</head>
+<body class="font-sans text-g-body bg-g-light overflow-x-hidden">
+
+  <!-- Section: Navbar -->
+  <header id="navbar" class="sticky top-0 z-50 bg-g-light/80 border-b border-g-border shadow-sm backdrop-blur-md">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+      <div class="h-20 px-0 sm:px-6 flex items-center justify-between">
+        <div class="flex items-center gap-8 lg:gap-12">
+          <a href="./index.html" aria-label="دراهم">
+            <img src="./assets/imgs/logo.png" alt="دراهم" width="88" height="44" class="w-[88px] h-[44px] object-contain" />
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+            <a href="./index.html#features" class="text-base font-medium text-g-body hover:text-g-green transition-colors">المميزات</a>
+            <a href="./pricing.html" class="text-base font-medium text-g-body hover:text-g-green transition-colors">الأسعار</a>
+            <a href="./faq.html" class="text-base font-medium text-g-purple-mid hover:text-g-green transition-colors">الأسئلة الشائعة</a>
+            <a href="#" class="text-base font-medium text-g-body hover:text-g-green transition-colors">المدونة</a>
+          </nav>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#" class="px-4 text-base font-bold text-g-purple-mid hover:opacity-75 transition-opacity">تسجيل الدخول</a>
+          <a href="#" class="px-6 py-2.5 rounded-[10px] bg-g-green-lt text-white text-base font-bold hover:opacity-90 transition-opacity">ابدأ مجاناً</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-g-light2 transition-colors" aria-label="القائمة">
+          <svg id="icon-menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-g-border">
+      <nav class="flex flex-col px-6 py-4 gap-1">
+        <a href="./index.html#features" class="py-3 border-b border-g-border/50 text-g-body">المميزات</a>
+        <a href="./pricing.html" class="py-3 border-b border-g-border/50 text-g-body">الأسعار</a>
+        <a href="./faq.html" class="py-3 border-b border-g-border/50 text-g-purple-mid font-semibold">الأسئلة الشائعة</a>
+        <a href="#" class="py-3 border-b border-g-border/50 text-g-body">المدونة</a>
+        <a href="#" class="pt-4 pb-2 text-center font-bold text-g-purple-mid">تسجيل الدخول</a>
+        <a href="#" class="py-3 rounded-[10px] bg-g-green-lt text-white text-center font-bold">ابدأ مجاناً</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section: Hero -->
+    <section class="relative overflow-hidden bg-[linear-gradient(67deg,#310e8e_0%,#13c597_95%)]">
+      <div class="absolute -top-44 end-[-230px] size-[500px] rounded-full bg-g-green opacity-15 blur-[40px]"></div>
+      <div class="absolute -bottom-32 start-[-140px] size-[400px] rounded-full bg-g-purple opacity-15 blur-[40px]"></div>
+
+      <div class="relative mx-auto flex min-h-[520px] max-w-[1142px] flex-col items-center justify-center px-6 py-24 text-center sm:min-h-[595px]">
+        <h1 class="max-w-[1104px] bg-gradient-to-r from-white to-g-mint-bright bg-clip-text text-[40px] font-bold leading-[1.15] text-transparent sm:text-[56px] lg:text-[63px] lg:leading-[72px]">
+          الأسئلة الشائعة
+        </h1>
+        <p class="mt-6 text-base leading-8 text-white sm:text-lg">كل ما تحتاج معرفته عن دراهم — في مكان واحد</p>
+
+        <form class="relative mt-6 w-full max-w-[672px]" role="search">
+          <label for="faq-search" class="sr-only">ابحث في الأسئلة الشائعة</label>
+          <input id="faq-search" type="search" placeholder="كيف يمكننا مساعدتك اليوم؟" class="h-14 w-full rounded-full bg-white ps-14 pe-6 text-start text-base text-g-dark shadow-lg outline-none placeholder:text-g-muted focus:ring-4 focus:ring-white/25" />
+          <svg class="pointer-events-none absolute start-5 top-1/2 size-[18px] -translate-y-1/2 text-g-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" />
+          </svg>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section: Main FAQ -->
+    <section class="bg-g-light px-5 py-24">
+      <div class="mx-auto grid max-w-[1100px] grid-cols-1 gap-12 lg:grid-cols-[256px_minmax(0,1fr)]">
+        <aside class="lg:sticky lg:top-28 lg:self-start">
+          <nav class="rounded-xl bg-g-light p-2">
+            <a href="#general" class="flex items-center justify-between rounded-xl p-4 text-base text-g-body hover:bg-white hover:text-g-purple transition-colors">
+              <span>عام</span>
+              <span class="text-g-green-lt">‹</span>
+            </a>
+            <a href="#features" class="flex items-center justify-between rounded-xl border-s-4 border-g-green-lt bg-white p-4 text-base font-bold text-g-purple shadow-sm">
+              <span>الميزات</span>
+              <span class="text-g-green-lt">‹</span>
+            </a>
+            <a href="#pricing" class="flex items-center justify-between rounded-xl p-4 text-base text-g-body hover:bg-white hover:text-g-purple transition-colors">
+              <span>التسعير</span>
+              <span class="text-g-green-lt">‹</span>
+            </a>
+            <a href="#security" class="flex items-center justify-between rounded-xl p-4 text-base text-g-body hover:bg-white hover:text-g-purple transition-colors">
+              <span>الأمان</span>
+              <span class="text-g-green-lt">‹</span>
+            </a>
+            <a href="#support" class="flex items-center justify-between rounded-xl p-4 text-base text-g-body hover:bg-white hover:text-g-purple transition-colors">
+              <span>الدعم الفني</span>
+              <span class="text-g-green-lt">‹</span>
+            </a>
+          </nav>
+        </aside>
+
+        <div class="flex flex-col gap-16">
+          <section id="general" class="faq-page-section flex flex-col gap-8">
+            <h2 class="border-s-4 border-g-green-lt ps-4 text-2xl font-semibold leading-[33.6px] text-g-purple">الأسئلة العامة</h2>
+            <div class="flex flex-col gap-4">
+              <article class="faq-page-item rounded-[14px] border-s-4 border-g-green-lt bg-g-mint-soft p-6 shadow-sm">
+                <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                  <span class="faq-page-icon shrink-0 rotate-180 text-g-green-lt transition-transform">⌄</span>
+                  <span class="text-lg font-bold leading-[30.6px] text-g-purple">ما هو تطبيق دراهم وكيف يعمل؟</span>
+                </button>
+                <div class="faq-page-answer pt-4 text-base leading-6 text-g-body">دراهم هو تطبيق مالي متكامل مصمم خصيصاً للمستقلين والشركات الناشئة في المنطقة. يتيح لك إدارة فواتيرك، تتبع مصاريفك، وربط حساباتك البنكية في منصة واحدة سهلة الاستخدام.</div>
+              </article>
+
+              <article class="faq-page-item rounded-[14px] bg-white p-6 shadow-sm">
+                <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                  <span class="faq-page-icon shrink-0 text-g-green-lt transition-transform">⌄</span>
+                  <span class="text-lg font-bold leading-[30.6px] text-g-purple">هل دراهم متاح في جميع الدول العربية؟</span>
+                </button>
+                <div class="faq-page-answer hidden pt-4 text-base leading-6 text-g-body">نعمل على توسيع التغطية تدريجياً في المنطقة، وتختلف بعض مزايا الربط البنكي والدفع حسب الدولة والأنظمة المحلية.</div>
+              </article>
+            </div>
+          </section>
+
+          <section id="features" class="faq-page-section flex flex-col gap-8">
+            <h2 class="border-s-4 border-g-green-lt ps-4 text-2xl font-semibold leading-[33.6px] text-g-purple">الميزات والخصائص</h2>
+            <div class="flex flex-col gap-4">
+              <article class="faq-page-item rounded-[14px] border-s-4 border-g-green-lt bg-g-mint-soft p-6 shadow-sm">
+                <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                  <span class="faq-page-icon shrink-0 rotate-180 text-g-green-lt transition-transform">⌄</span>
+                  <span class="text-lg font-bold leading-[30.6px] text-g-purple">كيف يمكنني أتمتة الفواتير؟</span>
+                </button>
+                <div class="faq-page-answer pt-4 text-base leading-6 text-g-body">من خلال إعداد الفواتير الدورية، يقوم دراهم بإرسال الفواتير تلقائياً لعملائك في المواعيد المحددة مع روابط دفع مباشرة وتذكيرات ذكية.</div>
+              </article>
+
+              <article class="faq-page-item rounded-[14px] bg-white p-6 shadow-sm">
+                <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                  <span class="faq-page-icon shrink-0 text-g-green-lt transition-transform">⌄</span>
+                  <span class="text-lg font-bold leading-[30.6px] text-g-purple">هل يمكنني ربط أكثر من حساب بنكي؟</span>
+                </button>
+                <div class="faq-page-answer hidden pt-4 text-base leading-6 text-g-body">يمكنك ربط حسابات متعددة حسب الخطة المتاحة، ثم متابعة التدفقات النقدية والمصاريف من لوحة واحدة.</div>
+              </article>
+            </div>
+          </section>
+
+          <section id="pricing" class="faq-page-section flex flex-col gap-8">
+            <h2 class="border-s-4 border-g-green-lt ps-4 text-2xl font-semibold leading-[33.6px] text-g-purple">التسعير والاشتراكات</h2>
+            <article class="faq-page-item rounded-[14px] border-s-4 border-g-green-lt bg-g-mint-soft p-6 shadow-sm">
+              <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                <span class="faq-page-icon shrink-0 rotate-180 text-g-green-lt transition-transform">⌄</span>
+                <span class="text-lg font-bold leading-[30.6px] text-g-purple">هل هناك نسخة مجانية؟</span>
+              </button>
+              <div class="faq-page-answer pt-4 text-base leading-6 text-g-body">نعم، تتوفر باقة "البداية" المجانية للأفراد، والتي تشمل الميزات الأساسية لإدارة الفواتير وتتبع المصاريف المحدودة.</div>
+            </article>
+          </section>
+
+          <section id="security" class="faq-page-section flex flex-col gap-8">
+            <h2 class="border-s-4 border-g-green-lt ps-4 text-2xl font-semibold leading-[33.6px] text-g-purple">الأمان والخصوصية</h2>
+            <article class="faq-page-item rounded-[14px] border-s-4 border-g-green-lt bg-g-mint-soft p-6 shadow-sm">
+              <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                <span class="faq-page-icon shrink-0 rotate-180 text-g-green-lt transition-transform">⌄</span>
+                <span class="text-lg font-bold leading-[30.6px] text-g-purple">كيف يتم حماية بياناتي المالية؟</span>
+              </button>
+              <div class="faq-page-answer pt-4 text-base leading-6 text-g-body">نستخدم تشفير AES-256 بمستوى بنكي عالمي، ونلتزم بمعايير SAMA و ISO لضمان أعلى مستويات الأمان والخصوصية لبياناتك.</div>
+            </article>
+          </section>
+
+          <section id="support" class="faq-page-section flex flex-col gap-8">
+            <h2 class="border-s-4 border-g-green-lt ps-4 text-2xl font-semibold leading-[33.6px] text-g-purple">الدعم الفني</h2>
+            <article class="faq-page-item rounded-[14px] border-s-4 border-g-green-lt bg-g-mint-soft p-6 shadow-sm">
+              <button type="button" class="faq-page-trigger flex w-full items-center justify-between gap-4 text-start">
+                <span class="faq-page-icon shrink-0 rotate-180 text-g-green-lt transition-transform">⌄</span>
+                <span class="text-lg font-bold leading-[30.6px] text-g-purple">كيف يمكنني التواصل مع فريق الدعم؟</span>
+              </button>
+              <div class="faq-page-answer pt-4 text-base leading-6 text-g-body">فريقنا متاح على مدار الساعة عبر الدردشة الحية داخل التطبيق، أو يمكنك مراسلتنا عبر البريد الإلكتروني support@darahum.com.</div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Support CTA -->
+    <section class="bg-white px-5 py-24 text-center">
+      <div class="mx-auto flex max-w-[1100px] flex-col items-center gap-10">
+        <div class="flex flex-col items-center gap-2">
+          <div class="grid size-[45px] place-items-center text-g-green-lt">
+            <svg class="size-[45px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-4l-3 3-3-3Z" />
+            </svg>
+          </div>
+          <h2 class="pt-2 text-2xl font-semibold leading-[33.6px] text-g-purple">لم تجد إجابتك؟</h2>
+          <p class="text-base leading-6 text-g-body">فريقنا المتخصص مستعد دائماً لمساعدتك في أي وقت.</p>
+        </div>
+
+        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+          <a href="#" class="inline-flex items-center justify-center gap-2 rounded-xl bg-g-purple px-10 py-[18px] text-base font-bold text-white hover:opacity-90 transition-opacity">
+            <span>تواصل مع الدعم</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="#" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-g-purple px-10 py-[18px] text-base font-bold text-g-purple hover:bg-g-light2 transition-colors">
+            <span>تصفّح مركز المساعدة</span>
+            <span aria-hidden="true">□</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Footer CTA -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-g-purple-mid to-g-green-lt px-5 py-24 text-center">
+      <div class="absolute -top-32 end-[-128px] size-64 rounded-full bg-white/5 blur-[32px]"></div>
+      <div class="absolute -bottom-48 start-[-192px] size-96 rounded-full bg-g-green-lt/5 blur-[32px]"></div>
+      <div class="relative mx-auto flex max-w-[1100px] flex-col items-center gap-8">
+        <h2 class="text-[34px] font-semibold leading-tight text-white sm:text-[42px] sm:leading-[54.6px]">جاهز لتجربة دراهم؟</h2>
+        <a href="#" class="rounded-full bg-white px-12 py-5 text-xl font-semibold leading-[33.6px] text-g-purple shadow-xl sm:text-2xl">أنشئ حسابك المجاني الآن</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section: Footer -->
+  <footer class="bg-g-light border-t border-g-border px-5 py-16 sm:py-20">
+    <div class="mx-auto flex max-w-[1200px] flex-col gap-12 px-0 sm:px-6">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex flex-col items-end gap-5 text-end">
+          <img src="./assets/imgs/logo.png" alt="دراهم" width="88" height="44" class="w-[88px] h-[44px] object-contain" />
+          <p class="max-w-xs text-sm leading-7 text-g-body">المنصة المالية الأولى المصممة لتمكين المستقلين في العالم العربي. نحن هنا لنمكّن المستقل العربي من التركيز على ما يتقنه.</p>
+        </div>
+
+        <div class="flex flex-col items-end gap-5 text-end">
+          <h3 class="font-bold text-black">المنتج</h3>
+          <a href="./index.html#features" class="text-sm text-g-body hover:text-g-green">المميزات</a>
+          <a href="./pricing.html" class="text-sm text-g-body hover:text-g-green">الأسعار</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">المدونة</a>
+          <a href="./faq.html" class="text-sm text-g-body hover:text-g-green">الأسئلة الشائعة</a>
+        </div>
+
+        <div class="flex flex-col items-end gap-5 text-end">
+          <h3 class="font-bold text-black">الشركة</h3>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">عن دراهم</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">سياسة الخصوصية</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">شروط الاستخدام</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">الوظائف</a>
+        </div>
+
+        <div class="flex flex-col items-end gap-5 text-end">
+          <h3 class="font-bold text-black">تواصل معنا</h3>
+          <p class="text-sm text-g-body">support@darahum.com</p>
+          <p class="text-sm text-g-body">الرياض، المملكة العربية السعودية</p>
+          <div class="flex gap-3">
+            <a href="#" aria-label="X" class="grid size-8 place-items-center rounded-full bg-black/10 text-xs font-bold text-black">X</a>
+            <a href="#" aria-label="LinkedIn" class="grid size-8 place-items-center rounded-full bg-black/10 text-xs font-bold text-black">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col-reverse items-center justify-between gap-4 border-t border-black/10 pt-8 text-xs text-black/40 md:flex-row">
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-g-green">سياسة الكوكيز</a>
+          <a href="#" class="hover:text-g-green">إعدادات الخصوصية</a>
+        </div>
+        <p>© 2026 دراهم. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/faq.js"></script>
+</body>
+</html>

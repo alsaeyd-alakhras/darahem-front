@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دراهم — الأسعار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/output.css" />
+</head>
+<body class="font-sans text-g-body bg-g-light overflow-x-hidden">
+
+  <!-- Section: Navbar -->
+  <header id="navbar" class="sticky top-0 z-50 bg-g-light/80 border-b border-g-border shadow-sm backdrop-blur-md">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+      <div class="h-20 px-0 sm:px-6 flex items-center justify-between">
+        <div class="flex items-center gap-8 lg:gap-12">
+          <a href="./index.html" aria-label="دراهم">
+            <img src="./assets/imgs/logo.png" alt="دراهم" width="88" height="44" class="w-[88px] h-[44px] object-contain" />
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+            <a href="./index.html#features" class="text-base font-medium text-g-body hover:text-g-green transition-colors">المميزات</a>
+            <a href="./pricing.html" class="text-base font-medium text-g-purple-mid hover:text-g-green transition-colors">الأسعار</a>
+            <a href="#faq" class="text-base font-medium text-g-body hover:text-g-green transition-colors">الأسئلة الشائعة</a>
+            <a href="#" class="text-base font-medium text-g-body hover:text-g-green transition-colors">المدونة</a>
+          </nav>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#" class="px-4 text-base font-bold text-g-purple-mid hover:opacity-75 transition-opacity">تسجيل الدخول</a>
+          <a href="#" class="px-6 py-2.5 rounded-[10px] bg-g-green-lt text-white text-base font-bold hover:opacity-90 transition-opacity">ابدأ مجاناً</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-g-light2 transition-colors" aria-label="القائمة">
+          <svg id="icon-menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-g-border">
+      <nav class="flex flex-col px-6 py-4 gap-1">
+        <a href="./index.html#features" class="py-3 border-b border-g-border/50 text-g-body">المميزات</a>
+        <a href="./pricing.html" class="py-3 border-b border-g-border/50 text-g-purple-mid font-semibold">الأسعار</a>
+        <a href="#faq" class="py-3 border-b border-g-border/50 text-g-body">الأسئلة الشائعة</a>
+        <a href="#" class="py-3 border-b border-g-border/50 text-g-body">المدونة</a>
+        <a href="#" class="pt-4 pb-2 text-center font-bold text-g-purple-mid">تسجيل الدخول</a>
+        <a href="#" class="py-3 rounded-[10px] bg-g-green-lt text-white text-center font-bold">ابدأ مجاناً</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section: Hero -->
+    <section class="relative overflow-hidden bg-[linear-gradient(67deg,#310e8e_0%,#13c597_95%)]">
+      <div class="absolute -top-44 end-[-230px] size-[500px] rounded-full bg-g-green opacity-15 blur-[40px]"></div>
+      <div class="absolute -bottom-32 start-[-140px] size-[400px] rounded-full bg-g-purple opacity-15 blur-[40px]"></div>
+
+      <div class="relative mx-auto flex min-h-[520px] max-w-[1142px] flex-col items-center justify-center px-6 py-24 text-center sm:min-h-[595px]">
+        <h1 class="max-w-[1104px] text-[40px] font-bold leading-[1.15] text-white sm:text-[56px] lg:text-[63px] lg:leading-[72px]">
+          <span class="block">إبدأ مجانا</span>
+          <span class="block bg-gradient-to-r from-white to-[#63f8c7] bg-clip-text text-transparent">وانتقل عندما تكون جاهزا</span>
+        </h1>
+        <p class="mt-6 text-base leading-8 text-white sm:text-lg">لا بطاقة ائتمان. لا التزامات. خطط مصممة لتنمو معك.</p>
+
+        <div class="mt-7 inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 p-[5px] backdrop-blur-md">
+          <button type="button" data-billing="yearly" class="pricing-billing-toggle flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium text-white/90 transition-colors">
+            <span class="pricing-save-badge rounded-full bg-[#63f8c7] px-2 py-0.5 text-[11px] font-bold text-[#007055]">وفّر 20%</span>
+            سنوي
+          </button>
+          <button type="button" data-billing="monthly" class="pricing-billing-toggle rounded-full bg-white px-6 py-2 text-sm font-medium text-g-purple shadow-sm transition-colors">شهري</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Pricing Cards -->
+    <section id="pricing" class="bg-g-light px-5 py-20">
+      <div class="mx-auto max-w-[1164px]">
+        <div class="grid grid-cols-1 gap-[26px] md:grid-cols-3">
+          <article class="flex min-h-[425px] flex-col rounded-lg border border-g-border bg-white p-8">
+            <div class="border-b border-g-border pb-5 text-end">
+              <span class="inline-flex rounded-full bg-g-light2 px-3 py-1 text-xs font-bold text-g-body">البداية</span>
+              <div class="mt-4 flex items-end justify-end gap-1">
+                <span class="text-base text-g-body">$ / شهرياً</span>
+                <span data-plan="starter" class="pricing-price text-[42px] font-semibold leading-10 text-g-purple">0</span>
+              </div>
+            </div>
+            <ul class="mt-6 flex flex-col gap-3 text-end text-base text-g-dark">
+              <li class="flex items-center justify-end gap-3"><span>٥ فواتير شهرياً</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>عميلان نشطان</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>تقارير مالية أساسية</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>دعم عبر البريد</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+            </ul>
+            <a href="#" class="mt-auto block rounded border border-g-border px-4 py-3 text-center text-base font-bold text-g-purple hover:bg-g-light2 transition-colors">ابدأ مجاناً</a>
+          </article>
+
+          <article class="relative flex min-h-[425px] flex-col rounded-lg border border-g-green bg-white p-8 shadow-[0_18px_45px_rgba(0,108,81,0.10)]">
+            <div class="absolute -top-3 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 rounded-full bg-g-green px-6 py-1 text-xs font-bold text-white">الأكثر شعبية</div>
+            <div class="border-b border-g-green/30 pb-5 text-end">
+              <span class="inline-flex rounded-full bg-g-green/15 px-3 py-1 text-xs font-bold text-g-green">المحترف</span>
+              <div class="mt-4 flex items-end justify-end gap-1">
+                <span class="text-base text-g-body">$ / شهرياً</span>
+                <span data-plan="growth" class="pricing-price text-[42px] font-semibold leading-10 text-g-green">18</span>
+              </div>
+            </div>
+            <ul class="mt-6 flex flex-col gap-3 text-end text-base text-g-dark">
+              <li class="flex items-center justify-end gap-3"><span>فواتير غير محدودة</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>عملاء غير محدودين</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>تقارير مالية متقدمة</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>تذكيرات دفع تلقائية</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>دعم ذو أولوية</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+            </ul>
+            <a href="#" class="mt-auto block rounded bg-g-green px-4 py-3 text-center text-base font-bold text-white hover:opacity-90 transition-opacity">ابدأ الآن</a>
+          </article>
+
+          <article class="flex min-h-[425px] flex-col rounded-lg border border-g-purple bg-white p-8">
+            <div class="border-b border-g-purple/30 pb-5 text-end">
+              <span class="inline-flex rounded-full bg-g-purple/15 px-3 py-1 text-xs font-bold text-g-purple">الفريق</span>
+              <div class="mt-4 flex items-end justify-end gap-1">
+                <span class="text-base text-g-body">$ / شهرياً</span>
+                <span data-plan="team" class="pricing-price text-[42px] font-semibold leading-10 text-g-purple">29</span>
+              </div>
+            </div>
+            <ul class="mt-6 flex flex-col gap-3 text-end text-base text-g-dark">
+              <li class="flex items-center justify-end gap-3"><span>حتى ٥ أعضاء فريق</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>صلاحيات وصول مخصصة</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>تتبع الوقت للمشاريع</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+              <li class="flex items-center justify-end gap-3"><span>مدير حساب مخصص</span><span class="grid size-5 place-items-center rounded-full bg-g-green text-xs text-white">✓</span></li>
+            </ul>
+            <a href="#" class="mt-auto block rounded border border-g-purple px-4 py-3 text-center text-base font-bold text-g-purple hover:bg-g-light2 transition-colors">تواصل مع المبيعات</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Plan Comparison -->
+    <section class="bg-white px-5 py-20">
+      <div class="mx-auto max-w-[1100px]">
+        <h2 class="mb-10 text-center text-3xl font-semibold text-g-purple sm:text-4xl">قارن بين الخطط بالتفصيل</h2>
+        <div class="overflow-x-auto rounded-lg border border-g-border bg-white">
+          <table class="w-full min-w-[760px] border-collapse text-sm">
+            <thead>
+              <tr class="bg-g-light text-g-purple">
+                <th class="px-6 py-4 text-start font-bold">الميزة</th>
+                <th class="px-6 py-4 text-center font-bold">البداية</th>
+                <th class="px-6 py-4 text-center font-bold">المحترف</th>
+                <th class="px-6 py-4 text-center font-bold">الفريق</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-g-border text-g-dark">
+              <tr><td class="px-6 py-4 text-start font-semibold text-g-green">الفواتير والعملاء</td><td class="px-6 py-4 text-center"></td><td></td><td></td></tr>
+              <tr><td class="px-6 py-4 text-start">عدد الفواتير</td><td class="px-6 py-4 text-center">٥</td><td class="px-6 py-4 text-center">غير محدود</td><td class="px-6 py-4 text-center">غير محدود</td></tr>
+              <tr><td class="px-6 py-4 text-start">عدد العملاء</td><td class="px-6 py-4 text-center">٢</td><td class="px-6 py-4 text-center">غير محدود</td><td class="px-6 py-4 text-center">غير محدود</td></tr>
+              <tr><td class="px-6 py-4 text-start font-semibold text-g-green">التقارير والتحليلات</td><td></td><td></td><td></td></tr>
+              <tr><td class="px-6 py-4 text-start">تقارير مالية أساسية</td><td class="px-6 py-4 text-center text-g-green">✓</td><td class="px-6 py-4 text-center text-g-green">✓</td><td class="px-6 py-4 text-center text-g-green">✓</td></tr>
+              <tr><td class="px-6 py-4 text-start">تقارير متقدمة</td><td class="px-6 py-4 text-center">-</td><td class="px-6 py-4 text-center text-g-green">✓</td><td class="px-6 py-4 text-center text-g-green">✓</td></tr>
+              <tr><td class="px-6 py-4 text-start">لوحة مؤشرات الفريق</td><td class="px-6 py-4 text-center">-</td><td class="px-6 py-4 text-center">-</td><td class="px-6 py-4 text-center text-g-green">✓</td></tr>
+              <tr><td class="px-6 py-4 text-start font-semibold text-g-green">الدعم</td><td></td><td></td><td></td></tr>
+              <tr><td class="px-6 py-4 text-start">مستوى الدعم</td><td class="px-6 py-4 text-center">بريد إلكتروني</td><td class="px-6 py-4 text-center">دعم ذو أولوية</td><td class="px-6 py-4 text-center">مدير حساب</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-4 rounded-lg bg-g-light2 p-6 text-center text-sm text-g-body md:grid-cols-3">
+          <div class="flex items-center justify-center gap-3"><span class="grid size-8 place-items-center rounded-full bg-white text-g-green">✓</span><span>إعداد سريع خلال دقائق</span></div>
+          <div class="flex items-center justify-center gap-3"><span class="grid size-8 place-items-center rounded-full bg-white text-g-green">✓</span><span>تشفير وحماية للبيانات</span></div>
+          <div class="flex items-center justify-center gap-3"><span class="grid size-8 place-items-center rounded-full bg-white text-g-green">✓</span><span>دعم للفاتورة الإلكترونية</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: FAQ -->
+    <section id="faq" class="bg-white px-5 py-20">
+      <div class="mx-auto max-w-[960px]">
+        <h2 class="mb-10 text-center text-3xl font-semibold text-g-navy">الأسئلة الشائعة</h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <article class="pricing-faq-item rounded-2xl border border-g-navy bg-white p-6">
+            <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4 text-start">
+              <span class="pricing-faq-icon text-lg text-g-navy">-</span>
+              <span class="font-bold text-g-navy">هل يمكنني استخدام دراهم مجاناً؟</span>
+            </button>
+            <div class="pricing-faq-answer mt-4 text-sm leading-7 text-g-body">نعم، الخطة المجانية دائمة وتغطي احتياجات البداية. يمكنك الترقية فقط عندما تحتاج إلى ميزات إضافية.</div>
+          </article>
+
+          <article class="pricing-faq-item rounded-2xl border border-g-border2/30 bg-white p-6">
+            <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4 text-start">
+              <span class="pricing-faq-icon text-lg text-g-muted">+</span>
+              <span class="font-bold text-g-navy">هل البرنامج متوافق مع الفاتورة الإلكترونية؟</span>
+            </button>
+            <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">يدعم دراهم متطلبات الفاتورة الإلكترونية ويتيح إنشاء فواتير منظمة قابلة للمشاركة والتصدير.</div>
+          </article>
+
+          <article class="pricing-faq-item rounded-2xl border border-g-border2/30 bg-white p-6">
+            <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4 text-start">
+              <span class="pricing-faq-icon text-lg text-g-muted">+</span>
+              <span class="font-bold text-g-navy">ماذا يحدث لبياناتي إذا ألغيت اشتراكي؟</span>
+            </button>
+            <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">تبقى بياناتك قابلة للتصدير، ويمكنك تحميل الفواتير والعملاء والتقارير قبل إغلاق الاشتراك المدفوع.</div>
+          </article>
+
+          <article class="pricing-faq-item rounded-2xl border border-g-border2/30 bg-white p-6">
+            <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4 text-start">
+              <span class="pricing-faq-icon text-lg text-g-muted">+</span>
+              <span class="font-bold text-g-navy">كيف يمكنني التواصل مع الدعم الفني؟</span>
+            </button>
+            <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">يمكنك التواصل معنا عبر البريد الإلكتروني أو من خلال قنوات الدعم داخل التطبيق حسب خطتك.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Final CTA -->
+    <section class="relative overflow-hidden bg-[linear-gradient(248deg,#13c597_0%,#310e8e_99%)] px-5 py-24 text-center">
+      <div class="absolute start-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rtl:translate-x-1/2 rounded-xl bg-g-purple/10 blur-[60px]"></div>
+      <div class="absolute end-[-190px] top-[-190px] size-96 rounded-full border-[40px] border-white/10"></div>
+      <div class="absolute start-[-128px] bottom-[-128px] size-64 rounded-full border-[20px] border-white/10"></div>
+
+      <div class="relative mx-auto flex max-w-[760px] flex-col items-center gap-4">
+        <span class="rounded-xl border border-white/5 bg-white/10 px-4 py-2 text-sm font-semibold text-[#fcb87d]">الفرصة بين يديك</span>
+        <h2 class="text-[36px] font-bold leading-tight text-white sm:text-[56px] sm:leading-[70px]">
+          جاهز لتنظيم
+          <span class="block text-g-orange">حياتك المالية؟</span>
+        </h2>
+        <p class="max-w-[672px] pt-2 text-base leading-8 text-white/70 sm:text-lg">انضم إلى آلاف المستقلين الذين يديرون أعمالهم بثقة وسهولة. ابدأ اليوم مجاناً لمدة 14 يوماً.</p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="#" class="rounded bg-g-orange px-10 py-5 text-lg font-bold text-white hover:opacity-90 transition-opacity">ابدأ الآن</a>
+          <a href="#" class="rounded border-2 border-white/20 px-10 py-5 text-lg font-bold text-white hover:bg-white/10 transition-colors">احجز جلسة استشارية</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section: Footer -->
+  <footer class="bg-g-light border-t border-g-border px-5 py-16 sm:py-20">
+    <div class="mx-auto flex max-w-[1200px] flex-col gap-12 px-0 sm:px-6">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex flex-col items-end gap-5 text-end">
+          <img src="./assets/imgs/logo.png" alt="دراهم" width="88" height="44" class="w-[88px] h-[44px] object-contain" />
+          <p class="max-w-xs text-sm leading-7 text-g-body">المنصة المالية الأولى المصممة لتمكين المستقلين في العالم العربي. نحن هنا لنمكّن المستقل العربي من التركيز على ما يتقنه.</p>
+        </div>
+
+        <div class="flex flex-col items-end gap-5 text-end">
+          <h3 class="font-bold text-black">المنتج</h3>
+          <a href="./index.html#features" class="text-sm text-g-body hover:text-g-green">المميزات</a>
+          <a href="./pricing.html" class="text-sm text-g-body hover:text-g-green">الأسعار</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">المدونة</a>
+          <a href="#faq" class="text-sm text-g-body hover:text-g-green">الأسئلة الشائعة</a>
+        </div>
+
+        <div class="flex flex-col items-end gap-5 text-end">
+          <h3 class="font-bold text-black">الشركة</h3>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">عن دراهم</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">سياسة الخصوصية</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">شروط الاستخدام</a>
+          <a href="#" class="text-sm text-g-body hover:text-g-green">الوظائف</a>
+        </div>
+
+        <div class="flex flex-col items-end gap-5 text-end">
+          <h3 class="font-bold text-black">تواصل معنا</h3>
+          <p class="text-sm text-g-body">support@darahum.com</p>
+          <p class="text-sm text-g-body">الرياض، المملكة العربية السعودية</p>
+          <div class="flex gap-3">
+            <a href="#" aria-label="X" class="grid size-8 place-items-center rounded-full bg-black/10 text-xs font-bold text-black">X</a>
+            <a href="#" aria-label="LinkedIn" class="grid size-8 place-items-center rounded-full bg-black/10 text-xs font-bold text-black">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col-reverse items-center justify-between gap-4 border-t border-black/10 pt-8 text-xs text-black/40 md:flex-row">
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-g-green">سياسة الكوكيز</a>
+          <a href="#" class="hover:text-g-green">إعدادات الخصوصية</a>
+        </div>
+        <p>© 2026 دراهم. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/pricing.js"></script>
+</body>
+</html>
