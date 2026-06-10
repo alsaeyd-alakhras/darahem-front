@@ -57,3 +57,8 @@
   opacity: 0;
   animation: fade-up-in 0.65s ease-out forwards;
 }
+
+
+button {
+  cursor: pointer;
+}
