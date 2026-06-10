@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 // ============================================================
 // SECTION: Textarea Character Counter
-// Handles: live character count display (Arabic numerals)
+// Handles: live character count display
 // ============================================================
 
 $(document).ready(function () {
@@ -26,15 +26,9 @@ $(document).ready(function () {
   var $counter = $('#char-count');
   var $textarea = $('#field-message');
 
-  function toArabicNumerals(n) {
-    return n.toString().replace(/\d/g, function (d) {
-      return '٠١٢٣٤٥٦٧٨٩'[d];
-    });
-  }
-
   $textarea.on('input', function () {
     var len = $(this).val().length;
-    $counter.text(toArabicNumerals(maxLen) + ' / ' + toArabicNumerals(len));
+    $counter.text(maxLen + ' / ' + len);
 
     if (len >= maxLen * 0.9) {
       $counter.addClass('text-g-orange').removeClass('text-g-muted');

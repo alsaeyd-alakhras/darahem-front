@@ -19,7 +19,8 @@
   --color-g-mint-bright: #63F8C7;
 
   /* Font */
-  --font-sans: "Readex Pro", sans-serif;
+  --font-sans:    "Readex Pro", sans-serif;
+  --font-heading: "IBM Plex Sans Arabic", sans-serif;
 
   /* Spacing */
   --spacing-section: 5rem;
@@ -35,4 +36,24 @@
 .reveal-on-scroll.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── 404 Page Animations ────────────────────────────────── */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes fade-up-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float-y 3.6s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fade-up-in 0.65s ease-out forwards;
 }
