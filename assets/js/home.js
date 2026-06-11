@@ -1,74 +1,85 @@
 // ============================================================
 // SECTION: Billing Toggle
-// Handles: annual ↔ monthly switch, updates displayed prices
+// Handles: monthly/yearly switch and price updates
 // ============================================================
 
 $(document).ready(function () {
-
-  var isMonthly = false;
-  var prices = {
-    pro:  { annual: '18', monthly: '22' },
-    team: { annual: '29', monthly: '36' }
+  const prices = {
+    monthly: { pro: "18", team: "29" },
+    yearly:  { pro: "14", team: "23" },
   };
 
-  function updatePrices() {
-    var mode = isMonthly ? 'monthly' : 'annual';
-    $('#price-pro').text(prices.pro[mode]);
+  $(".pricing-billing-toggle").on("click", function () {
+    const mode = $(this).data("billing");
 
-    if (isMonthly) {
-      $('#billing-toggle').attr('aria-pressed', 'true');
-      $('#toggle-thumb')
-        .css({ 'inset-inline-start': '4px', 'inset-inline-end': 'auto' });
-      $('#lbl-monthly')
-        .removeClass('text-[#44474F] font-normal')
-        .addClass('font-bold text-g-navy');
-      $('#lbl-annual')
-        .removeClass('font-bold text-g-purple')
-        .addClass('font-normal text-[#44474F]');
-    } else {
-      $('#billing-toggle').attr('aria-pressed', 'false');
-      $('#toggle-thumb')
-        .css({ 'inset-inline-end': '4px', 'inset-inline-start': 'auto' });
-      $('#lbl-annual')
-        .removeClass('font-normal text-[#44474F]')
-        .addClass('font-bold text-g-purple');
-      $('#lbl-monthly')
-        .removeClass('font-bold text-g-navy')
-        .addClass('font-normal text-[#44474F]');
-    }
-  }
+    $(".pricing-billing-toggle")
+      .removeClass("bg-white text-g-purple shadow")
+      .addClass("text-white/80");
 
-  $('#billing-toggle').on('click', function () {
-    isMonthly = !isMonthly;
-    updatePrices();
+    $(this)
+      .removeClass("text-white/80")
+      .addClass("bg-white text-g-purple shadow");
+
+    $(".pricing-price").each(function () {
+      const plan = $(this).data("plan");
+      if (plan && prices[mode][plan] !== undefined) {
+        $(this).text(prices[mode][plan]);
+      }
+    });
   });
-
 });
+
 
 
 // ============================================================
 // SECTION: FAQ Accordion
-// Handles: expand / collapse items; toggles plus → minus icon
+// Handles: expand/collapse with exclusive open (one at a time)
 // ============================================================
 
 $(document).ready(function () {
+  function closeItem($item) {
+    $item.find(".pricing-faq-answer").slideUp(180, function () { $(this).addClass("hidden"); });
+    $item
+      .removeClass("border-2 border-g-navy hover:shadow-md")
+      .addClass("border border-g-border");
+    $item.attr("data-faq-open", "false");
+    $item.find(".pricing-faq-icon")
+      .removeClass("bg-g-navy/10")
+      .addClass("bg-g-light2");
+    $item.find(".pricing-faq-icon-minus").addClass("hidden");
+    $item.find(".pricing-faq-icon-plus").removeClass("hidden");
+  }
 
-  $('.faq-item').on('click', function () {
-    var $item   = $(this);
-    var $answer = $item.find('.faq-answer');
-    var $vbar   = $item.find('.faq-plus-v');
-    var isOpen  = !$answer.hasClass('hidden');
+  function openItem($item) {
+    $item.find(".pricing-faq-answer").hide().removeClass("hidden").slideDown(180);
+    $item
+      .removeClass("border border-g-border")
+      .addClass("border-2 border-g-navy");
+    $item.attr("data-faq-open", "true");
+    $item.find(".pricing-faq-icon")
+      .removeClass("bg-g-light2")
+      .addClass("bg-g-navy/10");
+    $item.find(".pricing-faq-icon-minus").removeClass("hidden");
+    $item.find(".pricing-faq-icon-plus").addClass("hidden");
+  }
+
+  $(".pricing-faq-trigger").on("click", function () {
+    const $item = $(this).closest(".pricing-faq-item");
+    const isOpen = $item.attr("data-faq-open") === "true";
+
+    // close all others first
+    $(".pricing-faq-item[data-faq-open='true']").not($item).each(function () {
+      closeItem($(this));
+    });
 
     if (isOpen) {
-      $answer.addClass('hidden');
-      $vbar.css('opacity', '1');
+      closeItem($item);
     } else {
-      $answer.removeClass('hidden');
-      $vbar.css('opacity', '0');
+      openItem($item);
     }
   });
-
 });
+
 
 
 // ============================================================

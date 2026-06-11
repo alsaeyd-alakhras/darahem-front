@@ -109,13 +109,13 @@
         class="absolute w-[400px] h-[400px] rounded-full bg-g-purple blur-[80px] opacity-15 pointer-events-none top-[461px] start-[-113px]">
       </div>
 
-      <!-- Container: max-w 1152px px-6 py-[159px] -->
-      <div class="relative z-10 max-w-[1152px] mx-auto px-6 py-[120px] lg:py-[159px]">
+      <!-- Container: max-w 1152px py-[159px] -->
+      <div class="relative z-10 max-w-[1152px] mx-auto py-[120px] lg:py-[159px]">
         <!--
           2-col layout. In RTL flex-row: first child = inline-start = RIGHT side.
           DOM: [text-col, image-col] → text on RIGHT, image on LEFT ✓
         -->
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-10 md:px-0">
 
           <!-- ── Text Column (RIGHT in RTL) ────────────────── -->
           <!-- layout_0XA3YJ: column, gap: 22.8px, locationRelativeToParent x:584 -->
@@ -124,8 +124,7 @@
             <!-- Heading 1: IBM Plex Sans Arabic Bold 700 63px/72px
                  ts1: dark fill #191C1F
                  ts2: gradient linear-gradient(90deg, #006C51 0%, #1C0060 100%) -->
-            <h1
-              class="font-heading font-bold text-[42px] sm:text-[52px] lg:text-[63px] leading-[1.15] text-start w-full">
+            <h1 class="font-sans font-bold text-[42px] sm:text-[52px] lg:text-[63px] leading-[1.3] text-start w-full">
               <span class="block text-g-dark">أدر أموالك بذكاء</span>
               <span class="block bg-gradient-to-l from-g-purple to-g-green bg-clip-text text-transparent">كمستقل
                 محترف</span>
@@ -148,14 +147,14 @@
 
               <!-- شاهد العرض: ghost — icon + text, #1C0060 SemiBold 24px py-5 px-6 -->
               <a href="#"
-                class="inline-flex items-center gap-2 text-g-purple font-semibold text-[24px] leading-[1.4] py-[20px] px-6 hover:opacity-75 transition-opacity">
+                class="inline-flex items-center gap-2 text-g-purple font-semibold text-xl leading-[1.4] py-[20px] px-6 hover:opacity-75 transition-opacity">
                 <!-- Play icon SVG -->
-                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                    clip-rule="evenodd" />
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.5 14.5L14.5 10L7.5 5.5V14.5ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z"
+                    fill="#1C0060" />
                 </svg>
-                شاهد كيف يعمل
+                شاهد العرض
               </a>
 
             </div>
@@ -164,13 +163,12 @@
           <!-- ── Image Column (LEFT in RTL) ─────────────────── -->
           <!-- layout_5YD8AM: row center, h:500, x:0 y:0 → occupies left half -->
           <div class="relative w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
-
             <!-- Mockup container: layout_K1TC9S  w:512 -->
             <div class="relative w-full max-w-[512px]">
 
               <!-- Main dashboard image: w:547.61 h:547.61 rounded-[24px] border-white-8 shadow -->
               <div
-                class="relative rounded-[24px] overflow-hidden border-[8px] border-white shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] w-full aspect-square">
+                class="relative rounded-[24px] rotate-[-5deg] overflow-hidden border-[8px] border-white shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] w-full aspect-square">
                 <img src="./assets/imgs/hero-dashboard-56586a.png" alt="لوحة تحكم دراهم المالية"
                   class="w-full h-full object-cover" />
               </div>
@@ -180,7 +178,7 @@
                    row, gap:16, p: 24px 24px 24px 27px
                    bg: rgba(255,255,255,0.7) border: rgba(255,255,255,0.3) radius-24 backdrop-blur-12 shadow -->
               <div data-float="1"
-                class="absolute top-[-40px] end-0 lg:end-[-20px] flex items-center gap-4 rounded-[24px] border border-white/30 bg-white/70 backdrop-blur-[12px] shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] ps-[27px] pe-6 py-6">
+                class="absolute top-[-40px] start-0 lg:start-[-20px] flex items-center gap-4 rounded-[24px] border border-white/30 bg-white/70 backdrop-blur-[12px] shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] ps-[27px] pe-6 py-6">
                 <!-- Green circle icon: bg #D1FAE5 p-2 rounded-full -->
                 <div class="bg-[#D1FAE5] rounded-full p-2 flex-shrink-0">
                   <svg class="w-5 h-5 text-g-green" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -200,15 +198,7 @@
                    column, gap:8, p: 23px 24px 24px
                    same visual style -->
               <div data-float="2"
-                class="absolute bottom-[-20px] start-0 lg:start-[-48px] flex flex-col gap-2 rounded-[24px] border border-white/30 bg-white/70 backdrop-blur-[12px] shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] py-[23px] ps-6 pe-6">
-                <!-- Chart icon -->
-                <div class="flex items-end justify-start gap-2">
-                  <!-- Mini bar chart icon -->
-                  <svg class="w-[150px] h-[6px] text-[#EDEEF2]" viewBox="0 0 150 6" fill="currentColor">
-                    <rect width="150" height="6" rx="3" fill="#EDEEF2" />
-                    <rect width="112" height="6" rx="3" fill="#006C51" />
-                  </svg>
-                </div>
+                class="absolute bottom-[-20px] end-0 lg:end-[-48px] flex flex-col gap-2 rounded-[24px] border border-white/30 bg-white/70 backdrop-blur-[12px] shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] py-[23px] ps-6 pe-6">
                 <div class="flex flex-col items-start">
                   <span class="font-medium text-[13px] leading-[18px] text-g-body">صافي الربح الشهري</span>
                   <div class="flex items-end gap-2">
@@ -216,6 +206,16 @@
                     <span class="font-medium text-[14px] leading-[21px] text-g-body pb-1">ريال</span>
                   </div>
                 </div>
+                <!-- Chart icon -->
+                <div class="flex items-end justify-start gap-2">
+                  <!-- Mini bar chart icon -->
+                  <svg width="150" height="6" viewBox="0 0 150 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="6" rx="3" fill="#EDEEF2" />
+                    <rect x="37.5" width="112.5" height="6" rx="3" fill="#006C51" />
+                  </svg>
+
+                </div>
+
               </div>
 
             </div>
@@ -392,7 +392,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
           <!-- إدارة علاقات العملاء (CRM) — rightmost in RTL -->
-          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white rounded-xl
+          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white
                       border border-g-border border-s-4 border-s-g-purple
                       shadow-[0px_1px_3px_0px_rgba(0,0,0,0.06)]
                       transition-all duration-200 ease-out
@@ -415,7 +415,7 @@
           </div>
 
           <!-- إدارة المشاريع — middle -->
-          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white rounded-xl
+          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white
                       border border-g-border border-s-4 border-s-g-purple
                       shadow-[0px_1px_3px_0px_rgba(0,0,0,0.06)]
                       transition-all duration-200 ease-out
@@ -437,7 +437,7 @@
           </div>
 
           <!-- عروض الأسعار — leftmost in RTL -->
-          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white rounded-xl
+          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white
                       border border-g-border border-s-4 border-s-g-purple
                       shadow-[0px_1px_3px_0px_rgba(0,0,0,0.06)]
                       transition-all duration-200 ease-out
@@ -459,7 +459,7 @@
           </div>
 
           <!-- الفواتير الذكية — rightmost row 2 -->
-          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white rounded-xl
+          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white
                       border border-g-border border-s-4 border-s-g-purple
                       shadow-[0px_1px_3px_0px_rgba(0,0,0,0.06)]
                       transition-all duration-200 ease-out
@@ -481,7 +481,7 @@
           </div>
 
           <!-- تتبع المصاريف — middle row 2 -->
-          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white rounded-xl
+          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white
                       border border-g-border border-s-4 border-s-g-purple
                       shadow-[0px_1px_3px_0px_rgba(0,0,0,0.06)]
                       transition-all duration-200 ease-out
@@ -503,7 +503,7 @@
           </div>
 
           <!-- تقارير تحليلية — leftmost row 2 -->
-          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white rounded-xl
+          <div class="group flex flex-col items-start gap-[7px] p-7 bg-white
                       border border-g-border border-s-4 border-s-g-purple
                       shadow-[0px_1px_3px_0px_rgba(0,0,0,0.06)]
                       transition-all duration-200 ease-out
@@ -626,7 +626,7 @@
 
           <!-- Card 1: سارة أحمد — border-s-8 border-s-g-green -->
           <div
-            class="flex flex-col gap-6 p-[31px_32px_32px] bg-g-light border-s-[8px] border-s-g-green rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+            class="flex flex-col gap-6 p-[31px_32px_32px] bg-g-light2 border-s-[8px] border-s-g-green rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
             <!-- Quote text: layout_C4FGV5 Regular 18px/30.6px #191C1F w:290 -->
             <p class="font-normal text-[18px] leading-[30.6px] text-g-dark text-start">
               "غيرت دراهم طريقتي في إدارة أعمالي تماماً. كنت أقضي أياماً في الحسابات، الآن كل شيء يتم بنقرة واحدة. الدعم
@@ -650,7 +650,7 @@
 
           <!-- Card 2: عمر خالد — border-s-8 border-s-g-purple -->
           <div
-            class="flex flex-col gap-6 p-[31px_32px_32px] bg-g-light border-s-[8px] border-s-g-purple rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+            class="flex flex-col gap-6 p-[31px_32px_32px] bg-g-light2 border-s-[8px] border-s-g-purple rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
             <p class="font-normal text-[18px] leading-[30.6px] text-g-dark text-start">
               "كصاحب شركة ناشئة، الوضوح المالي هو كل شيء. توفر لي دراهم تقارير دقيقة ساعدتنا في الحصول على جولة
               استثمارية بفضل دقة بياناتنا."
@@ -670,7 +670,7 @@
 
           <!-- Card 3: نورة السالم — border-s-8 border-s-g-green -->
           <div
-            class="flex flex-col gap-6 p-[31px_32px_32px] bg-g-light border-s-[8px] border-s-g-green rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+            class="flex flex-col gap-6 p-[31px_32px_32px] bg-g-light2 border-s-[8px] border-s-g-green rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
             <p class="font-normal text-[18px] leading-[30.6px] text-g-dark text-start">
               "وفّرت دراهم عليّ ساعات كل أسبوع. الفواتير تصدر بثوانٍ والتقارير تعطيني نظرة واضحة على عملي. أنصح به كل
               مستقل في السوق العربي."
@@ -708,533 +708,385 @@
             ابدأ مجاناً وقم بالترقية مع نمو عملك
           </p>
 
-          <!-- Billing toggle: layout_ONMPRP row center gap-16 -->
-          <div class="flex items-center justify-center gap-4 mt-4">
-            <!-- سنوي label + "وفر 20%" badge -->
-            <div class="flex items-center gap-2">
-              <span class="font-bold text-base leading-4 text-g-purple" id="lbl-annual">سنوي</span>
-              <!-- "وفر 20%" badge: bg rgba(28,0,96,0.3) text g-purple px-3 py-1 rounded-[12px] -->
-              <span class="bg-[rgba(28,0,96,0.3)] text-g-purple font-bold text-base px-3 py-1 rounded-[12px]">وفر
+          <!-- Billing toggle: شهري first = right in RTL -->
+          <div
+            class="mt-7 inline-flex items-center gap-1 rounded-full bg-[linear-gradient(67deg,#310e8e_0%,#13c597_95%)] p-1 backdrop-blur-sm">
+            <button type="button" data-billing="monthly"
+              class="pricing-billing-toggle rounded-full bg-white px-6 py-2 text-sm font-semibold text-g-purple shadow transition-colors">شهري</button>
+            <button type="button" data-billing="yearly"
+              class="pricing-billing-toggle flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium text-white/80 transition-colors">
+              سنوي
+              <span
+                class="pricing-save-badge rounded-full bg-g-green-lt/25 px-2.5 py-0.5 text-[11px] font-bold text-g-green-lt">وفّر
                 20%</span>
-            </div>
-
-            <!-- Toggle switch: 56×28px -->
-            <button id="billing-toggle"
-              class="relative w-[56px] h-[28px] rounded-[12px] bg-g-navy flex items-center transition-colors"
-              aria-pressed="false">
-              <div id="toggle-thumb"
-                class="absolute w-5 h-5 rounded-[12px] bg-white shadow transition-all duration-300 end-1">
-              </div>
             </button>
-
-            <!-- شهري label -->
-            <span class="font-normal text-base leading-6 text-[#44474F]" id="lbl-monthly">شهري</span>
           </div>
         </div>
 
-        <!--
-          3 cards: layout_SD8RHF row center gap-26
-          Figma DOM: [الفريق, الإحترافية(featured), البداية]
-          In RTL flex-row: الفريق=right, الإحترافية=center, البداية=left
-        -->
-        <div class="flex flex-col md:flex-row items-start justify-center gap-[26px]">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:items-start">
 
-          <!-- الفريق — Pro card (right in RTL) -->
-          <!-- layout_LVQ1XF: h:425 bg white border #1C0060 1px radius-8 p-32 -->
-          <div
-            class="flex flex-col w-full md:w-[calc(33%-18px)] min-h-[425px] bg-white border border-g-purple rounded-[8px] p-8 gap-0">
-            <!-- Header -->
-            <div class="flex flex-col items-start gap-[2px] pb-[10px] border-b border-[rgba(28,0,96,0.3)]">
-              <!-- Plan badge -->
-              <div class="flex justify-start">
+          <!-- Card: البداية -->
+          <article
+            class="flex flex-col rounded-lg border border-g-border bg-white p-8 transition-shadow hover:shadow-md">
+            <div class="border-b border-g-border pb-5">
+              <span
+                class="inline-flex rounded-full bg-g-light2 px-3 py-1 text-xs font-semibold text-g-body">البداية</span>
+              <div class="mt-4 flex items-end gap-2">
+                <span class="text-[44px] font-bold leading-none text-g-purple">مجاني</span>
+                <span class="mb-1 text-sm text-g-muted">/ شهرياً</span>
+              </div>
+            </div>
+            <ul class="mt-6 flex flex-col gap-3.5 text-base text-g-dark">
+              <li class="flex items-center gap-3">
                 <span
-                  class="bg-[rgba(28,0,96,0.3)] text-g-purple font-bold text-xs leading-4 px-3 py-1 rounded-[12px]">الفريق</span>
-              </div>
-              <!-- Price -->
-              <div class="flex items-end gap-[4px] mt-2">
-                <span class="font-semibold text-[42px] leading-[40px] text-g-purple">29</span>
-                <span class="font-normal text-base leading-[27.2px] text-g-body">$ / شهرياً</span>
-              </div>
-            </div>
-            <!-- Features list -->
-            <div class="flex flex-col gap-3 py-[10px] flex-1">
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">حتى ٥ أعضاء فريق</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">صلاحيات وصول مخصصة</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">تتبع الوقت للمشاريع</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">مدير حساب مخصص</span>
-              </div>
-            </div>
-            <!-- CTA button: layout_XI040P border g-purple text g-purple -->
-            <button
-              class="w-full py-3 border border-g-purple text-g-purple font-bold text-base rounded-[4px] hover:bg-g-purple hover:text-white transition-colors mt-auto">
-              تواصل مع المبيعات
-            </button>
-          </div>
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>حتى 3 عملاء</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>فواتير غير محدودة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>إدارة المهام الأساسية</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>دعم عبر البريد</span>
+              </li>
+            </ul>
+            <a href="#"
+              class="mt-8 block rounded-lg border border-g-border px-4 py-3 text-center text-sm font-bold text-g-purple transition-colors hover:border-g-purple hover:bg-g-light2">اشترك
+              الآن</a>
+          </article>
 
-          <!-- الإحترافية — Featured card (center) -->
-          <!-- layout_IBUD9B: border 2px #006C51 bg white radius-8 p-32 w:383 relative (badge overflows) -->
-          <div
-            class="relative flex flex-col w-full md:w-[383px] bg-white border-2 border-g-green rounded-[8px] p-8 gap-0 md:-mt-[13px]">
-            <!-- "الأكثر طلباً 🔥" badge: absolute top overlapping border -->
-            <!-- layout_RPQH7V: absolute x:115.52 y:-14.28 w:151.95 bg #006C51 radius-12 py-1 px-4 -->
-            <div
-              class="absolute top-[-14px] start-[116px] bg-g-green text-white font-bold text-sm leading-5 px-4 py-1 rounded-[12px]">
-              الأكثر طلباً 🔥
+          <!-- Card: الإحترافية (featured) -->
+          <article
+            class="relative flex flex-col rounded-lg border-2 border-g-green bg-white px-8 pb-8 pt-10 shadow-[0_20px_50px_rgba(0,108,81,0.13)] transition-shadow hover:shadow-[0_24px_60px_rgba(0,108,81,0.18)] md:-mt-4">
+            <!-- Badge -->
+            <div class="absolute -top-[18px] inset-x-0 flex justify-center">
+              <span class="rounded-full bg-g-green px-5 py-1.5 text-xs font-bold text-white">🔥 الأكثر طلباً</span>
             </div>
-            <!-- Header -->
-            <div class="flex flex-col items-start gap-[2px] pb-[10px] border-b border-[rgba(27,58,107,0.3)]">
-              <div class="flex justify-start">
+            <div class="border-b border-g-green/25 pb-5">
+              <span
+                class="inline-flex rounded-full bg-g-green/10 px-3 py-1 text-xs font-semibold text-g-green">الإحترافية</span>
+              <div class="mt-4 flex items-end gap-2">
+                <span data-plan="pro" class="pricing-price text-[44px] font-bold leading-none text-g-green">18</span>
+                <span class="mb-1 text-sm text-g-muted">$ / شهرياً</span>
+              </div>
+            </div>
+            <ul class="mt-6 flex flex-col gap-3.5 text-base text-g-dark">
+              <li class="flex items-center gap-3">
                 <span
-                  class="bg-[rgba(27,58,107,0.3)] text-g-green font-bold text-xs leading-4 px-3 py-1 rounded-[12px]">الإحترافية</span>
-              </div>
-              <div class="flex items-end gap-[4px] mt-2">
-                <span class="font-bold text-[36px] leading-[40px] text-g-green" id="price-pro">18</span>
-                <span class="font-normal text-base leading-[27.2px] text-g-body">$ / شهرياً</span>
-              </div>
-            </div>
-            <!-- Features list (green checkmarks fill_XJLZAA = #66FBCA) -->
-            <div class="flex flex-col gap-4 py-[10px] flex-1">
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#66FBCA">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">عملاء غير محدودين</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#66FBCA">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">تقارير مالية متقدمة</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#66FBCA">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">تخصيص هوية الفواتير</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#66FBCA">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">تنبيهات الدفع الآلية</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#66FBCA">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">دعم فني ذو أولوية</span>
-              </div>
-            </div>
-            <!-- CTA: bg g-green white text -->
-            <button
-              class="w-full py-3 bg-g-green text-white font-bold text-base rounded-[4px] hover:opacity-90 transition-opacity mt-auto">
-              ابدأ الآن
-            </button>
-          </div>
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>عملاء غير محدودين</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>تقارير مالية متقدمة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>تخصيص هوية الفواتير</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>تنبيهات الدفع الآلية</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>دعم فني ذو أولوية</span>
+              </li>
+            </ul>
+            <a href="#"
+              class="mt-8 block rounded-lg bg-g-green px-4 py-3.5 text-center text-sm font-bold text-white transition-opacity hover:opacity-90">اشترك
+              الآن</a>
+          </article>
 
-          <!-- البداية — Trial card (left in RTL) -->
-          <!-- layout_DBOJIB: bg white border rgba(64,97,129,0.4) radius-8 p-32 -->
-          <div
-            class="flex flex-col w-full md:w-[calc(33%-18px)] bg-white border border-[rgba(64,97,129,0.4)] rounded-[8px] p-8 gap-0">
-            <!-- Header -->
-            <div class="flex flex-col items-start gap-[2px] pb-[10px] border-b border-[rgba(64,97,129,0.3)]">
-              <div class="flex flex-col items-start gap-2">
+          <!-- Card: الفريق -->
+          <article
+            class="flex flex-col rounded-lg border-2 border-g-purple/40 bg-white p-8 transition-shadow hover:shadow-md">
+            <div class="border-b border-g-purple/20 pb-5">
+              <span
+                class="inline-flex rounded-full bg-g-purple/10 px-3 py-1 text-xs font-semibold text-g-purple">الفريق</span>
+              <div class="mt-4 flex items-end gap-2">
+                <span data-plan="team" class="pricing-price text-[44px] font-bold leading-none text-g-purple">29</span>
+                <span class="mb-1 text-sm text-g-muted">$ / شهرياً</span>
+              </div>
+            </div>
+            <ul class="mt-6 flex flex-col gap-3.5 text-base text-g-dark">
+              <li class="flex items-center gap-3">
                 <span
-                  class="bg-[rgba(64,97,129,0.3)] text-[#406181] font-bold text-xs leading-4 px-3 py-1 rounded-[12px]">البداية</span>
-                <span class="font-normal text-sm leading-5 text-[#44474F] text-start">جرّب بدون بطاقة ائتمان</span>
-              </div>
-              <!-- Price: "مجاني" -->
-              <div class="flex items-end gap-[4px] mt-2">
-                <span class="font-bold text-[36px] leading-5 text-g-navy">مجاني</span>
-                <span class="font-normal text-base leading-[27.2px] text-g-body">/ شهرياً</span>
-              </div>
-            </div>
-            <!-- Features -->
-            <div class="flex flex-col gap-3 py-[10px] flex-1">
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">حتى 3 عملاء</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">فواتير غير محدودة</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">إدارة المهام الأساسية</span>
-              </div>
-              <div class="flex items-center justify-start gap-3">
-                <div class="w-5 h-5 flex-shrink-0">
-                  <svg viewBox="0 0 20 20" fill="#006C51">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <span class="font-normal text-base text-g-dark text-start">دعم عبر البريد</span>
-              </div>
-            </div>
-            <!-- CTA: outline #406181 -->
-            <button
-              class="w-full py-3 border border-[#406181] text-[#406181] font-bold text-base rounded-[4px] hover:bg-[#406181] hover:text-white transition-colors mt-auto">
-              اشترك الآن
-            </button>
-          </div>
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>حتى 6 أعضاء فريق</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>صلاحيات وصول مخصصة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>تتبع الوقت للمشاريع</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 grid size-5 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">✓</span>
+                <span>مدير حساب مخصص</span>
+              </li>
+            </ul>
+            <a href="#"
+              class="mt-8 block rounded-lg border-2 border-g-purple px-4 py-3 text-center text-sm font-bold text-g-purple transition-colors hover:bg-g-light2">تواصل
+              مع المبيعات</a>
+          </article>
 
         </div>
       </div>
     </section>
 
+    <!-- Section: FAQ -->
+    <section id="faq" class="bg-white px-5 py-20">
+      <div class="mx-auto max-w-[1000px]">
+        <h2 class="mb-12 text-center text-[32px] font-bold text-g-navy sm:text-[40px]">الأسئلة الشائعة</h2>
+        <div class="flex flex-col gap-4 md:flex-row md:items-start">
 
-    <!-- ════════════════════════════════════════
-         Section: FAQ
-    ════════════════════════════════════════ -->
-    <section id="faq" class="bg-white py-[120px] px-12">
-      <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
+          <!-- Column 1 -->
+          <div class="flex flex-1 flex-col gap-4">
 
-        <!-- Heading: SemiBold 40px/52px g-navy centered -->
-        <h2 class="font-semibold text-[40px] leading-[52px] text-g-navy text-center w-full">
-          الأسئلة الشائعة
-        </h2>
-
-        <!--
-          Two columns: Right Col (x:604 in LTR = smaller), Left Col (x:0 in LTR = larger)
-          RTL DOM order: [Right Col, Left Col] → Right Col first = rightmost in RTL ✓
-        -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-
-          <!-- Right Column (layout_8WYRJP) — in LTR = right side, so RTL = first in DOM (visual right) -->
-          <div class="flex flex-col gap-4">
-
-            <!-- FAQ 1 — EXPANDED: border #C4C6D0 (fill_0OQ4QQ) radius-16 p-24 -->
-            <div class="flex flex-col gap-[14.8px] p-6 border border-g-border2 rounded-[16px] bg-white">
-              <!-- Header row: question + icon -->
-              <div class="flex items-center justify-between gap-4">
-                <span class="font-bold text-base leading-6 text-g-navy text-start flex-1">
-                  هل يمكنني استخدام دراهم مجاناً للأبد؟
+            <article
+              class="pricing-faq-item rounded-2xl border-2 border-g-navy bg-white p-6 transition-all duration-200 hover:shadow-md"
+              data-faq-open="true">
+              <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
+                <span class="text-start text-base font-bold text-g-navy">هل يمكنني استخدام دراهم مجاناً للأبد؟</span>
+                <span
+                  class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-navy/10 transition-all duration-200">
+                  <svg class="pricing-faq-icon-minus size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <svg class="pricing-faq-icon-plus hidden size-[14px] text-g-muted" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
                 </span>
-                <!-- Minus icon (expanded): w-14 h-2 bg #002452 -->
-                <div class="w-3.5 h-0.5 bg-g-navy rounded-full flex-shrink-0"></div>
-              </div>
-              <!-- Answer: Regular 16px/26px #484553 w:554 -->
-              <p class="font-normal text-base leading-[26px] text-g-body text-start">
+              </button>
+              <div class="pricing-faq-answer mt-4 text-sm leading-7 text-g-body">
                 نعم، الخطة المجانية دائمة وتغطي احتياجات المستقلين في بداية طريقهم. يمكنك الترقية فقط عندما تحتاج
                 لمميزات إضافية.
-              </p>
-            </div>
+              </div>
+            </article>
 
-            <!-- FAQ 2 — COLLAPSED: border rgba(196,198,208,0.3) radius-16 p-24 -->
-            <div
-              class="faq-item flex flex-col gap-[14.8px] p-6 border border-[rgba(196,198,208,0.3)] rounded-[16px] bg-white cursor-pointer">
-              <div class="flex items-center justify-between gap-4">
-                <span class="font-bold text-base leading-6 text-g-navy text-start flex-1">
-                  هل البرنامج متوافق مع الفاتورة الإلكترونية؟
+            <article
+              class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
+              data-faq-open="false">
+              <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
+                <span class="text-start text-base font-bold text-g-navy">كيف يمكنني التواصل مع الدعم الفني؟</span>
+                <span
+                  class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
+                  <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <svg class="pricing-faq-icon-plus size-[14px] text-g-muted" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
                 </span>
-                <!-- Plus icon (collapsed): 14×14 -->
-                <div class="w-3.5 h-3.5 flex-shrink-0 relative">
-                  <div class="absolute top-1/2 start-0 end-0 h-0.5 bg-[#44474F] -translate-y-1/2 rounded-full"></div>
-                  <div
-                    class="faq-plus-v absolute start-1/2 top-0 bottom-0 w-0.5 bg-[#44474F] -translate-x-1/2 rounded-full transition-opacity">
-                  </div>
-                </div>
+              </button>
+              <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
+                يمكنك التواصل معنا عبر البريد الإلكتروني أو من خلال قنوات الدعم داخل التطبيق حسب خطتك.
               </div>
-              <div class="faq-answer hidden">
-                <p class="font-normal text-base leading-[26px] text-g-body text-start">
-                  نعم، دراهم متوافق مع متطلبات الفاتورة الإلكترونية وضريبة القيمة المضافة في المملكة العربية السعودية.
-                </p>
-              </div>
-            </div>
+            </article>
 
           </div>
 
-          <!-- Left Column (layout_MCO3QR) — in LTR = left side, so RTL = second in DOM (visual left) -->
-          <div class="flex flex-col gap-4">
+          <!-- Column 2 -->
+          <div class="flex flex-1 flex-col gap-4">
 
-            <!-- FAQ 3 — COLLAPSED -->
-            <div
-              class="faq-item flex flex-col gap-[14.8px] p-6 border border-[rgba(196,198,208,0.3)] rounded-[16px] bg-white cursor-pointer">
-              <div class="flex items-center justify-between gap-4">
-                <span class="font-bold text-base leading-6 text-g-navy text-start flex-1">
-                  ماذا يحدث لبياناتي إذا ألغيت اشتراكي؟
+            <article
+              class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
+              data-faq-open="false">
+              <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
+                <span class="text-start text-base font-bold text-g-navy">ماذا يحدث لبياناتي إذا ألغيت اشتراكي؟</span>
+                <span
+                  class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
+                  <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <svg class="pricing-faq-icon-plus size-[14px] text-g-muted" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
                 </span>
-                <div class="w-3.5 h-3.5 flex-shrink-0 relative">
-                  <div class="absolute top-1/2 start-0 end-0 h-0.5 bg-[#44474F] -translate-y-1/2 rounded-full"></div>
-                  <div
-                    class="faq-plus-v absolute start-1/2 top-0 bottom-0 w-0.5 bg-[#44474F] -translate-x-1/2 rounded-full transition-opacity">
-                  </div>
-                </div>
+              </button>
+              <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
+                تبقى بياناتك قابلة للتصدير، ويمكنك تحميل الفواتير والعملاء والتقارير قبل إغلاق الاشتراك المدفوع.
               </div>
-              <div class="faq-answer hidden">
-                <p class="font-normal text-base leading-[26px] text-g-body text-start">
-                  بياناتك تبقى محفوظة لمدة 90 يوماً بعد إلغاء الاشتراك، ويمكنك تصديرها في أي وقت خلال هذه الفترة.
-                </p>
-              </div>
-            </div>
+            </article>
 
-            <!-- FAQ 4 — COLLAPSED -->
-            <div
-              class="faq-item flex flex-col gap-[14.8px] p-6 border border-[rgba(196,198,208,0.3)] rounded-[16px] bg-white cursor-pointer">
-              <div class="flex items-center justify-between gap-4">
-                <span class="font-bold text-base leading-6 text-g-navy text-start flex-1">
-                  كيف يمكنني التواصل مع الدعم الفني؟
+            <article
+              class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
+              data-faq-open="false">
+              <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
+                <span class="text-start text-base font-bold text-g-navy">هل البرنامج متوافق مع الفاتورة
+                  الإلكترونية؟</span>
+                <span
+                  class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
+                  <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <svg class="pricing-faq-icon-plus size-[14px] text-g-muted" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
                 </span>
-                <div class="w-3.5 h-3.5 flex-shrink-0 relative">
-                  <div class="absolute top-1/2 start-0 end-0 h-0.5 bg-[#44474F] -translate-y-1/2 rounded-full"></div>
-                  <div
-                    class="faq-plus-v absolute start-1/2 top-0 bottom-0 w-0.5 bg-[#44474F] -translate-x-1/2 rounded-full transition-opacity">
-                  </div>
-                </div>
+              </button>
+              <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
+                يدعم دراهم متطلبات الفاتورة الإلكترونية ويتيح إنشاء فواتير منظمة قابلة للمشاركة والتصدير.
               </div>
-              <div class="faq-answer hidden">
-                <p class="font-normal text-base leading-[26px] text-g-body text-start">
-                  يمكنك التواصل معنا عبر الدردشة الفورية داخل التطبيق، البريد الإلكتروني، أو واتساب. دعمنا متاح 24/7
-                  باللغة العربية.
-                </p>
-              </div>
-            </div>
+            </article>
 
           </div>
+
         </div>
-
       </div>
     </section>
 
+    <!-- Section: Final CTA -->
+    <section
+      class="relative overflow-hidden bg-[linear-gradient(to_right,#310e8e_0%,#13c597_100%)] px-5 py-24 text-center">
+      <div class="absolute start-[-200px] top-[-200px] size-[500px] rounded-full border-[30px] border-white/10"></div>
+      <div class="absolute end-[-100px] bottom-[-100px] size-[240px] rounded-full border-[20px] border-white/10"></div>
 
-    <!-- ════════════════════════════════════════
-         Section: Final CTA
-    ════════════════════════════════════════ -->
-    <section class="relative py-24 overflow-hidden"
-      style="background-image: linear-gradient(228deg, #13C597 0%, #310E8E 100%)">
-
-      <!-- Decorative glow: layout_936LRF w:600 h:600 x:340 y:-12.7 blur(120px) rgba(28,0,96,0.1) -->
-      <div
-        class="absolute pointer-events-none rounded-[12px] blur-[120px] bg-[rgba(28,0,96,0.1)] w-[600px] h-[600px] top-[-13px] start-[340px]">
-      </div>
-
-      <!-- Content: layout_VJLE1P column center gap-16 px-24 -->
-      <div class="relative z-10 max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-4 text-center">
-
-        <!-- "الفرصة بين يديك" badge: bg rgba(255,255,255,0.1) border rgba(255,255,255,0.05) py-[6px] px-4 radius-12 -->
-        <div
-          class="inline-flex items-center px-4 py-[6px] rounded-[12px] bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.05)]">
-          <span class="font-semibold text-[14px] leading-[14px] text-[#FCB87D]">الفرصة بين يديك</span>
-        </div>
-
-        <!-- Heading 2: Bold 700 56px/70px letter-spacing -2%
-             "جاهز لتنظيم" white | "حياتك المالية؟" #F0995A (ts3) -->
-        <h2 class="font-bold text-[42px] sm:text-[56px] leading-[1.25] tracking-[-0.02em] text-white">
-          جاهز لتنظيم<br>
-          <span class="text-g-orange">حياتك المالية؟</span>
+      <div class="relative mx-auto flex max-w-[760px] flex-col items-center gap-4">
+        <span
+          class="rounded-xl border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-[#fcb87d]">الفرصة
+          بين يديك</span>
+        <h2 class="text-[36px] font-bold leading-tight text-white sm:text-[56px] sm:leading-[70px]">
+          جاهز لتنظيم
+          <span class="block text-g-orange">حياتك المالية؟</span>
         </h2>
-
-        <!-- Body: Regular 18px/28.8px white max-w-[672px] -->
-        <p class="font-normal text-[18px] leading-[28.8px] text-white max-w-[672px] mt-[15px]">
-          انضم إلى آلاف المستقلين الذين يديرون أعمالهم بثقة وسهولة. ابدأ اليوم مجاناً لمدة 14 يوماً.
-        </p>
-
-        <!-- Buttons row: layout_RXBIRE row center gap-16 pt-48 -->
-        <div class="flex flex-wrap justify-center items-center gap-4 pt-12">
-          <!-- ابدأ الآن: bg #F0995A (fill_6XR88O) white Bold 18px py-5 px-10 radius-4 -->
+        <p class="max-w-[672px] pt-2 text-base leading-8 text-white/70 sm:text-lg">انضم إلى آلاف المستقلين الذين يديرون
+          أعمالهم بثقة وسهولة. ابدأ اليوم مجاناً لمدة 14 يوماً.</p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
           <a href="#"
-            class="font-bold text-[18px] leading-[28px] text-white bg-g-orange py-5 px-10 rounded-[4px] hover:opacity-90 transition-opacity">
-            ابدأ الآن
-          </a>
-          <!-- احجز جلسة استشارية: border rgba(255,255,255,0.2) white Bold 18px py-5 px-10 radius-4 -->
-          <a href="./contact.html"
-            class="font-bold text-[18px] leading-[28.8px] text-white border-2 border-[rgba(255,255,255,0.2)] py-5 px-10 rounded-[4px] hover:bg-white/10 transition-colors">
-            تواصل معنا
-          </a>
+            class="rounded bg-g-orange px-10 py-5 text-lg font-bold text-white hover:opacity-90 transition-opacity">ابدأ
+            الآن</a>
+          <a href="#"
+            class="rounded border-2 border-white/20 px-10 py-5 text-lg font-bold text-white hover:bg-white/10 transition-colors">احجز
+            جلسة استشارية</a>
         </div>
-
       </div>
     </section>
 
   </main>
 
 
-  <!-- ════════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════ -->
-  <footer class="bg-g-light border-t border-g-border pt-20 pb-10 px-10">
-    <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
+  <!-- Section: Footer -->
+  <footer class="bg-g-light border-t border-g-border py-20 px-5">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-col gap-16">
 
+      <!-- Top: 4 columns -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-        <div class="flex flex-col items-start gap-[23px]">
-          <a href="./index.html">
+        <!-- Brand column -->
+        <div class="flex flex-col gap-6 items-start text-start">
+          <div class="flex items-center gap-2">
             <img src="./assets/imgs/logo.png" alt="دراهم" width="88" height="44"
               class="w-[88px] h-[44px] object-cover" />
-          </a>
-          <p class="font-normal text-sm leading-[22.75px] text-g-body text-start">
+          </div>
+          <p class="text-g-body text-sm leading-relaxed max-w-xs">
             المنصة المالية الأولى المصممة لتمكين المستقلين في العالم العربي. نحن هنا لنمكّن المستقل العربي من التركيز
             على ما يتقنه.
           </p>
         </div>
 
-        <div class="flex flex-col items-start gap-6">
-          <h4 class="font-bold text-base leading-6 text-black">الشركة</h4>
-          <ul class="flex flex-col gap-4 items-start">
-            <li><a href="#" class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">عن
-                دراهم</a></li>
-            <li><a href="#" class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">سياسة
-                الخصوصية</a></li>
-            <li><a href="#" class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">شروط
-                الاستخدام</a></li>
-            <li><a href="#"
-                class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">الوظائف</a></li>
+        <!-- المنتج -->
+        <div class="flex flex-col gap-6 items-start text-start">
+          <h4 class="font-bold text-base text-black">المنتج</h4>
+          <ul class="flex flex-col gap-4">
+            <li><a href="./index.html#features"
+                class="text-g-body text-sm hover:text-g-green transition-colors">المميزات</a></li>
+            <li><a href="./pricing.html" class="text-g-body text-sm hover:text-g-green transition-colors">الأسعار</a>
+            </li>
+            <li><a href="#" class="text-g-body text-sm hover:text-g-green transition-colors">المدونة</a></li>
+            <li><a href="./faq.html" class="text-g-body text-sm hover:text-g-green transition-colors">الأسئلة
+                الشائعة</a></li>
           </ul>
         </div>
 
-        <!-- تواصل معنا column: layout_GXU5SP col gap-24 pb-8 (x:0 in LTR → leftmost in LTR → middle-right in RTL) -->
-        <div class="flex flex-col items-start gap-6">
-          <h4 class="font-bold text-base leading-6 text-black">تواصل معنا</h4>
-          <ul class="flex flex-col items-start gap-[15.5px]">
-            <!-- Email: layout_6L22XW row justify-start gap-8 -->
-            <li class="flex items-center justify-start gap-2 w-full">
-              <svg class="w-3 h-[10px] text-g-body flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5"
+        <!-- الشركة -->
+        <div class="flex flex-col gap-6 items-start text-start">
+          <h4 class="font-bold text-base text-black">الشركة</h4>
+          <ul class="flex flex-col gap-4">
+            <li><a href="#" class="text-g-body text-sm hover:text-g-green transition-colors">عن دراهم</a></li>
+            <li><a href="#" class="text-g-body text-sm hover:text-g-green transition-colors">سياسة الخصوصية</a></li>
+            <li><a href="#" class="text-g-body text-sm hover:text-g-green transition-colors">شروط الاستخدام</a></li>
+            <li><a href="#" class="text-g-body text-sm hover:text-g-green transition-colors">الوظائف</a></li>
+          </ul>
+        </div>
+
+        <!-- تواصل معنا -->
+        <div class="flex flex-col gap-6 items-start text-start">
+          <h4 class="font-bold text-base text-black">تواصل معنا</h4>
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-center justify-start gap-2">
+              <svg class="w-4 h-4 text-g-body shrink-0" fill="none" stroke="currentColor" stroke-width="2"
                 viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
-              <span class="font-normal text-sm leading-5 text-g-body" dir="ltr">support@darahum.com</span>
+              <span class="text-g-body text-sm" dir="ltr">support@darahum.com</span>
             </li>
-            <!-- Location -->
-            <li class="flex items-center justify-start gap-2 w-full">
-              <svg class="w-[10px] h-3 text-g-body flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5"
+            <li class="flex items-center justify-start gap-2">
+              <svg class="w-4 h-4 text-g-body shrink-0" fill="none" stroke="currentColor" stroke-width="2"
                 viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg>
-              <span class="font-normal text-sm leading-5 text-g-body text-start">الرياض، المملكة العربية السعودية</span>
+              <span class="text-g-body text-sm">الرياض، المملكة العربية السعودية</span>
             </li>
           </ul>
-          <!-- Social icons: layout_A4WK50 row justify-end gap-16 pt-8 -->
-          <div class="flex justify-start gap-4 pt-2">
-            <!-- Twitter/X: w-8 h-8 rounded-full bg rgba(0,0,0,0.1) -->
+          <div class="flex gap-3">
             <a href="#"
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-black/10 hover:bg-black/20 transition-colors"
+              class="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center hover:bg-g-green/20 transition-colors"
               aria-label="Twitter">
-              <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
-            <!-- LinkedIn -->
             <a href="#"
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-black/10 hover:bg-black/20 transition-colors"
+              class="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center hover:bg-g-green/20 transition-colors"
               aria-label="LinkedIn">
-              <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- المنتج column: layout_9TTE9D col gap-24 (x:600 in LTR → leftmost in RTL) -->
-        <div class="flex flex-col items-start gap-6">
-          <h4 class="font-bold text-base leading-6 text-black">المنتج</h4>
-          <ul class="flex flex-col gap-4 items-start">
-            <li><a href="./features.html"
-                class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">المميزات</a></li>
-            <li><a href="./pricing.html"
-                class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">الأسعار</a></li>
-            <li><a href="#"
-                class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">المدونة</a></li>
-            <li><a href="./faq.html"
-                class="font-normal text-sm leading-5 text-g-body hover:text-g-green transition-colors">الأسئلة
-                الشائعة</a></li>
-          </ul>
+      <!-- Bottom bar -->
+      <div class="border-t border-g-border pt-8 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-black/40">© 2026 دراهم. جميع الحقوق محفوظة.</p>
+
+        <div class="flex gap-6">
+          <a href="#" class="text-xs text-black/40 hover:text-g-green transition-colors">سياسة الكوكيز</a>
+          <a href="#" class="text-xs text-black/40 hover:text-g-green transition-colors">إعدادات الخصوصية</a>
         </div>
-
-      </div><!-- /top grid -->
-
-      <!-- Bottom bar: layout_LDXS48 row space-between pt-32 border-top -->
-      <div
-        class="border-t border-[rgba(0,0,0,0.1)] pt-8 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
-        <!-- Legal links: layout_CB7MRM row gap-24 -->
-        <div class="flex items-center gap-6">
-          <a href="#" class="font-normal text-xs leading-4 text-black/40 hover:text-g-green transition-colors">إعدادات
-            الخصوصية</a>
-          <a href="#" class="font-normal text-xs leading-4 text-black/40 hover:text-g-green transition-colors">سياسة
-            الكوكيز</a>
-        </div>
-        <!-- Copyright -->
-        <p class="font-normal text-xs leading-4 text-black/40">© 2026 دراهم. جميع الحقوق محفوظة.</p>
       </div>
 
     </div>
