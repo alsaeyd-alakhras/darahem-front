@@ -1,8 +1,8 @@
-# CLAUDE.md — Darahum Project
+# CLAUDE.md — Azlynt Project
 
 ## Project Overview
 
-**Darahum** is a marketing website for an Arabic-first SaaS platform targeting freelancers in the MENA region (financial tools: invoicing, cash flow, client management).
+**Azlynt** (أزلينت) is a marketing website for an Arabic-first SaaS platform targeting freelancers in the MENA region (project management, client relations, invoicing, and payment collection tools).
 
 - Delivered as static HTML to a client — must be clean and production-ready
 - Default language: Arabic (RTL)
@@ -65,22 +65,25 @@ When implementing from Figma, extract exact values and update here first.
 
 @theme {
   /* Typography */
-  --font-sans: "Readex Pro", sans-serif;
+  --font-sans:    "Readex Pro", sans-serif;
+  --font-heading: "IBM Plex Sans Arabic", sans-serif;
 
   /* Brand Colors */
-  --color-g-green:      #006C51;
-  --color-g-green-lt:   #13C597;
-  --color-g-purple:     #1C0060;
-  --color-g-purple-mid: #310E8E;
-  --color-g-navy:       #002452;
-  --color-g-dark:       #191C1F;
-  --color-g-body:       #484553;
-  --color-g-muted:      #6B7280;
-  --color-g-light:      #F8F9FD;
-  --color-g-light2:     #F2F3F7;
-  --color-g-orange:     #F0995A;
-  --color-g-border:     #E5E7EB;
-  --color-g-border2:    #C4C6D0;
+  --color-g-green:       #157A70;
+  --color-g-green-lt:    #1D9E92;
+  --color-g-purple:      #2B0A8C;
+  --color-g-purple-mid:  #2E4E96;
+  --color-g-navy:        #002452;
+  --color-g-dark:        #191C1F;
+  --color-g-body:        #484553;
+  --color-g-muted:       #6B7280;
+  --color-g-light:       #F8F9FD;
+  --color-g-light2:      #F2F3F7;
+  --color-g-orange:      #F0995A;
+  --color-g-border:      #E5E7EB;
+  --color-g-border2:     #C4C6D0;
+  --color-g-mint-soft:   #EAFAF7;
+  --color-g-mint-bright: #4FD9C4;
 
   /* Spacing scale — extend only if Figma uses non-standard values */
   --spacing-section: 5rem;
@@ -185,7 +188,7 @@ Every HTML file starts with this base:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>دراهم — [Page Title]</title>
+  <title>أزلينت — [Page Title]</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />

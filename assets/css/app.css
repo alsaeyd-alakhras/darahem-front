@@ -2,10 +2,10 @@
 
 @theme {
   /* Colors */
-  --color-g-green:       #006C51;
-  --color-g-green-lt:    #13C597;
-  --color-g-purple:      #1C0060;
-  --color-g-purple-mid:  #310E8E;
+  --color-g-green:       #157A70;
+  --color-g-green-lt:    #1D9E92;
+  --color-g-purple:      #2B0A8C;
+  --color-g-purple-mid:  #2E4E96;
   --color-g-navy:        #002452;
   --color-g-dark:        #191C1F;
   --color-g-body:        #484553;
@@ -15,8 +15,8 @@
   --color-g-orange:      #F0995A;
   --color-g-border:      #E5E7EB;
   --color-g-border2:     #C4C6D0;
-  --color-g-mint-soft:   #F0FDF9;
-  --color-g-mint-bright: #63F8C7;
+  --color-g-mint-soft:   #EAFAF7;
+  --color-g-mint-bright: #4FD9C4;
 
   /* Font */
   --font-sans:    "Readex Pro", sans-serif;
