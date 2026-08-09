@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
   <link rel="stylesheet" href="./assets/css/output.css" />
 </head>
 
@@ -20,8 +21,8 @@
       <div class="h-20 px-0 sm:px-6 flex items-center justify-between">
         <div class="flex items-center gap-8 lg:gap-12">
           <a href="./index.html" aria-label="أزلينت">
-            <img src="./assets/imgs/logo.png" alt="أزلينت" width="88" height="44"
-              class="w-[88px] h-[44px] object-contain" />
+            <img src="./assets/imgs/logo-full.png" alt="أزلينت" width="152" height="64"
+              class="w-[132px] h-[56px] object-contain" />
           </a>
 
           <nav class="hidden md:flex items-center gap-6 lg:gap-8">
@@ -71,24 +72,27 @@
   </header>
 
   <main>
-    <!-- Section: Hero -->
-    <section class="relative overflow-hidden bg-[linear-gradient(67deg,#2e4e96_0%,#1d9e92_95%)]">
-      <div class="absolute -top-44 end-[-230px] size-[500px] rounded-full bg-g-green opacity-15 blur-[40px]"></div>
-      <div class="absolute -bottom-32 start-[-140px] size-[400px] rounded-full bg-g-purple opacity-15 blur-[40px]">
-      </div>
+    <!-- ════════════════════════════════════════
+         Section: Page Banner (shared pattern across inner pages)
+    ════════════════════════════════════════ -->
+    <section class="relative overflow-hidden bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]">
+      <div class="relative mx-auto flex max-w-[1142px] flex-col items-center px-6 pt-16 pb-24 text-center">
 
-      <div
-        class="relative mx-auto flex min-h-[520px] max-w-[1142px] flex-col items-center justify-center px-6 py-24 text-center sm:min-h-[595px]">
-        <h1
-          class="max-w-[1104px] bg-gradient-to-r from-white to-g-mint-bright bg-clip-text text-[40px] font-bold leading-[1.15] text-transparent sm:text-[56px] lg:text-[63px] lg:leading-[72px]">
+        <!-- Eyebrow -->
+        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white">الدعم</span>
+
+        <h1 class="mt-4 max-w-[900px] text-[32px] font-bold leading-[1.25] text-white sm:text-[44px] lg:text-[52px]">
           الأسئلة الشائعة
         </h1>
-        <p class="mt-6 text-base leading-8 text-white sm:text-lg">كل ما تحتاج معرفته عن أزلينت — في مكان واحد</p>
+        <p class="mt-4 text-base leading-8 text-white/85 sm:text-lg">كل ما تحتاج معرفته عن أزلينت — في مكان واحد</p>
+      </div>
 
-        <form class="relative mt-6 w-full max-w-[672px]" role="search">
+      <!-- ── Search card — straddles the seam between banner and content ─────────────────────────────── -->
+      <div class="relative z-10 mx-auto max-w-[1142px] -mt-14 flex justify-center px-6 pb-14">
+        <form class="relative w-full max-w-[672px]" role="search">
           <label for="faq-search" class="sr-only">ابحث في الأسئلة الشائعة</label>
           <input id="faq-search" type="search" placeholder="كيف يمكننا مساعدتك اليوم؟"
-            class="h-14 w-full rounded-full bg-white ps-14 pe-6 text-start text-base text-g-dark shadow-lg outline-none placeholder:text-g-muted focus:ring-4 focus:ring-white/25" />
+            class="h-14 w-full rounded-full bg-white ps-14 pe-6 text-start text-base text-g-dark shadow-[0_20px_40px_-8px_rgba(2,62,142,0.35)] outline-none placeholder:text-g-muted focus:ring-4 focus:ring-white/40" />
           <svg class="pointer-events-none absolute start-5 top-1/2 size-[18px] -translate-y-1/2 text-g-green"
             fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -517,16 +521,27 @@
       </div>
     </section>
 
-    <!-- Section: Footer CTA -->
-    <section class="relative overflow-hidden bg-gradient-to-r from-g-purple-mid to-g-green-lt px-5 py-24 text-center">
-      <div class="absolute -top-32 end-[-128px] size-64 rounded-full bg-white/5 blur-[32px]"></div>
-      <div class="absolute -bottom-48 start-[-192px] size-96 rounded-full bg-g-green-lt/5 blur-[32px]"></div>
-      <div class="relative mx-auto flex max-w-[1100px] flex-col items-center gap-8">
-        <h2 class="text-[34px] font-semibold leading-tight text-white sm:text-[42px] sm:leading-[54.6px]">جاهز لتجربة
-          أزلينت؟</h2>
-        <a href="#"
-          class="rounded-full bg-white px-12 py-5 text-xl font-semibold leading-[33.6px] text-g-purple shadow-xl sm:text-2xl hover:bg-g-purple hover:text-white transition-colors">أنشئ
-          حسابك المجاني الآن</a>
+    <!-- Section: Final CTA -->
+    <section class="relative py-24 px-5 overflow-hidden bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]">
+      <div
+        class="absolute rounded-[12px] pointer-events-none blur-[60px] bg-[rgba(28,0,96,0.1)] w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      </div>
+      <div
+        class="absolute top-[-192px] -right-28 w-[384px] h-96 rounded-full border-40 border-white/10 pointer-events-none">
+      </div>
+      <div
+        class="absolute bottom-[-160px] -left-16 w-[256px] h-64 rounded-full border-20 border-white/10 pointer-events-none">
+      </div>
+      <div class="relative z-10 max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-4 text-center">
+        <h2 class="text-5xl font-bold text-white leading-tight">جاهز لتجربة أزلينت؟</h2>
+        <p class="text-white text-base leading-relaxed max-w-xl mt-4">أنشئ حسابك المجاني الآن وابدأ باستكشاف
+          كل ما تقدمه المنصة دون أي التزام.</p>
+        <div class="mt-12">
+          <a href="#"
+            class="bg-white text-g-purple-mid font-bold text-lg px-10 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
+            أنشئ حسابك المجاني الآن
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -541,8 +556,8 @@
         <!-- Brand column -->
         <div class="flex flex-col gap-6 items-start text-start">
           <div class="flex items-center gap-2">
-            <img src="./assets/imgs/logo.png" alt="أزلينت" width="88" height="44"
-              class="w-[88px] h-[44px] object-cover" />
+            <img src="./assets/imgs/logo-full.png" alt="أزلينت" width="152" height="64"
+              class="w-[132px] h-[56px] object-contain" />
           </div>
           <p class="text-g-body text-sm leading-relaxed max-w-xs">
             أزلينت هي مساحة عمل رقمية متكاملة مصممة خصيصاً لتمكين المستقلين في العالم العربي. نحن هنا لنمنحك الأدوات

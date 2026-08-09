@@ -106,6 +106,71 @@ $(document).ready(function () {
 
 
 // ============================================================
+// SECTION: How It Works - Sequential Step Reveal
+// Handles: scroll-triggered 1->2->3 activation with connector draw
+// ============================================================
+
+$(document).ready(function () {
+  var $stepsTrack = $('#steps-track');
+
+  if (!$stepsTrack.length) return;
+
+  var hasPlayed = false;
+  var $stepItems = $stepsTrack.find('.step-item');
+  var $connectorFills = $stepsTrack.find('.step-connector-fill');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function revealAllSteps() {
+    $stepItems.addClass('is-active');
+    $connectorFills.addClass('is-filled');
+  }
+
+  function playStepsSequence() {
+    if (hasPlayed) return;
+    hasPlayed = true;
+
+    if (reduceMotion) {
+      revealAllSteps();
+      return;
+    }
+
+    $stepsTrack.find('[data-step="1"]').addClass('is-active');
+
+    window.setTimeout(function () {
+      $connectorFills.eq(0).addClass('is-filled');
+    }, 300);
+
+    window.setTimeout(function () {
+      $stepsTrack.find('[data-step="2"]').addClass('is-active');
+    }, 1000);
+
+    window.setTimeout(function () {
+      $connectorFills.eq(1).addClass('is-filled');
+    }, 1300);
+
+    window.setTimeout(function () {
+      $stepsTrack.find('[data-step="3"]').addClass('is-active');
+    }, 2000);
+  }
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealAllSteps();
+    return;
+  }
+
+  var stepsObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        playStepsSequence();
+        stepsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  stepsObserver.observe($stepsTrack[0]);
+});
+
+// ============================================================
 // SECTION: Card Scroll Reveal (home-specific)
 // Handles: staggered entrance for pain-point / feature cards
 // ============================================================

@@ -18,6 +18,11 @@
   --color-g-mint-soft:   #EAFAF7;
   --color-g-mint-bright: #4FD9C4;
 
+  /* Brand accent colors (from logo identity) */
+  --color-g-blue:   #320E8E;
+  --color-g-lime:   #14C698;
+  --color-g-accent: #F2E70F;
+
   /* Font */
   --font-sans:    "Readex Pro", sans-serif;
   --font-heading: "IBM Plex Sans Arabic", sans-serif;
@@ -38,6 +43,43 @@
   transform: translateY(0);
 }
 
+/* -- How It Works Step Reveal -------------------------------- */
+.step-circle {
+  background-color: #fff;
+  border-color: var(--color-g-light);
+}
+
+.step-number {
+  color: var(--color-g-green);
+}
+
+.step-item.is-active .step-circle {
+  background-color: var(--color-g-green);
+  border-color: var(--color-g-light);
+}
+
+.step-item.is-active .step-number {
+  color: #fff;
+}
+
+.step-connector-fill.is-filled {
+  height: 100%;
+}
+
+@media (min-width: 48rem) {
+  .step-connector-fill.is-filled {
+    width: 100%;
+    height: 0.125rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step-circle,
+  .step-number,
+  .step-connector-fill {
+    transition-duration: 0ms !important;
+  }
+}
 /* ── 404 Page Animations ────────────────────────────────── */
 @keyframes float-y {
   0%, 100% { transform: translateY(0); }

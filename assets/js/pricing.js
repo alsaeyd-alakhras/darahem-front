@@ -13,12 +13,12 @@ $(document).ready(function () {
     const mode = $(this).data("billing");
 
     $(".pricing-billing-toggle")
-      .removeClass("bg-white text-g-purple shadow")
-      .addClass("text-white/80");
+      .removeClass("bg-g-navy text-white shadow")
+      .addClass("text-g-body");
 
     $(this)
-      .removeClass("text-white/80")
-      .addClass("bg-white text-g-purple shadow");
+      .removeClass("text-g-body")
+      .addClass("bg-g-navy text-white shadow");
 
     $(".pricing-price").each(function () {
       const plan = $(this).data("plan");
@@ -26,6 +26,15 @@ $(document).ready(function () {
         $(this).text(prices[mode][plan]);
       }
     });
+
+    $(".pricing-old-price").each(function () {
+      const plan = $(this).data("plan");
+      if (plan && prices.monthly[plan] !== undefined) {
+        $(this).text(prices.monthly[plan] + "$");
+      }
+    });
+
+    $(".pricing-save-line").toggleClass("hidden", mode !== "yearly").toggleClass("flex", mode === "yearly");
   });
 });
 

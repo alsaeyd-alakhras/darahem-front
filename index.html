@@ -12,6 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@700&family=Readex+Pro:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
+  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
   <link rel="stylesheet" href="./assets/css/output.css" />
 </head>
 
@@ -29,8 +30,8 @@
         <div class="flex items-center gap-12">
           <!-- Logo 88×44px — imageRef logo.png -->
           <a href="./index.html" aria-label="أزلينت - الرئيسية">
-            <img src="./assets/imgs/logo.png" alt="أزلينت" width="88" height="44"
-              class="w-[88px] h-[44px] object-cover" />
+            <img src="./assets/imgs/logo-full.png" alt="أزلينت" width="152" height="64"
+              class="w-[132px] h-[56px] object-contain" />
           </a>
 
           <!-- Nav links: gap-32px (layout_RZWPMF) font Medium 500 16px -->
@@ -541,40 +542,34 @@
         </h2>
 
         <!--
-          3 steps: layout_USV1J3 row space-between
-          Figma DOM: [step3, step2, step1] — RTL reversal: DOM [step1, step2, step3]
-          → step1 rightmost (inline-start in RTL), step3 leftmost
-          Dashed connector line behind circles (absolute)
+          3 steps: DOM order step1 → step2 → step3 (step1 rightmost in RTL, step3 leftmost)
+          Sequential reveal on scroll (home.js #steps-animation): step1 active on load,
+          each connector segment draws then activates the next circle.
+          Mobile: stacked vertically, connector becomes a vertical growing line.
         -->
-        <div class="relative flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0">
+        <div id="steps-track" class="relative flex flex-col md:flex-row items-start justify-between gap-0 md:gap-0">
 
-          <!-- Dashed connector line (desktop only): layout_LNUNN0 stroke #006C51 dashed -->
-          <div
-            class="absolute hidden md:block top-[48px] start-[147px] end-[147px] h-0 border-t-2 border-dashed border-g-green">
-          </div>
-
-          <!-- Step 1: أنشئ حسابك — circle bg #006C51 (green filled), number white -->
-          <!-- layout_0TL1D7 column center gap-11 -->
-          <div class="relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10">
-            <!-- Circle: 96×96 border-[4px] border-g-light rounded-full bg g-green shadow -->
-            <div
-              class="flex items-center justify-center w-24 h-24 rounded-full bg-g-green border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)]">
-              <!-- Number: Bold 700 42px white -->
-              <span class="font-bold text-[42px] leading-[54.6px] text-white">1</span>
+          <!-- Step 1: أنشئ حسابك -->
+          <div class="step-item relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10" data-step="1">
+            <div class="step-circle flex items-center justify-center w-24 h-24 rounded-full border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500">
+              <span class="step-number font-bold text-[42px] leading-[54.6px] transition-colors duration-500">1</span>
             </div>
-            <!-- Step label: SemiBold 24px #1C0060 centered -->
             <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-center">أنشئ حسابك</h3>
-            <!-- Step body: Regular 16px #6B7280 w-[320px] centered -->
             <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[320px]">
               سجّل مجاناً خلال أقل من دقيقة لتجهيز مساحة العمل الرقمية الخاصة بك.
             </p>
           </div>
 
-          <!-- Step 2: وثق معاملاتك — circle bg white, number g-green -->
-          <div class="relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10">
-            <div
-              class="flex items-center justify-center w-24 h-24 rounded-full bg-white border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)]">
-              <span class="font-bold text-[42px] leading-[54.6px] text-g-green">2</span>
+          <!-- Connector 1→2 -->
+          <div class="step-connector relative shrink-0 md:self-start md:mt-12 h-10 w-1 md:h-0 md:w-full md:max-w-[180px] md:mx-2 overflow-hidden">
+            <div class="absolute inset-0 md:inset-y-auto md:top-1/2 md:-translate-y-1/2 w-1 h-full md:h-0.5 md:w-full bg-g-border"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 md:inset-x-auto md:inset-y-auto md:top-1/2 md:start-0 md:-translate-y-1/2 w-1 h-0 md:h-0.5 md:w-0 bg-g-green transition-[height,width] duration-700 ease-out mx-auto md:mx-0"></div>
+          </div>
+
+          <!-- Step 2: أنشئ مشروعك -->
+          <div class="step-item relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10" data-step="2">
+            <div class="step-circle flex items-center justify-center w-24 h-24 rounded-full bg-white border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500">
+              <span class="step-number font-bold text-[42px] leading-[54.6px] text-g-green transition-colors duration-500">2</span>
             </div>
             <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-center">أنشئ مشروعك</h3>
             <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[320px]">
@@ -582,11 +577,16 @@
             </p>
           </div>
 
-          <!-- Step 3: شاهد نموك — circle bg white, number g-green -->
-          <div class="relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10">
-            <div
-              class="flex items-center justify-center w-24 h-24 rounded-full bg-white border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)]">
-              <span class="font-bold text-[42px] leading-[54.6px] text-g-green">3</span>
+          <!-- Connector 2→3 -->
+          <div class="step-connector relative shrink-0 md:self-start md:mt-12 h-10 w-1 md:h-0 md:w-full md:max-w-[180px] md:mx-2 overflow-hidden">
+            <div class="absolute inset-0 md:inset-y-auto md:top-1/2 md:-translate-y-1/2 w-1 h-full md:h-0.5 md:w-full bg-g-border"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 md:inset-x-auto md:inset-y-auto md:top-1/2 md:start-0 md:-translate-y-1/2 w-1 h-0 md:h-0.5 md:w-0 bg-g-green transition-[height,width] duration-700 ease-out mx-auto md:mx-0"></div>
+          </div>
+
+          <!-- Step 3: استلم مستحقاتك -->
+          <div class="step-item relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10" data-step="3">
+            <div class="step-circle flex items-center justify-center w-24 h-24 rounded-full bg-white border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500">
+              <span class="step-number font-bold text-[42px] leading-[54.6px] text-g-green transition-colors duration-500">3</span>
             </div>
             <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-center">استلم مستحقاتك</h3>
             <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[320px]">
@@ -710,7 +710,7 @@
 
           <!-- Billing toggle: شهري first = right in RTL -->
           <div
-            class="mt-7 inline-flex items-center gap-1 rounded-full bg-[linear-gradient(67deg,#2e4e96_0%,#1d9e92_95%)] p-1 backdrop-blur-sm">
+            class="mt-7 inline-flex items-center gap-1 rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] p-1 backdrop-blur-sm">
             <button type="button" data-billing="monthly"
               class="pricing-billing-toggle rounded-full bg-white px-6 py-2 text-sm font-semibold text-g-purple shadow transition-colors">شهري</button>
             <button type="button" data-billing="yearly"
@@ -965,28 +965,25 @@
     </section>
 
     <!-- Section: Final CTA -->
-    <section
-      class="relative overflow-hidden bg-[linear-gradient(to_right,#2e4e96_0%,#1d9e92_100%)] px-5 py-24 text-center">
-      <div class="absolute start-[-200px] top-[-200px] size-[500px] rounded-full border-[30px] border-white/10"></div>
-      <div class="absolute end-[-100px] bottom-[-100px] size-[240px] rounded-full border-[20px] border-white/10"></div>
-
-      <div class="relative mx-auto flex max-w-[760px] flex-col items-center gap-4">
-        <span
-          class="rounded-xl border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-[#fcb87d]">الفرصة
-          بين يديك</span>
-        <h2 class="text-[36px] font-bold leading-tight text-white sm:text-[56px] sm:leading-[70px]">
-          جاهز لتنظيم
-          <span class="block text-g-orange">مساحة عملك؟</span>
-        </h2>
-        <p class="max-w-[672px] pt-2 text-base leading-8 text-white/70 sm:text-lg">انضم إلى آلاف المستقلين الذين
+    <section class="relative py-24 px-5 overflow-hidden bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]">
+      <div
+        class="absolute rounded-[12px] pointer-events-none blur-[60px] bg-[rgba(28,0,96,0.1)] w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      </div>
+      <div
+        class="absolute top-[-192px] -right-28 w-[384px] h-96 rounded-full border-40 border-white/10 pointer-events-none">
+      </div>
+      <div
+        class="absolute bottom-[-160px] -left-16 w-[256px] h-64 rounded-full border-20 border-white/10 pointer-events-none">
+      </div>
+      <div class="relative z-10 max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-4 text-center">
+        <h2 class="text-5xl font-bold text-white leading-tight">جاهز لتنظيم مساحة عملك؟</h2>
+        <p class="text-white text-base leading-relaxed max-w-xl mt-4">انضم إلى آلاف المستقلين الذين
           يحركون أعمالهم بذكاء وبساطة. ابدأ اليوم بتنظيم مشاريعك وعملائك مجاناً لمدة 14 يوماً.</p>
-        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <div class="mt-12">
           <a href="#"
-            class="rounded bg-g-orange px-10 py-5 text-lg font-bold text-white hover:opacity-90 transition-opacity">ابدأ
-            الآن</a>
-          <a href="#"
-            class="rounded border-2 border-white/20 px-10 py-5 text-lg font-bold text-white hover:bg-white/10 transition-colors">احجز
-            جلسة استشارية</a>
+            class="bg-white text-g-purple-mid font-bold text-lg px-10 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
+            ابدأ الآن
+          </a>
         </div>
       </div>
     </section>
@@ -1004,8 +1001,8 @@
         <!-- Brand column -->
         <div class="flex flex-col gap-6 items-start text-start">
           <div class="flex items-center gap-2">
-            <img src="./assets/imgs/logo.png" alt="أزلينت" width="88" height="44"
-              class="w-[88px] h-[44px] object-cover" />
+            <img src="./assets/imgs/logo-full.png" alt="أزلينت" width="152" height="64"
+              class="w-[132px] h-[56px] object-contain" />
           </div>
           <p class="text-g-body text-sm leading-relaxed max-w-xs">
             أزلينت هي مساحة عمل رقمية متكاملة مصممة خصيصاً لتمكين المستقلين في العالم العربي. نحن هنا لنمنحك الأدوات
