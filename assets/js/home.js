@@ -134,23 +134,38 @@ $(document).ready(function () {
       return;
     }
 
-    $stepsTrack.find('[data-step="1"]').addClass('is-active');
+    var STEP_RISE_MS = 500;   // matches .step-item transition duration
+    var LINE_DRAW_MS = 700;   // matches .step-connector-fill transition duration
+    var t = 0;
 
+    // Step 1 rises immediately
+    window.setTimeout(function () {
+      $stepsTrack.find('[data-step="1"]').addClass('is-active');
+    }, t);
+    t += STEP_RISE_MS;
+
+    // Connector 1→2 draws right after step 1 has risen
     window.setTimeout(function () {
       $connectorFills.eq(0).addClass('is-filled');
-    }, 300);
+    }, t);
+    t += LINE_DRAW_MS;
 
+    // Step 2 rises once the line reaches it
     window.setTimeout(function () {
       $stepsTrack.find('[data-step="2"]').addClass('is-active');
-    }, 1000);
+    }, t);
+    t += STEP_RISE_MS;
 
+    // Connector 2→3 draws right after step 2 has risen
     window.setTimeout(function () {
       $connectorFills.eq(1).addClass('is-filled');
-    }, 1300);
+    }, t);
+    t += LINE_DRAW_MS;
 
+    // Step 3 rises once the line reaches it
     window.setTimeout(function () {
       $stepsTrack.find('[data-step="3"]').addClass('is-active');
-    }, 2000);
+    }, t);
   }
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
