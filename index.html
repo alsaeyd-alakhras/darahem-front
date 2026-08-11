@@ -105,129 +105,72 @@
     <!-- ════════════════════════════════════════
           Section: Hero
     ════════════════════════════════════════ -->
-    <section class="relative bg-g-light overflow-hidden pt-20">
+    <section class="relative bg-white overflow-hidden pt-40 pb-24 min-h-[92vh] flex items-center">
 
-      <!-- Blur circle 1 — #006C51 @ top-end: w:500 h:500 x:739 y:-158 opacity 0.15 blur(80px) -->
-      <div
-        class="absolute w-[500px] h-[500px] rounded-full bg-g-green blur-[80px] opacity-15 pointer-events-none top-[-158px] end-[-87px]">
-      </div>
-      <!-- Blur circle 2 — #1C0060 @ bottom-start: w:400 h:400 x:-113 y:461 opacity 0.15 blur(80px) -->
-      <div
-        class="absolute w-[400px] h-[400px] rounded-full bg-g-purple blur-[80px] opacity-15 pointer-events-none top-[461px] start-[-113px]">
-      </div>
+      <!-- Radial glow backdrop -->
+      <div class="absolute top-0 inset-x-0 h-[600px] pointer-events-none" style="background: radial-gradient(60% 50% at 50% 0%, rgba(20,198,152,0.14) 0%, rgba(50,14,142,0.08) 45%, rgba(255,255,255,0) 80%);"></div>
+      <div class="absolute inset-0 pointer-events-none [background-image:radial-gradient(circle,rgba(0,0,0,0.035)_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
 
-      <!-- Container: max-w 1152px py-[159px] -->
-      <div class="relative z-10 max-w-[1152px] mx-auto py-[120px] lg:py-[159px]">
-        <!--
-          2-col layout. In RTL flex-row: first child = inline-start = RIGHT side.
-          DOM: [text-col, image-col] → text on RIGHT, image on LEFT ✓
-        -->
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-10 md:px-0">
+      <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center gap-8">
 
-          <!-- ── Text Column (RIGHT in RTL) ────────────────── -->
-          <!-- layout_0XA3YJ: column, gap: 22.8px, locationRelativeToParent x:584 -->
-          <div class="flex flex-col items-start gap-[23px] w-full lg:w-1/2 order-2 lg:order-1">
+        <span class="relative inline-flex items-center gap-2 bg-white border border-g-border shadow-sm rounded-full px-4 py-2 text-sm font-semibold text-g-body">
+          <span class="absolute inset-0 rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] opacity-20 animate-pulse"></span>
+          <span class="relative flex -space-x-1.5 rtl:space-x-reverse">
+            <span class="w-5 h-5 rounded-full bg-g-orange border border-white"></span>
+            <span class="w-5 h-5 rounded-full bg-g-lime border border-white"></span>
+            <span class="w-5 h-5 rounded-full bg-g-blue border border-white"></span>
+          </span>
+          <span class="relative">يثق بها أكثر من 50,000 مستقل عربي</span>
+        </span>
 
-            <!-- Heading 1: IBM Plex Sans Arabic Bold 700 63px/72px
-                 ts1: dark fill #191C1F
-                 ts2: gradient linear-gradient(90deg, #006C51 0%, #1C0060 100%) -->
-            <h1 class="font-sans font-bold text-[42px] sm:text-[52px] lg:text-[63px] leading-[1.3] text-start w-full">
-              <span class="block text-g-dark">مساحتك الرقمية المتكاملة</span>
-              <span class="block bg-gradient-to-l from-g-purple to-g-green bg-clip-text text-transparent">لإدارة
-                مشاريعك كمستقل</span>
-            </h1>
+        <!-- Headline stage: feature tags float around the bold text -->
+        <div class="relative w-full flex items-center justify-center py-4">
 
-            <!-- Body: Regular 400 18px/30.6px color #484553 -->
-            <p class="text-g-body font-normal text-lg leading-[1.7] text-start max-w-[520px]">
-              أزلينت منصة بسيطة للمستقلين العرب، تجمع مشاريعك، عملاءك، فواتيرك، واستلام مستحقاتك بمكان واحد، لتمنحك
-              تجربة عمل احترافية وسلسة خالية من التعقيد.
-            </p>
+          <h1 class="relative z-10 font-heading font-bold text-[40px] sm:text-[56px] lg:text-[72px] leading-[1.2] text-g-dark max-w-[900px]">
+            مساحتك الرقمية المتكاملة
+            <span class="block bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] bg-clip-text text-transparent">لإدارة مشاريعك كمستقل</span>
+          </h1>
 
-            <!-- Buttons row: layout_YM3KIH row justify-start gap-16px pt-[17px] -->
-            <div class="flex items-center gap-4 pt-[17px] w-full justify-start flex-wrap">
+          <!-- Floating feature tag: مشاريعك -->
+          <span class="hidden md:inline-flex absolute top-[6%] start-[6%] lg:start-[12%] rotate-[-8deg] items-center gap-1.5 bg-g-light2 border border-g-border2 rounded-full px-4 py-2 text-sm font-bold text-g-dark shadow-[0px_10px_20px_-6px_rgba(0,0,0,0.1)]">
+            <span class="w-2 h-2 rounded-full bg-g-muted"></span>
+            إدارة المشاريع
+          </span>
 
-              <!-- ابدأ تجربتك المجانية: bg #006C51 radius 12px py-[16px] px-[32px] SemiBold 24px white shadow -->
-              <a href="#"
-                class="relative inline-flex items-center justify-center bg-g-green text-white font-semibold text-[24px] leading-[1.4] rounded-[12px] py-[16px] px-[32px] shadow-[0px_8px_10px_-6px_rgba(0,108,81,0.2),0px_20px_25px_-5px_rgba(0,108,81,0.2)] hover:opacity-90 transition-opacity">
-                ابدأ تجربتك المجانية
-              </a>
+          <!-- Floating feature tag: فواتيرك -->
+          <span class="hidden md:inline-flex absolute top-[2%] end-[4%] lg:end-[10%] rotate-[7deg] items-center gap-1.5 bg-g-blue text-white rounded-full px-4 py-2 text-sm font-bold shadow-[0px_10px_20px_-6px_rgba(50,14,142,0.45)]">
+            <span class="w-2 h-2 rounded-full bg-white/70"></span>
+            الفواتير
+          </span>
 
-              <!-- شاهد العرض: ghost — icon + text, #1C0060 SemiBold 24px py-5 px-6 -->
-              <a href="#"
-                class="inline-flex items-center gap-2 text-g-purple font-semibold text-xl leading-[1.4] py-[20px] px-6 hover:opacity-75 transition-opacity">
-                <!-- Play icon SVG -->
-                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.5 14.5L14.5 10L7.5 5.5V14.5ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z"
-                    fill="#2B0A8C" />
-                </svg>
-                شاهد العرض
-              </a>
+          <!-- Floating feature tag: عملاؤك -->
+          <span class="hidden lg:inline-flex absolute bottom-[10%] start-[2%] rotate-[6deg] items-center gap-1.5 bg-g-orange text-white rounded-full px-4 py-2 text-sm font-bold shadow-[0px_10px_20px_-6px_rgba(240,153,90,0.45)]">
+            <span class="w-2 h-2 rounded-full bg-white/70"></span>
+            العملاء
+          </span>
 
-            </div>
-          </div><!-- /Text Column -->
+          <!-- Floating feature tag: مستحقاتك -->
+          <span class="hidden lg:inline-flex absolute bottom-[6%] end-[2%] rotate-[-6deg] items-center gap-1.5 bg-g-lime text-white rounded-full px-4 py-2 text-sm font-bold shadow-[0px_10px_20px_-6px_rgba(20,198,152,0.45)]">
+            <span class="w-2 h-2 rounded-full bg-white/70"></span>
+            استلام المستحقات
+          </span>
+        </div>
 
-          <!-- ── Image Column (LEFT in RTL) ─────────────────── -->
-          <!-- layout_5YD8AM: row center, h:500, x:0 y:0 → occupies left half -->
-          <div class="relative w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
-            <!-- Mockup container: layout_K1TC9S  w:512 -->
-            <div class="relative w-full max-w-[512px]">
+        <p class="text-g-body text-lg leading-[1.7] max-w-[560px]">
+          أزلينت منصة بسيطة للمستقلين العرب، تجمع مشاريعك، عملاءك، فواتيرك، واستلام مستحقاتك بمكان واحد،
+          لتمنحك تجربة عمل احترافية وسلسة خالية من التعقيد.
+        </p>
 
-              <!-- Main dashboard image: w:547.61 h:547.61 rounded-[24px] border-white-8 shadow -->
-              <div
-                class="relative rounded-[24px] rotate-[-5deg] overflow-hidden border-[8px] border-white shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] w-full aspect-square">
-                <img src="./assets/imgs/hero-dashboard-56586a.png" alt="لوحة تحكم أزلينت"
-                  class="w-full h-full object-cover" />
-              </div>
-
-              <!-- Floating Element 1: تم استلام الدفعة + 2,500
-                   layout_9AJS07: x:312 y:-40 → near top-end of image
-                   row, gap:16, p: 24px 24px 24px 27px
-                   bg: rgba(255,255,255,0.7) border: rgba(255,255,255,0.3) radius-24 backdrop-blur-12 shadow -->
-              <div data-float="1"
-                class="absolute top-[-40px] start-0 lg:start-[-20px] flex items-center gap-4 rounded-[24px] border border-white/30 bg-white/70 backdrop-blur-[12px] shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] ps-[27px] pe-6 py-6">
-                <!-- Green circle icon: bg #D1FAE5 p-2 rounded-full -->
-                <div class="bg-[#D1FAE5] rounded-full p-2 flex-shrink-0">
-                  <svg class="w-5 h-5 text-g-green" fill="none" stroke="currentColor" stroke-width="2.5"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                </div>
-                <!-- Text -->
-                <div class="flex flex-col items-start">
-                  <span class="font-medium text-[13px] leading-[18px] text-g-body">تم استلام الدفعة</span>
-                  <span class="font-bold text-[24px] leading-[34px] text-g-green">+ 2,500 ريال</span>
-                </div>
-              </div>
-
-              <!-- Floating Element 2: صافي الربح الشهري + 15,400
-                   layout_006OAD: x:-48 y:452.41 → bottom-start of image (overflows left by 48px)
-                   column, gap:8, p: 23px 24px 24px
-                   same visual style -->
-              <div data-float="2"
-                class="absolute bottom-[-20px] end-0 lg:end-[-48px] flex flex-col gap-2 rounded-[24px] border border-white/30 bg-white/70 backdrop-blur-[12px] shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] py-[23px] ps-6 pe-6">
-                <div class="flex flex-col items-start">
-                  <span class="font-medium text-[13px] leading-[18px] text-g-body">صافي الربح الشهري</span>
-                  <div class="flex items-end gap-2">
-                    <span class="font-bold text-[24px] leading-[34px] text-g-purple">15,400</span>
-                    <span class="font-medium text-[14px] leading-[21px] text-g-body pb-1">ريال</span>
-                  </div>
-                </div>
-                <!-- Chart icon -->
-                <div class="flex items-end justify-start gap-2">
-                  <!-- Mini bar chart icon -->
-                  <svg width="150" height="6" viewBox="0 0 150 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="150" height="6" rx="3" fill="#EDEEF2" />
-                    <rect x="37.5" width="112.5" height="6" rx="3" fill="#157A70" />
-                  </svg>
-
-                </div>
-
-              </div>
-
-            </div>
-          </div><!-- /Image Column -->
-
+        <div class="flex items-center gap-4 pt-2 flex-wrap justify-center">
+          <a href="#" class="inline-flex items-center justify-center bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] text-white font-semibold text-lg rounded-[12px] py-4 px-9 shadow-[0px_15px_30px_-8px_rgba(20,198,152,0.4)] hover:opacity-90 transition-opacity">
+            ابدأ تجربتك المجانية
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 text-g-dark font-semibold text-lg py-4 px-2 hover:opacity-70 transition-opacity">
+            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="none">
+              <path d="M7.5 14.5L14.5 10L7.5 5.5V14.5ZM10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10Zm0-2c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8Z" fill="#191C1F"/>
+            </svg>
+            شاهد العرض
+          </a>
         </div>
       </div>
     </section>
@@ -236,7 +179,7 @@
     <!-- ════════════════════════════════════════
          Section: Stats
     ════════════════════════════════════════ -->
-    <section class="bg-white py-16 px-10">
+    <section class="bg-g-light2 border-t border-g-border py-16 px-10">
       <div class="max-w-[1280px] mx-auto">
         <!--
           Figma x-positions (LTR): 24/7=0, 99%=296, 200M+=592, +50K=888
@@ -281,13 +224,13 @@
     <!-- ════════════════════════════════════════
          Section: Pain Points
     ════════════════════════════════════════ -->
-    <section class="bg-g-light2 py-24 px-10">
+    <section class="bg-white py-24 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Section heading block: layout_1KEC8I column align-start gap-16 -->
         <div class="flex flex-col items-start gap-4 w-full">
           <!-- Heading 2: SemiBold 42px #1C0060 -->
-          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-purple text-start">
+          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-start">
             أدر أعمالك ببساطة، ودون تعقيد
           </h2>
           <!-- Accent bar: 96×4px bg #006C51 rounded-full (layout_78WZGM) -->
@@ -375,13 +318,13 @@
     <!-- ════════════════════════════════════════
          Section: Features
     ════════════════════════════════════════ -->
-    <section id="features" class="py-24 px-10">
+    <section id="features" class="bg-g-light2 py-24 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Section heading -->
         <!-- alignItems:flex-end in Figma LTR = physical RIGHT = items-start in RTL -->
         <div class="flex flex-col items-start gap-4 w-full">
-          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-purple text-start">
+          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-start">
             ميزات صُممت لتبسيط عملك
           </h2>
           <div class="w-24 h-1 bg-g-green rounded-full"></div>
@@ -539,11 +482,11 @@
     <!-- ════════════════════════════════════════
          Section: How It Works
     ════════════════════════════════════════ -->
-    <section class="bg-g-light2 py-24 px-10">
+    <section class="bg-white py-24 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-20">
 
         <!-- Heading centered: SemiBold 42px -->
-        <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-purple text-center w-full">
+        <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-center w-full">
           ابدأ مشاريعك في 3 خطوات بسيطة
         </h2>
 
@@ -608,12 +551,12 @@
     <!-- ════════════════════════════════════════
          Section: Testimonials
     ════════════════════════════════════════ -->
-    <section class="bg-g-light py-24 px-10">
+    <section class="bg-g-light2 py-24 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Section heading -->
         <div class="flex flex-col items-start gap-4 w-full">
-          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-purple text-start">
+          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-start">
             ماذا يقول شركاؤنا
           </h2>
           <div class="w-24 h-1 bg-g-green rounded-full"></div>
@@ -702,12 +645,12 @@
     <!-- ════════════════════════════════════════
          Section: Pricing Preview
     ════════════════════════════════════════ -->
-    <section id="pricing" class="bg-g-light2 py-20 px-10">
+    <section id="pricing" class="bg-white py-20 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Heading block: layout_2DXYAH gap-8 -->
         <div class="flex flex-col items-center gap-2 w-full">
-          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-purple text-center w-full">
+          <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-center w-full">
             أسعار تلائم طموحك
           </h2>
           <p class="font-normal text-base leading-[27.2px] text-g-body text-center">
@@ -859,7 +802,7 @@
     </section>
 
     <!-- Section: FAQ -->
-    <section id="faq" class="bg-white px-5 py-20">
+    <section id="faq" class="bg-g-light2 px-5 py-20">
       <div class="mx-auto max-w-[1000px]">
         <h2 class="mb-12 text-center text-[32px] font-bold text-g-navy sm:text-[40px]">الأسئلة الشائعة</h2>
         <div class="flex flex-col gap-4 md:flex-row md:items-start">
