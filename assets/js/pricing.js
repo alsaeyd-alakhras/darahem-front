@@ -20,6 +20,9 @@ $(document).ready(function () {
       .removeClass("text-g-body")
       .addClass("bg-g-navy text-white shadow");
 
+    $(".pricing-save-badge").toggleClass("bg-g-lime/15 text-g-green", mode !== "yearly");
+    $(".pricing-save-badge").toggleClass("bg-white/15 text-white", mode === "yearly");
+
     $(".pricing-price").each(function () {
       const plan = $(this).data("plan");
       if (plan && prices[mode][plan] !== undefined) {
