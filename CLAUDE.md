@@ -32,6 +32,10 @@
 ├── features.html           # Features page
 ├── pricing.html            # Pricing page
 ├── faq.html                # FAQ page
+├── contact.html            # Contact page
+├── blog.html               # Blog listing page
+├── blog-article.html       # Blog article page
+├── 404.html                # 404 page
 └── assets/
     ├── css/
     │   ├── app.css         # Tailwind source (edit this)
@@ -42,7 +46,10 @@
     │   ├── home.js         # JS specific to index.html
     │   ├── features.js     # JS specific to features.html
     │   ├── pricing.js      # JS specific to pricing.html
-    │   └── faq.js          # JS specific to faq.html
+    │   ├── faq.js          # JS specific to faq.html
+    │   ├── contact.js      # JS specific to contact.html
+    │   ├── blog.js         # JS specific to blog.html
+    │   └── blog-article.js # JS specific to blog-article.html
     └── imgs/               # All images and icons
         └── (descriptive names: hero-laptop.png, icon-cashflow.svg)
 ```

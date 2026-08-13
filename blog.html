@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>أزلينت — ٤٠٤ الصفحة غير موجودة</title>
+  <title>أزلينت — المدونة</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,20 +18,19 @@
 <body class="bg-white text-g-dark antialiased overflow-x-hidden font-sans">
 
   <!-- ════════════════════════════════════════
-      NAVBAR
+       NAVBAR
   ════════════════════════════════════════ -->
   <header id="navbar"
     class="fixed top-0 inset-x-0 z-50 bg-[rgba(248,249,253,0.80)] border-b border-g-border shadow-sm backdrop-blur-[12px]">
     <div class="max-w-[1280px] mx-auto px-10">
-      <div class="flex flex-row items-center justify-between h-20 px-6">
+      <div class="flex items-center justify-between h-20 px-6">
 
-        <!-- START: Logo + Nav -->
-        <div class="flex flex-row items-center gap-12">
+        <div class="flex items-center gap-12">
           <a href="./index.html">
             <img src="./assets/imgs/logo-full.png" alt="أزلينت" width="152" height="64"
               class="w-[132px] h-[56px] object-contain" />
           </a>
-          <nav class="hidden md:flex flex-row items-center gap-8">
+          <nav class="hidden md:flex items-center gap-8">
             <a href="./index.html"
               class="font-medium text-base text-g-body hover:text-g-green transition-colors">الرئيسية</a>
             <a href="./features.html"
@@ -42,13 +41,11 @@
               الشائعة</a>
             <a href="./contact.html"
               class="font-medium text-base text-g-body hover:text-g-green transition-colors">تواصل معنا</a>
-            <a href="./blog.html"
-              class="font-medium text-base text-g-body hover:text-g-green transition-colors">المدونة</a>
+            <a href="./blog.html" class="font-medium text-base text-g-green transition-colors">المدونة</a>
           </nav>
         </div>
 
-        <!-- END: CTA buttons -->
-        <div class="hidden md:flex flex-row items-center gap-4">
+        <div class="hidden md:flex items-center gap-4">
           <a href="#login" class="font-bold text-base text-g-purple-mid px-4 hover:opacity-75 transition-opacity">تسجيل
             الدخول</a>
           <a href="#signup"
@@ -56,7 +53,6 @@
             مجاناً</a>
         </div>
 
-        <!-- Hamburger (mobile) -->
         <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-g-light2 transition-colors"
           aria-label="القائمة">
           <svg id="icon-menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
@@ -71,7 +67,6 @@
       </div>
     </div>
 
-    <!-- Mobile drawer -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-g-border">
       <nav class="flex flex-col px-6 py-4 gap-1">
         <a href="./index.html" class="font-medium text-base text-g-body py-3 border-b border-g-border/50">الرئيسية</a>
@@ -82,7 +77,7 @@
           الشائعة</a>
         <a href="./contact.html" class="font-medium text-base text-g-body py-3 border-b border-g-border/50">تواصل
           معنا</a>
-        <a href="./blog.html" class="font-medium text-base text-g-body py-3 border-b border-g-border/50">المدونة</a>
+        <a href="./blog.html" class="font-medium text-base text-g-green py-3 border-b border-g-border/50">المدونة</a>
         <div class="flex flex-col gap-3 pt-4">
           <a href="#login" class="font-bold text-base text-g-purple-mid text-center py-3">تسجيل الدخول</a>
           <a href="#signup"
@@ -93,88 +88,132 @@
     </div>
   </header>
 
-  <!-- ════════════════════════════════════════
-      MAIN: 404 Content
-  ════════════════════════════════════════ -->
-  <main class="min-h-screen bg-white flex items-center justify-center px-6 pt-20">
-    <div class="flex flex-col items-center gap-3 max-w-[600px] w-full text-center py-16">
+  <main>
 
-      <!-- Wallet Illustration
-      <div class="w-48 h-48 flex items-center justify-center mb-2 animate-float">
-        <img src="./assets/imgs/wallet.png" alt="Wallet" class="w-44 h-44 pointer-events-none" />
-      </div> -->
-
-      <!-- Giant 404 -->
-      <div
-        class="animate-fade-up leading-none font-bold text-[150px] md:text-[180px] tracking-[-6px] bg-clip-text text-transparent [animation-delay:0.1s]"
-        style="background-image: linear-gradient(154.69deg, #1D9E92 0%, #2E4E96 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: none;">
-        404
+    <!-- ════════════════════════════════════════
+         Section: Page Banner
+    ════════════════════════════════════════ -->
+    <section class="relative overflow-hidden bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] pt-20">
+      <div class="relative z-10 max-w-[1200px] mx-auto px-6 pt-16 pb-24 flex flex-col items-center gap-4 text-center">
+        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white">المدونة</span>
+        <h1 class="font-bold text-[32px] md:text-[42px] lg:text-[48px] leading-[1.25] text-center text-white">
+          أفكار وأدوات لتنمية عملك الحر
+        </h1>
+        <p class="text-white/80 text-base sm:text-lg leading-[1.7] max-w-2xl">
+          مقالات عملية تساعدك على تنظيم المشاريع، إدارة العملاء، إصدار الفواتير، وتحويل العمل اليومي إلى نظام واضح.
+        </p>
       </div>
 
-      <!-- Heading -->
-      <h1
-        class="animate-fade-up text-[26px] md:text-[30px] font-bold text-g-purple leading-[1.5] -mt-2 [animation-delay:0.2s]">
-        عذراً! هذه الصفحة غير موجودة
-      </h1>
-
-      <!-- Description -->
-      <p class="animate-fade-up text-g-muted text-[16px] leading-[1.7] max-w-[460px] pt-1 pb-10 [animation-delay:0.3s]">
-        يبدو أن الصفحة التي تبحث عنها قد انتقلت إلى مكان آخر، أو أن الرابط لا يعمل. لا تقلق — أنت في المكان الصحيح!
-      </p>
-
-      <!-- Action Buttons -->
-      <div class="animate-fade-up flex flex-col gap-4 w-full max-w-[320px] [animation-delay:0.4s]">
-
-        <!-- Primary: العودة إلى الصفحة الرئيسية -->
-        <a href="./index.html"
-          class="w-full flex items-center justify-center gap-2 bg-g-purple text-white font-bold text-base px-8 py-4 rounded-[14px] shadow-[0px_10px_15px_-3px_rgba(28,0,96,0.15),0px_4px_6px_-4px_rgba(28,0,96,0.1)] hover:opacity-90 transition-opacity">
-          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      <!-- Section: Blog Search -->
+      <div class="relative z-10 mx-auto max-w-[1142px] -mt-14 flex justify-center px-6 pb-14">
+        <form class="relative w-full max-w-[672px]" role="search">
+          <label for="blog-search" class="sr-only">ابحث في المدونة</label>
+          <input id="blog-search" type="search" placeholder="ابحث عن مقال أو موضوع"
+            class="h-14 w-full rounded-full bg-white ps-14 pe-6 text-start text-base text-g-dark shadow-[0_20px_40px_-8px_rgba(2,62,142,0.35)] outline-none placeholder:text-g-muted focus:ring-4 focus:ring-white/40" />
+          <svg class="pointer-events-none absolute start-5 top-1/2 size-[18px] -translate-y-1/2 text-g-green"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" />
           </svg>
-          <span>العودة إلى الصفحة الرئيسية</span>
-        </a>
-
-        <!-- Secondary: تصفح الميزات -->
-        <a href="./features.html"
-          class="w-full flex items-center justify-center border-2 border-g-purple text-g-purple font-bold text-base px-8 py-4 rounded-[14px] hover:bg-g-purple hover:text-white transition-colors">
-          تصفح الميزات
-        </a>
+        </form>
       </div>
+    </section>
 
-      <!-- Support link -->
-      <a href="./contact.html"
-        class="animate-fade-up text-g-green-lt font-bold text-sm mt-1 hover:opacity-75 transition-opacity [animation-delay:0.5s]">
-        أو تواصل مع فريق الدعم
-      </a>
+    <!-- Section: Articles Grid -->
+    <section class="bg-white py-24 px-5">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Quick Links Strip -->
-      <div
-        class="animate-fade-up w-full pt-12 mt-4 border-t border-g-border/50 flex flex-col items-center gap-4 [animation-delay:0.55s]">
-        <p class="text-g-muted text-sm font-medium">صفحات قد تفيدك</p>
-        <div class="flex flex-wrap items-center justify-center gap-3">
-          <a href="#login"
-            class="border border-g-green-lt text-g-green-lt text-sm font-medium px-5 py-2 rounded-full hover:bg-g-green-lt hover:text-white transition-colors">
-            تسجيل الدخول
-          </a>
-          <a href="./pricing.html"
-            class="border border-g-green-lt text-g-green-lt text-sm font-medium px-5 py-2 rounded-full hover:bg-g-green-lt hover:text-white transition-colors">
-            التسعير
-          </a>
-          <a href="./faq.html"
-            class="border border-g-green-lt text-g-green-lt text-sm font-medium px-5 py-2 rounded-full hover:bg-g-green-lt hover:text-white transition-colors">
-            الأسئلة الشائعة
-          </a>
+          <article
+            class="blog-card flex flex-col items-start gap-4 bg-white rounded-[16px] border border-g-border border-s-4 border-s-g-purple p-8 hover:-translate-y-1 hover:border-s-g-green hover:shadow-[0px_16px_32px_-8px_rgba(28,0,96,0.12)] transition-all duration-200">
+            <a href="./blog-article.html" class="flex flex-col items-start gap-4 h-full">
+              <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
+                <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h16.5m0 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0h-9.5" />
+                </svg>
+              </div>
+              <span class="inline-flex rounded-full bg-g-mint-soft px-3 py-1 text-xs font-semibold text-g-green">إدارة المشاريع</span>
+              <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">
+                وداعًا لجداول الإكسل: كيف تدير مشاريعك كمستقل من مكان واحد
+              </h3>
+              <p class="font-normal text-base leading-[27.2px] text-g-body text-start flex-1">
+                عندما تتوزع المهام بين الجداول والمحادثات، تضيع الصورة الكاملة. هذا الدليل يوضح كيف تجمع التخطيط
+                والتنفيذ والربحية في مساحة واحدة.
+              </p>
+              <p class="text-g-muted text-sm text-start">فريق أزلينت · ١٣ أغسطس ٢٠٢٦ · ٦ دقائق قراءة</p>
+            </a>
+          </article>
+
+          <article
+            class="blog-card flex flex-col items-start gap-4 bg-white rounded-[16px] border border-g-border border-s-4 border-s-g-purple p-8 hover:-translate-y-1 hover:border-s-g-green hover:shadow-[0px_16px_32px_-8px_rgba(28,0,96,0.12)] transition-all duration-200">
+            <a href="#" title="قريبًا" class="flex flex-col items-start gap-4 h-full">
+              <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
+                <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5h16.5m-18 1.5v9m18-10.5v9.75c0 .621-.504 1.125-1.125 1.125H3.375A1.125 1.125 0 012.25 14.25V6m12.75 4.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <span class="inline-flex rounded-full bg-g-mint-soft px-3 py-1 text-xs font-semibold text-g-green">التحصيل</span>
+              <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">
+                ٥ خطوات لتحصيل مستحقاتك من عملائك دون تأخير
+              </h3>
+              <p class="font-normal text-base leading-[27.2px] text-g-body text-start flex-1">
+                التحصيل لا يبدأ بعد إرسال الفاتورة، بل من لحظة الاتفاق. خطوات عملية لتقليل التأخير باستخدام روابط الدفع
+                والتنبيهات والمتابعة الواضحة.
+              </p>
+              <p class="text-g-muted text-sm text-start">فريق أزلينت · ١٣ أغسطس ٢٠٢٦ · ٤ دقائق قراءة</p>
+            </a>
+          </article>
+
+          <article
+            class="blog-card flex flex-col items-start gap-4 bg-white rounded-[16px] border border-g-border border-s-4 border-s-g-purple p-8 hover:-translate-y-1 hover:border-s-g-green hover:shadow-[0px_16px_32px_-8px_rgba(28,0,96,0.12)] transition-all duration-200">
+            <a href="#" title="قريبًا" class="flex flex-col items-start gap-4 h-full">
+              <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
+                <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584m12.022-3.894A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477M15 6.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <span class="inline-flex rounded-full bg-g-mint-soft px-3 py-1 text-xs font-semibold text-g-green">إدارة العملاء</span>
+              <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">
+                كيف تنظّم علاقتك بعملائك دون فوضى؟ دليل CRM للمستقل العربي
+              </h3>
+              <p class="font-normal text-base leading-[27.2px] text-g-body text-start flex-1">
+                كل عميل يحمل تاريخًا من الرسائل والملاحظات والفرص. تعرّف كيف يحوّل CRM هذه التفاصيل إلى متابعة مرتبة
+                وعلاقات عمل أطول.
+              </p>
+              <p class="text-g-muted text-sm text-start">فريق أزلينت · ١٣ أغسطس ٢٠٢٦ · ٥ دقائق قراءة</p>
+            </a>
+          </article>
+
+          <article
+            class="blog-card flex flex-col items-start gap-4 bg-white rounded-[16px] border border-g-border border-s-4 border-s-g-purple p-8 hover:-translate-y-1 hover:border-s-g-green hover:shadow-[0px_16px_32px_-8px_rgba(28,0,96,0.12)] transition-all duration-200">
+            <a href="#" title="قريبًا" class="flex flex-col items-start gap-4 h-full">
+              <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
+                <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z" />
+                </svg>
+              </div>
+              <span class="inline-flex rounded-full bg-g-mint-soft px-3 py-1 text-xs font-semibold text-g-green">الفواتير</span>
+              <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">
+                من عرض السعر إلى التحصيل: رحلة الفاتورة في ٣ خطوات
+              </h3>
+              <p class="font-normal text-base leading-[27.2px] text-g-body text-start flex-1">
+                ابدأ بعرض سعر واضح، حوّله إلى فاتورة ذكية، ثم راقب المصاريف والتقارير حتى تعرف أين تقف أرباحك بالفعل.
+              </p>
+              <p class="text-g-muted text-sm text-start">فريق أزلينت · ١٣ أغسطس ٢٠٢٦ · ٤ دقائق قراءة</p>
+            </a>
+          </article>
+
         </div>
       </div>
+    </section>
 
-    </div>
   </main>
 
-
-  <!-- ════════════════════════════════════════
-      FOOTER
-  ════════════════════════════════════════ -->
+  <!-- Section: Footer -->
   <footer class="bg-g-light border-t border-g-border py-20 px-5">
     <div class="max-w-[1200px] mx-auto px-6 flex flex-col gap-16">
 
@@ -280,6 +319,7 @@
 
   <script src="./assets/js/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/blog.js"></script>
 
 </body>
 
