@@ -5,8 +5,8 @@
 
 $(document).ready(function () {
   const prices = {
-    monthly: { pro: "18", team: "29" },
-    yearly:  { pro: "14", team: "23" },
+    monthly: { pro: "12", team: "24" },
+    yearly:  { pro: "8.3", team: "16.7" },
   };
 
   $(".pricing-billing-toggle").on("click", function () {
@@ -110,7 +110,7 @@ $(document).ready(function () {
 
 // ============================================================
 // SECTION: How It Works - Sequential Step Reveal
-// Handles: scroll-triggered 1->2->3 activation with connector draw
+// Handles: scroll-triggered sequential activation with connector draw
 // ============================================================
 
 $(document).ready(function () {
@@ -141,34 +141,22 @@ $(document).ready(function () {
     var LINE_DRAW_MS = 700;   // matches .step-connector-fill transition duration
     var t = 0;
 
-    // Step 1 rises immediately
-    window.setTimeout(function () {
-      $stepsTrack.find('[data-step="1"]').addClass('is-active');
-    }, t);
-    t += STEP_RISE_MS;
+    $stepItems.each(function (index) {
+      var step = this;
+      var connector = $connectorFills.get(index);
 
-    // Connector 1→2 draws right after step 1 has risen
-    window.setTimeout(function () {
-      $connectorFills.eq(0).addClass('is-filled');
-    }, t);
-    t += LINE_DRAW_MS;
+      window.setTimeout(function () {
+        $(step).addClass('is-active');
+      }, t);
+      t += STEP_RISE_MS;
 
-    // Step 2 rises once the line reaches it
-    window.setTimeout(function () {
-      $stepsTrack.find('[data-step="2"]').addClass('is-active');
-    }, t);
-    t += STEP_RISE_MS;
-
-    // Connector 2→3 draws right after step 2 has risen
-    window.setTimeout(function () {
-      $connectorFills.eq(1).addClass('is-filled');
-    }, t);
-    t += LINE_DRAW_MS;
-
-    // Step 3 rises once the line reaches it
-    window.setTimeout(function () {
-      $stepsTrack.find('[data-step="3"]').addClass('is-active');
-    }, t);
+      if (connector) {
+        window.setTimeout(function () {
+          $(connector).addClass('is-filled');
+        }, t);
+        t += LINE_DRAW_MS;
+      }
+    });
   }
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -211,6 +199,7 @@ $(document).ready(function () {
 
   // Stagger each grid of cards
   var gridSelectors = [
+    '.problem-solution-row',
     '.bg-g-light2 .grid > div',
     '#features .grid > div',
     '.bg-g-light .grid.grid-cols-1.md\\:grid-cols-3 > div'

@@ -111,19 +111,22 @@
     <section class="relative bg-white overflow-hidden pt-40 pb-24 min-h-[92vh] flex items-center">
 
       <!-- Radial glow backdrop -->
-      <div class="absolute top-0 inset-x-0 h-[600px] pointer-events-none" style="background: radial-gradient(60% 50% at 50% 0%, rgba(20,198,152,0.14) 0%, rgba(50,14,142,0.08) 45%, rgba(255,255,255,0) 80%);"></div>
+      <div class="absolute top-0 inset-x-0 h-[600px] pointer-events-none bg-[radial-gradient(60%_50%_at_50%_0%,rgba(20,198,152,0.14)_0%,rgba(50,14,142,0.08)_45%,rgba(255,255,255,0)_80%)]"></div>
       <div class="absolute inset-0 pointer-events-none [background-image:radial-gradient(circle,rgba(0,0,0,0.035)_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
 
       <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center gap-8">
 
-        <span class="relative inline-flex items-center gap-2 bg-white border border-g-border shadow-sm rounded-full px-4 py-2 text-sm font-semibold text-g-body">
+        <span class="relative inline-flex items-center justify-center gap-2 bg-white border border-g-border shadow-sm rounded-full px-4 py-2 text-sm font-semibold text-g-body max-w-full">
           <span class="absolute inset-0 rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] opacity-20 animate-pulse"></span>
-          <span class="relative flex -space-x-1.5 rtl:space-x-reverse">
-            <span class="w-5 h-5 rounded-full bg-g-accent border border-white"></span>
-            <span class="w-5 h-5 rounded-full bg-g-lime border border-white"></span>
-            <span class="w-5 h-5 rounded-full bg-g-blue border border-white"></span>
+          <span class="relative flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
+            <span>تجربة مجانية</span>
+            <span class="text-g-green">|</span>
+            <span>لا حاجة لبطاقة ائتمان</span>
+            <span class="text-g-green">|</span>
+            <span>جاهز للعمل فورًا</span>
+            <span class="text-g-green">|</span>
+            <span>شامل لجميع التطبيقات</span>
           </span>
-          <span class="relative">يثق بها أكثر من 50,000 مستقل عربي</span>
         </span>
 
         <!-- Headline stage: feature tags float around the bold text -->
@@ -159,13 +162,16 @@
           </span>
         </div>
 
-        <p class="text-g-body text-lg leading-[1.7] max-w-[560px]">
-          أزلينت منصة متكاملة للمستقلين العرب، تجمع مشاريعك، عملائك، فواتيرك، واستلام مستحقاتك بمكان واحد، لتمنحك تجربة عمل احترافية وسلسة خالية من التعقيد
-        </p>
+        <div class="flex max-w-[680px] flex-col items-center gap-2">
+          <p class="text-g-body text-lg leading-[1.7]">
+            أزلينت منصة متكاملة للمستقلين وأصحاب الخدمات، تجمع عملاءك، مشاريعك، عروض أسعارك، فواتيرك، مستحقاتك ومصاريفك في مساحة عمل واحدة.
+          </p>
+          <p class="text-sm font-semibold text-g-green">من أول عميل… إلى آخر دفعة.</p>
+        </div>
 
         <div class="flex items-center gap-4 pt-2 flex-wrap justify-center">
           <a href="#" class="inline-flex items-center justify-center bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)] text-white font-semibold text-lg rounded-[12px] py-4 px-9 shadow-[0px_15px_30px_-8px_rgba(20,198,152,0.4)] hover:opacity-90 transition-opacity">
-            ابدأ تجربتك المجانية
+            ابدأ الآن تجربتك المجانية
           </a>
           <a href="#" class="inline-flex items-center gap-2 text-g-dark font-semibold text-lg py-4 px-2 hover:opacity-70 transition-opacity">
             <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="none">
@@ -224,6 +230,161 @@
 
 
     <!-- ════════════════════════════════════════
+         Section: Problem Solution
+    ════════════════════════════════════════ -->
+    <section class="bg-white py-24 px-5 sm:px-10">
+      <div class="max-w-[1120px] mx-auto flex flex-col gap-14">
+
+        <div class="mx-auto flex max-w-[760px] flex-col items-center gap-4 text-center">
+          <h2 class="font-semibold text-[34px] leading-[1.35] text-g-navy sm:text-[42px]">
+            مشاكل يومية. وحلول في مكان واحد
+          </h2>
+          <div class="h-1 w-24 rounded-full bg-g-green"></div>
+          <p class="text-base leading-[1.8] text-g-body sm:text-lg">
+            أزلينت تقلل التشتت وتربط تفاصيل عملك في مساحة واحدة.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+
+          <article class="problem-solution-row grid gap-4 rounded-[16px] border border-g-border bg-g-light p-4 shadow-[0_12px_32px_-24px_rgba(0,36,82,0.35)] transition-all duration-200 hover:border-g-green/40 hover:shadow-[0_20px_44px_-28px_rgba(21,122,112,0.35)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.1fr)] md:items-stretch">
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-border bg-white p-5">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-g-muted/45"></span>
+              <p class="text-start text-base leading-[1.8] text-g-muted">بيانات عملائك مشتتة بين واتساب، البريد والملفات.</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="grid size-11 place-items-center rounded-full bg-white text-g-green shadow-[0_10px_24px_-14px_rgba(21,122,112,0.75)]">
+                <svg class="size-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-green/20 bg-g-mint-soft p-5">
+              <span class="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-g-green text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-start text-base font-semibold leading-[1.8] text-g-green">كل عميل في مكان واحد — بياناته، تواصله، مشاريعه وفواتيره.</p>
+            </div>
+          </article>
+
+          <article class="problem-solution-row grid gap-4 rounded-[16px] border border-g-border bg-g-light p-4 shadow-[0_12px_32px_-24px_rgba(0,36,82,0.35)] transition-all duration-200 hover:border-g-green/40 hover:shadow-[0_20px_44px_-28px_rgba(21,122,112,0.35)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.1fr)] md:items-stretch">
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-border bg-white p-5">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-g-muted/45"></span>
+              <p class="text-start text-base leading-[1.8] text-g-muted">مشاريعك ومهامك متداخلة ويصعب معرفة ما تم وما تبقى</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="grid size-11 place-items-center rounded-full bg-white text-g-green shadow-[0_10px_24px_-14px_rgba(21,122,112,0.75)]">
+                <svg class="size-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-green/20 bg-g-mint-soft p-5">
+              <span class="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-g-green text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-start text-base font-semibold leading-[1.8] text-g-green">نظّم مشاريعك بوضوح — مهام، مواعيد ومتابعة للإنجاز في مكان واحد.</p>
+            </div>
+          </article>
+
+          <article class="problem-solution-row grid gap-4 rounded-[16px] border border-g-border bg-g-light p-4 shadow-[0_12px_32px_-24px_rgba(0,36,82,0.35)] transition-all duration-200 hover:border-g-green/40 hover:shadow-[0_20px_44px_-28px_rgba(21,122,112,0.35)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.1fr)] md:items-stretch">
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-border bg-white p-5">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-g-muted/45"></span>
+              <p class="text-start text-base leading-[1.8] text-g-muted">إنشاء عروض الأسعار ومتابعتها يستغرق وقتًا.</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="grid size-11 place-items-center rounded-full bg-white text-g-green shadow-[0_10px_24px_-14px_rgba(21,122,112,0.75)]">
+                <svg class="size-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-green/20 bg-g-mint-soft p-5">
+              <span class="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-g-green text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-start text-base font-semibold leading-[1.8] text-g-green">أنشئ عرضك بسرعة وتابع الموافقة وحوّله إلى مشروع دون إعادة إدخال البيانات.</p>
+            </div>
+          </article>
+
+          <article class="problem-solution-row grid gap-4 rounded-[16px] border border-g-border bg-g-light p-4 shadow-[0_12px_32px_-24px_rgba(0,36,82,0.35)] transition-all duration-200 hover:border-g-green/40 hover:shadow-[0_20px_44px_-28px_rgba(21,122,112,0.35)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.1fr)] md:items-stretch">
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-border bg-white p-5">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-g-muted/45"></span>
+              <p class="text-start text-base leading-[1.8] text-g-muted">أنجزت العمل، لكن تحصيل مستحقاتك يأخذ وقتًا.</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="grid size-11 place-items-center rounded-full bg-white text-g-green shadow-[0_10px_24px_-14px_rgba(21,122,112,0.75)]">
+                <svg class="size-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-green/20 bg-g-mint-soft p-5">
+              <span class="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-g-green text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-start text-base font-semibold leading-[1.8] text-g-green">من الفاتورة إلى الدفع — أرسل الفاتورة واستقبل مستحقاتك عبر بوابة الدفع.</p>
+            </div>
+          </article>
+
+          <article class="problem-solution-row grid gap-4 rounded-[16px] border border-g-border bg-g-light p-4 shadow-[0_12px_32px_-24px_rgba(0,36,82,0.35)] transition-all duration-200 hover:border-g-green/40 hover:shadow-[0_20px_44px_-28px_rgba(21,122,112,0.35)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.1fr)] md:items-stretch">
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-border bg-white p-5">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-g-muted/45"></span>
+              <p class="text-start text-base leading-[1.8] text-g-muted">تعرف إيراداتك، لكن لا تعرف ربحك الحقيقي.</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="grid size-11 place-items-center rounded-full bg-white text-g-green shadow-[0_10px_24px_-14px_rgba(21,122,112,0.75)]">
+                <svg class="size-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-green/20 bg-g-mint-soft p-5">
+              <span class="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-g-green text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-start text-base font-semibold leading-[1.8] text-g-green">افهم أموالك بوضوح — تابع الإيرادات والمصاريف وصافي الربح.</p>
+            </div>
+          </article>
+
+          <article class="problem-solution-row grid gap-4 rounded-[16px] border border-g-border bg-g-light p-4 shadow-[0_12px_32px_-24px_rgba(0,36,82,0.35)] transition-all duration-200 hover:border-g-green/40 hover:shadow-[0_20px_44px_-28px_rgba(21,122,112,0.35)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.1fr)] md:items-stretch">
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-border bg-white p-5">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-g-muted/45"></span>
+              <p class="text-start text-base leading-[1.8] text-g-muted">لا تملك رؤية واضحة لأفضل عملائك ومشاريعك</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="grid size-11 place-items-center rounded-full bg-white text-g-green shadow-[0_10px_24px_-14px_rgba(21,122,112,0.75)]">
+                <svg class="size-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="flex items-start gap-3 rounded-[12px] border border-g-green/20 bg-g-mint-soft p-5">
+              <span class="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-g-green text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-start text-base font-semibold leading-[1.8] text-g-green">أزلينت تمنحك لوحة تحكم وتقارير واضحة لأداء عملك وأرباحك من نظرة واحدة.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
          Section: Pain Points
     ════════════════════════════════════════ -->
     <section class="bg-white py-24 px-10">
@@ -237,6 +398,9 @@
           </h2>
           <!-- Accent bar: 96×4px bg #006C51 rounded-full (layout_78WZGM) -->
           <div class="w-24 h-1 bg-g-green rounded-full"></div>
+          <p class="max-w-[720px] text-start text-base leading-[1.8] text-g-body">
+            أزلينت تساعدك على إدارة دورة عملك كاملة دون التنقل بين أدوات متعددة أو ملفات متفرقة.
+          </p>
         </div>
 
         <!--
@@ -247,42 +411,10 @@
         -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          <!-- Card 1: تتبع الأرباح -->
+          <!-- Card 1: العملاء -->
           <div
             class="flex flex-col items-start gap-3 p-8 bg-white rounded-[16px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
             <!-- Icon overlay: rgba(99,248,199,0.3) w-12 h-12 rounded-[8px] -->
-            <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
-              <!-- Chart icon -->
-              <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-              </svg>
-            </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">أرباحك في مكان واحد</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              اطلع على مسار أموالك بلمحة سريعة وبدون تعقيدات جداول الإكسل.
-            </p>
-          </div>
-
-          <!-- Card 2: وفّر وقتك وجهدك -->
-          <div
-            class="flex flex-col items-start gap-3 p-8 bg-white rounded-[16px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
-            <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
-              <svg class="w-5 h-[25px] text-g-green" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">وفّر وقتك وجهدك</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              ارتَح من المهام المكررة؛ فواتيرك الدورية ومتابعة عملائك تتم الآن تلقائياً.
-            </p>
-          </div>
-
-          <!-- Card 3: عملاؤك تحت السيطرة -->
-          <div
-            class="flex flex-col items-start gap-3 p-8 bg-white rounded-[16px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
             <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
               <svg class="w-[26px] h-[22px] text-g-green" fill="none" stroke="currentColor" stroke-width="2"
                 viewBox="0 0 24 24">
@@ -290,13 +422,28 @@
                   d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
               </svg>
             </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">عملاؤك تحت السيطرة</h3>
+            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">العملاء</h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              اجمع بيانات عملائك، عقودهم، ومدفوعاتهم في مساحة واحدة دون تشتت.
+              اعرف مع من تعمل وما الذي يجري معه.
             </p>
           </div>
 
-          <!-- Card 4: نظّم سيولتك المالية -->
+          <!-- Card 2: المشاريع -->
+          <div
+            class="flex flex-col items-start gap-3 p-8 bg-white rounded-[16px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+            <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
+              <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">المشاريع</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
+              حوّل الاتفاقات إلى مشاريع واضحة وتابع تنفيذها.
+            </p>
+          </div>
+
+          <!-- Card 3: المال -->
           <div
             class="flex flex-col items-start gap-3 p-8 bg-white rounded-[16px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
             <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
@@ -306,9 +453,24 @@
                   d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
               </svg>
             </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">نظّم سيولتك المالية</h3>
+            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">المال</h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              خطط لأعمالك بثقة، وشاهد سيولتك القادمة بكل وضوح وأمان.
+              اعرف ما لك، وما عليك، وما الذي حققته فعليًا.
+            </p>
+          </div>
+
+          <!-- Card 4: التحصيل -->
+          <div
+            class="flex flex-col items-start gap-3 p-8 bg-white rounded-[16px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+            <div class="flex items-center justify-center w-12 h-12 rounded-[8px] bg-[rgba(99,248,199,0.3)]">
+              <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818.879.659c1.171.879 3.071.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full">التحصيل</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
+              حوّل إنجازك إلى فاتورة، وتابع مستحقاتك حتى يتم الدفع.
             </p>
           </div>
 
@@ -327,7 +489,7 @@
         <!-- alignItems:flex-end in Figma LTR = physical RIGHT = items-start in RTL -->
         <div class="flex flex-col items-start gap-4 w-full">
           <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-start">
-            ميزات صُممت لتبسيط عملك
+            كل أدوات عملك. مترابطة في مكان واحد.
           </h2>
           <div class="w-24 h-1 bg-g-green rounded-full"></div>
         </div>
@@ -359,10 +521,10 @@
             </svg>
             <h3
               class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full pt-[9px] transition-colors duration-200 group-hover:text-g-green">
-              إدارة علاقات العملاء (CRM)
+              إدارة العملاء (CRM)
             </h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              نظّم بيانات عملائك وتواصل معهم في مكان واحد آمن.
+              كل بيانات العملاء، التواصل، الملاحظات، والمتابعة في مكان واحد.
             </p>
           </div>
 
@@ -384,7 +546,7 @@
               إدارة المشاريع
             </h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              تابع سير مشاريعك وجدول مهامك بكل سهولة ووضوح.
+              تنظيم المشاريع، المهام، المواعيد، الفريق، ومتابعة الإنجاز.
             </p>
           </div>
 
@@ -406,7 +568,7 @@
               عروض الأسعار
             </h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              أنشئ عروض أسعار احترافية وحوّلها لفواتير بنقرة واحدة.
+              إنشاء عروض احترافية، إرسالها للعميل، ومتابعة حالتها وتحويلها إلى مشروع.
             </p>
           </div>
 
@@ -425,10 +587,10 @@
             </svg>
             <h3
               class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full pt-[9px] transition-colors duration-200 group-hover:text-g-green">
-              الفواتير الذكية
+              الفواتير والتحصيل
             </h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              أصدر فواتير متكاملة تدعم ضريبة القيمة المضافة ورمز الاستجابة السريع.
+              إصدار الفواتير، إرسالها، متابعة حالتها، وتسهيل استلام المستحقات.
             </p>
           </div>
 
@@ -447,10 +609,10 @@
             </svg>
             <h3
               class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full pt-[9px] transition-colors duration-200 group-hover:text-g-green">
-              استلام المستحقات
+              المصاريف والأموال
             </h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              سهّل على عملائك الدفع واضمن تحصيل أموالك بسرعة وأمان.
+              تسجيل المصروفات، متابعة الإيرادات، معرفة صافي الربح، وتنظيم التدفق المالي.
             </p>
           </div>
 
@@ -469,10 +631,10 @@
             </svg>
             <h3
               class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-start w-full pt-[9px] transition-colors duration-200 group-hover:text-g-green">
-              تتبع المصاريف والتقارير
+              التقارير والرؤية المالية
             </h3>
             <p class="font-normal text-base leading-[27.2px] text-g-body text-start">
-              وثّق نفقاتك واطلع على تقارير دورية تلخص أداء عملك المالي.
+              تحويل بيانات عملك إلى مؤشرات واضحة تساعدك على فهم الأداء واتخاذ قرارات أفضل.
             </p>
           </div>
 
@@ -488,60 +650,109 @@
       <div class="max-w-[1200px] mx-auto flex flex-col gap-20">
 
         <!-- Heading centered: SemiBold 42px -->
-        <h2 class="font-semibold text-[42px] leading-[54.6px] text-g-navy text-center w-full">
-          ابدأ مشاريعك في 3 خطوات بسيطة
+        <h2 class="font-semibold text-[34px] leading-[1.35] text-g-navy text-center w-full sm:text-[42px]">
+          ابدأ من العميل. … . إلى استلام مستحقاتك
         </h2>
 
         <!--
-          3 steps: DOM order step1 → step2 → step3 (step1 rightmost in RTL, step3 leftmost)
-          Sequential reveal on scroll (home.js #steps-animation): step1 active on load,
-          each connector segment draws then activates the next circle.
-          Mobile: stacked vertically, connector becomes a vertical growing line.
+          6-step journey: mobile stacks vertically; desktop forms two rows of three.
+          The same .step-item / .step-connector-fill hooks drive the sequential reveal.
         -->
-        <div id="steps-track" class="relative flex flex-col md:flex-row items-start justify-between gap-0 md:gap-0">
+        <div id="steps-track" class="relative grid grid-cols-1 justify-items-center gap-0 md:grid-cols-[minmax(0,1fr)_minmax(48px,96px)_minmax(0,1fr)_minmax(48px,96px)_minmax(0,1fr)] md:gap-y-10">
 
-          <!-- Step 1: أنشئ حسابك -->
-          <div class="step-item relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10" data-step="1">
-            <div class="step-circle flex items-center justify-center w-24 h-24 rounded-full border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500">
-              <span class="step-number font-bold text-[42px] leading-[54.6px] transition-colors duration-500">1</span>
+          <!-- Step 1: عميل جديد -->
+          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-1 md:row-start-1" data-step="1">
+            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
+              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">01</span>
             </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-center">أنشئ حسابك</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[320px]">
-              سجّل مجاناً خلال أقل من دقيقة لتجهيز مساحة العمل الرقمية الخاصة بك.
+            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">عميل جديد</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
+              سجّل العميل وبياناته واحتياجاته.
             </p>
           </div>
 
           <!-- Connector 1→2 -->
-          <div class="step-connector relative shrink-0 md:self-start md:mt-[60px] h-10 w-1 md:h-0.5 md:w-full md:max-w-[180px] md:mx-2">
-            <div class="absolute inset-0 w-1 h-full md:w-full md:h-0.5 bg-g-border mx-auto md:mx-0"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 md:inset-x-auto md:top-0 md:start-0 w-1 h-0 md:h-full md:w-0 bg-g-green transition-[height,width] duration-700 ease-out mx-auto md:mx-0"></div>
+          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-2 md:row-start-1 md:mt-10 md:h-0.5 md:w-full md:self-start">
+            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:start-0 md:mx-0 md:h-full md:w-0"></div>
           </div>
 
-          <!-- Step 2: أنشئ مشروعك -->
-          <div class="step-item relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10" data-step="2">
-            <div class="step-circle flex items-center justify-center w-24 h-24 rounded-full bg-white border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500">
-              <span class="step-number font-bold text-[42px] leading-[54.6px] text-g-green transition-colors duration-500">2</span>
+          <!-- Step 2: عرض سعر -->
+          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-3 md:row-start-1" data-step="2">
+            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
+              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">02</span>
             </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-center">أنشئ مشروعك</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[320px]">
-              نظّم مهامك، وزّع الأدوار على فريق عملك بوضوح، وابدأ التنفيذ فوراً.
+            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">عرض سعر</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
+              حوّل احتياج العميل إلى عرض واضح، وأرسله للموافقة.
             </p>
           </div>
 
           <!-- Connector 2→3 -->
-          <div class="step-connector relative shrink-0 md:self-start md:mt-[60px] h-10 w-1 md:h-0.5 md:w-full md:max-w-[180px] md:mx-2">
-            <div class="absolute inset-0 w-1 h-full md:w-full md:h-0.5 bg-g-border mx-auto md:mx-0"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 md:inset-x-auto md:top-0 md:start-0 w-1 h-0 md:h-full md:w-0 bg-g-green transition-[height,width] duration-700 ease-out mx-auto md:mx-0"></div>
+          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-4 md:row-start-1 md:mt-10 md:h-0.5 md:w-full md:self-start">
+            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:start-0 md:mx-0 md:h-full md:w-0"></div>
           </div>
 
-          <!-- Step 3: استلم مستحقاتك -->
-          <div class="step-item relative flex flex-col items-center gap-[11px] w-full md:w-auto z-10" data-step="3">
-            <div class="step-circle flex items-center justify-center w-24 h-24 rounded-full bg-white border-[4px] border-g-light shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500">
-              <span class="step-number font-bold text-[42px] leading-[54.6px] text-g-green transition-colors duration-500">3</span>
+          <!-- Step 3: مشروع -->
+          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-5 md:row-start-1" data-step="3">
+            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
+              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">03</span>
             </div>
-            <h3 class="font-semibold text-[24px] leading-[33.6px] text-g-purple text-center">استلم مستحقاتك</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[320px]">
-              حوّل منجزات المشروع إلى فاتورة ذكية، وحصّل أموالك بأمان ودون أي تأخير.
+            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">مشروع</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
+              بعد الموافقة، حوّل العرض إلى مشروع وابدأ التنفيذ.
+            </p>
+          </div>
+
+          <!-- Connector 3→4 -->
+          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-5 md:row-start-2 md:h-12 md:w-1">
+            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:[&.is-filled]:!h-full md:[&.is-filled]:!w-1"></div>
+          </div>
+
+          <!-- Step 4: فاتورة -->
+          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-5 md:row-start-3" data-step="4">
+            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
+              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">04</span>
+            </div>
+            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">فاتورة</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
+              أنشئ الفاتورة دون إعادة إدخال البيانات.
+            </p>
+          </div>
+
+          <!-- Connector 4→5 -->
+          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-4 md:row-start-3 md:mt-10 md:h-0.5 md:w-full md:self-start">
+            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:end-0 md:mx-0 md:h-full md:w-0"></div>
+          </div>
+
+          <!-- Step 5: تحصيل -->
+          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-3 md:row-start-3" data-step="5">
+            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
+              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">05</span>
+            </div>
+            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">تحصيل</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
+              أرسلها للعميل وتابع حالة الدفع.
+            </p>
+          </div>
+
+          <!-- Connector 5→6 -->
+          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-2 md:row-start-3 md:mt-10 md:h-0.5 md:w-full md:self-start">
+            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
+            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:end-0 md:mx-0 md:h-full md:w-0"></div>
+          </div>
+
+          <!-- Step 6: أرباح -->
+          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-1 md:row-start-3" data-step="6">
+            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
+              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">06</span>
+            </div>
+            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">أرباح</h3>
+            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
+              اعرف الإيرادات والمصاريف وصافي ربحك.
             </p>
           </div>
 
@@ -669,7 +880,7 @@
               سنوي
               <span
                 class="pricing-save-badge rounded-full bg-white/25 px-2.5 py-0.5 text-[11px] font-bold text-white">وفّر
-                20%</span>
+                31%</span>
             </button>
           </div>
         </div>
@@ -725,9 +936,10 @@
               <span
                 class="inline-flex rounded-full bg-g-green/10 px-3 py-1 text-xs font-semibold text-g-green">الإحترافية</span>
               <div class="mt-4 flex items-end gap-2">
-                <span data-plan="pro" class="pricing-price text-[44px] font-bold leading-none text-g-green">18</span>
+                <span data-plan="pro" class="pricing-price text-[44px] font-bold leading-none text-g-green">12</span>
                 <span class="mb-1 text-sm text-g-muted">$ / شهرياً</span>
               </div>
+              <p class="mt-2 text-sm font-semibold text-g-green">إجمالي سنوي: $100</p>
             </div>
             <ul class="mt-6 flex flex-col gap-3.5 text-base text-g-dark">
               <li class="flex items-center gap-3">
@@ -768,9 +980,10 @@
               <span
                 class="inline-flex rounded-full bg-g-purple/10 px-3 py-1 text-xs font-semibold text-g-purple">الفريق</span>
               <div class="mt-4 flex items-end gap-2">
-                <span data-plan="team" class="pricing-price text-[44px] font-bold leading-none text-g-purple">29</span>
+                <span data-plan="team" class="pricing-price text-[44px] font-bold leading-none text-g-purple">24</span>
                 <span class="mb-1 text-sm text-g-muted">$ / شهرياً</span>
               </div>
+              <p class="mt-2 text-sm font-semibold text-g-purple">إجمالي سنوي: $200</p>
             </div>
             <ul class="mt-6 flex flex-col gap-3.5 text-base text-g-dark">
               <li class="flex items-center gap-3">
@@ -816,7 +1029,7 @@
               class="pricing-faq-item rounded-2xl border-2 border-g-navy bg-white p-6 transition-all duration-200 hover:shadow-md"
               data-faq-open="true">
               <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
-                <span class="text-start text-base font-bold text-g-navy">لمن صُممت منصة أزلينت بالضبط؟</span>
+                <span class="text-start text-base font-bold text-g-navy">هل أزلينت مناسبة للمستقلين فقط؟</span>
                 <span
                   class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-navy/10 transition-all duration-200">
                   <svg class="pricing-faq-icon-minus size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
@@ -830,8 +1043,7 @@
                 </span>
               </button>
               <div class="pricing-faq-answer mt-4 text-sm leading-7 text-g-body">
-                صُممت خصيصاً للمستقلين، أصحاب المشاريع، ومزودي الخدمات في العالم العربي، لتمنحهم مساحة عمل رقمية
-                متكاملة وسلسة.
+                صُممت أزلينت أساسًا للمستقلين وأصحاب الخدمات، لكنها مناسبة أيضًا للوكالات الصغيرة والمدربين والاستشاريين وغيرهم ممن يديرون أعمالهم من خلال العملاء والمشاريع.
               </div>
             </article>
 
@@ -839,7 +1051,7 @@
               class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
               data-faq-open="false">
               <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
-                <span class="text-start text-base font-bold text-g-navy">هل يمكنني العمل مع فريق عملي وتوزيع المهام بيننا؟</span>
+                <span class="text-start text-base font-bold text-g-navy">هل يمكنني استلام مستحقاتي من العملاء عبر أزلينت؟</span>
                 <span
                   class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
                   <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
@@ -853,8 +1065,29 @@
                 </span>
               </button>
               <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
-                بكل تأكيد؛ تتيح لك أزلينت ربط مشاريعك بفريقك، توزيع المهام بوضوح، ومتابعة نسب الإنجاز لحظة بلحظة
-                وبكل سلاسة.
+                نعم، تتيح لك أزلينت إرسال فواتيرك للعملاء وتمكينهم من سداد مستحقاتهم عبر بوابة الدفع، مع إمكانية متابعة حالة الفواتير والمدفوعات من مكان واحد.
+              </div>
+            </article>
+
+            <article
+              class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
+              data-faq-open="false">
+              <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
+                <span class="text-start text-base font-bold text-g-navy">هل يمكنني تحويل عرض السعر إلى مشروع؟</span>
+                <span
+                  class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
+                  <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <svg class="pricing-faq-icon-plus size-[14px] text-g-muted" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </button>
+              <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
+                نعم، عند قبول عرض السعر يمكنك استخدام بياناته لبدء المشروع بدل إعادة إدخال المعلومات من البداية.
               </div>
             </article>
 
@@ -867,7 +1100,7 @@
               class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
               data-faq-open="false">
               <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
-                <span class="text-start text-base font-bold text-g-navy">هل يمكنني تجربة أزلينت مجاناً؟</span>
+                <span class="text-start text-base font-bold text-g-navy">هل توجد تجربة مجانية؟</span>
                 <span
                   class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
                   <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
@@ -881,7 +1114,7 @@
                 </span>
               </button>
               <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
-                نعم، نوفر فترة تجريبية مجانية بالكامل لتستكشف واجهة المنصة وتجرب كل الأدوات بنفسك ودون أي التزام.
+                نعم، يمكنك تجربة أزلينت مجانًا خلال الفترة التجريبية المتاحة قبل اختيار خطة الاشتراك المناسبة لك.
               </div>
             </article>
 
@@ -889,8 +1122,7 @@
               class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
               data-faq-open="false">
               <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
-                <span class="text-start text-base font-bold text-g-navy">ما مدى أمان بياناتي وبيانات عملائي على
-                  منصة أزلينت؟</span>
+                <span class="text-start text-base font-bold text-g-navy">هل يمكنني إلغاء الاشتراك؟</span>
                 <span
                   class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
                   <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
@@ -904,8 +1136,7 @@
                 </span>
               </button>
               <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
-                الأمان هو أولويتنا؛ نستخدم خوادم سحابية محمية بأعلى تقنيات التشفير العالمية لضمان سرية وحفظ كافة
-                معلوماتك ومشاريعك بنسبة 100%.
+                يمكنك إدارة اشتراكك وفق شروط الخطة وسياسة الاشتراك المعتمدة في أزلينت.
               </div>
             </article>
 
