@@ -1,30 +1,28 @@
-﻿// ============================================================
-// SECTION: Steps Preview Reveal
-// Handles: independent sequential reveals for internal concepts
+// steps.js
+// ============================================================
+// SECTION: Steps Preview Page — Sequential Reveal
+// Handles: independent scroll-triggered reveal per concept track
 // ============================================================
 
 $(document).ready(function () {
-  var trackSelectors = ['#steps-track-1', '#steps-track-2', '#steps-track-3'];
+  var trackIds = ['#steps-track-1', '#steps-track-2', '#steps-track-3'];
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var itemSelector = '.card-step, .rail-stop, .ring-step';
+  var connectorSelector = '.row-arrow-fill, .col-connector-fill, .rail-fill, .rail-fill-v, .ring-row-connector';
 
   function getSequence($track) {
     return $track
-      .find('.steps-preview-item, .steps-preview-line-fill, .steps-preview-path-fill')
+      .find(itemSelector + ', ' + connectorSelector)
       .get()
       .sort(function (a, b) {
-        return Number($(a).data('sequence')) - Number($(b).data('sequence'));
+        return parseFloat($(a).data('sequence')) - parseFloat($(b).data('sequence'));
       });
   }
 
   function revealNode(node) {
     var $node = $(node);
-
-    if ($node.hasClass('steps-preview-item')) {
-      $node.addClass('is-active');
-      return;
-    }
-
-    $node.addClass('is-filled');
+    $node.addClass($node.is(itemSelector) ? 'is-active' : 'is-filled');
   }
 
   function revealAll($track) {
@@ -40,22 +38,19 @@ $(document).ready(function () {
       return;
     }
 
-    var STEP_RISE_MS = 500;
-    var LINE_DRAW_MS = 700;
+    var STEP_MS = 180;
     var t = 0;
 
     getSequence($track).forEach(function (node) {
       window.setTimeout(function () {
         revealNode(node);
       }, t);
-
-      t += $(node).hasClass('steps-preview-item') ? STEP_RISE_MS : LINE_DRAW_MS;
+      t += STEP_MS;
     });
   }
 
-  trackSelectors.forEach(function (selector) {
-    var $track = $(selector);
-
+  trackIds.forEach(function (id) {
+    var $track = $(id);
     if (!$track.length) return;
 
     if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -70,7 +65,7 @@ $(document).ready(function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.24, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
 
     observer.observe($track[0]);
   });

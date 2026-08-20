@@ -117,66 +117,107 @@
 button {
   cursor: pointer;
 }
-/* -- Steps Preview Page Reveal -------------------------------- */
-.steps-preview-item {
+/* -- Steps Preview Page (steps.html) — Reveal Animations ------ */
+
+/* Concept 1 & 3 shared: card / ring rise-in */
+.card-step,
+.ring-step {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(24px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.steps-preview-item.is-active {
+.card-step.is-active,
+.ring-step.is-active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.steps-preview-line-fill {
-  transform: scaleY(0);
-  transform-origin: center top;
-  transition: transform 0.7s ease;
-}
-
-.steps-preview-line-fill.is-filled {
-  transform: scaleY(1);
-}
-
-.steps-preview-path-fill {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  transition: stroke-dashoffset 0.7s ease;
-}
-
-.steps-preview-path-fill.is-filled {
-  stroke-dashoffset: 0;
-}
-
-.circle-v2-ring {
+/* Concept 1: row arrow pill fill + mobile column connector */
+.row-arrow-fill {
   opacity: 0;
-  transform: scale(0.92);
+  transform: scale(0.5);
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.circle-v2-step:hover .circle-v2-ring,
-.circle-v2-step.is-active .circle-v2-ring {
+.row-arrow-fill.is-filled {
   opacity: 1;
-  transform: scale(1.08);
+  transform: scale(1);
 }
 
-@media (min-width: 48rem) {
-  .steps-preview-line-fill {
-    transform: scaleX(0);
-    transform-origin: center;
-  }
+.col-connector-fill {
+  height: 0;
+  transition: height 0.5s ease;
+}
 
-  .steps-preview-line-fill.is-filled {
-    transform: scaleX(1);
-  }
+.col-connector-fill.is-filled {
+  height: 100%;
+}
+
+/* Concept 2: process rail fill (horizontal + vertical) */
+.rail-stop {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.rail-stop.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rail-fill {
+  width: 0;
+  transition: width 1.1s ease;
+}
+
+.rail-fill.is-filled {
+  width: 100%;
+}
+
+.rail-fill-v {
+  height: 0;
+  transition: height 1.1s ease;
+}
+
+.rail-fill-v.is-filled {
+  height: 100%;
+}
+
+/* Concept 3: row-wrap chevron connector */
+.ring-row-connector {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ring-row-connector.is-filled {
+  opacity: 1;
+}
+
+/* Concept 3: conic-gradient hover/active halo ring */
+.ring-glow {
+  opacity: 0;
+  filter: blur(6px);
+  transform: scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.ring-step:hover .ring-glow,
+.ring-step.is-active .ring-glow {
+  opacity: 0.55;
+  transform: scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .steps-preview-item,
-  .steps-preview-line-fill,
-  .steps-preview-path-fill,
-  .circle-v2-ring {
+  .card-step,
+  .ring-step,
+  .row-arrow-fill,
+  .col-connector-fill,
+  .ring-row-connector,
+  .rail-stop,
+  .rail-fill,
+  .rail-fill-v,
+  .ring-glow {
     transition-duration: 0ms !important;
   }
 }
