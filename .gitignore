@@ -4,3 +4,7 @@ package-lock.json
 
 /files
 hero.html
+
+.gitignore
+steps copy.html
+steps.html

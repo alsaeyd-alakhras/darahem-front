@@ -109,8 +109,8 @@ $(document).ready(function () {
 
 
 // ============================================================
-// SECTION: How It Works - Sequential Step Reveal
-// Handles: scroll-triggered sequential activation with connector draw
+// SECTION: How It Works - Process Rail Sequential Reveal
+// Handles: scroll-triggered sequential stop reveal with rail fill draw
 // ============================================================
 
 $(document).ready(function () {
@@ -119,13 +119,15 @@ $(document).ready(function () {
   if (!$stepsTrack.length) return;
 
   var hasPlayed = false;
-  var $stepItems = $stepsTrack.find('.step-item');
-  var $connectorFills = $stepsTrack.find('.step-connector-fill');
+  var $stops = $stepsTrack.find('.rail-stop');
+  var $railFill = $stepsTrack.find('.rail-fill');
+  var $railFillV = $stepsTrack.find('.rail-fill-v');
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function revealAllSteps() {
-    $stepItems.addClass('is-active');
-    $connectorFills.addClass('is-filled');
+    $stops.addClass('is-active');
+    $railFill.addClass('is-filled');
+    $railFillV.addClass('is-filled');
   }
 
   function playStepsSequence() {
@@ -137,25 +139,16 @@ $(document).ready(function () {
       return;
     }
 
-    var STEP_RISE_MS = 500;   // matches .step-item transition duration
-    var LINE_DRAW_MS = 700;   // matches .step-connector-fill transition duration
-    var t = 0;
+    var STOP_RISE_MS = 160; // stagger between each stop lighting up
 
-    $stepItems.each(function (index) {
-      var step = this;
-      var connector = $connectorFills.get(index);
+    $railFill.addClass('is-filled');
+    $railFillV.addClass('is-filled');
 
+    $stops.each(function (index) {
+      var stop = this;
       window.setTimeout(function () {
-        $(step).addClass('is-active');
-      }, t);
-      t += STEP_RISE_MS;
-
-      if (connector) {
-        window.setTimeout(function () {
-          $(connector).addClass('is-filled');
-        }, t);
-        t += LINE_DRAW_MS;
-      }
+        $(stop).addClass('is-active');
+      }, index * STOP_RISE_MS);
     });
   }
 

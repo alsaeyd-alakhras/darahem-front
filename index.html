@@ -646,116 +646,115 @@
     <!-- ════════════════════════════════════════
          Section: How It Works
     ════════════════════════════════════════ -->
-    <section class="bg-white py-24 px-10">
-      <div class="max-w-[1200px] mx-auto flex flex-col gap-20">
+    <section class="relative bg-white overflow-hidden py-24 px-6 sm:px-10">
 
-        <!-- Heading centered: SemiBold 42px -->
-        <h2 class="font-semibold text-[34px] leading-[1.35] text-g-navy text-center w-full sm:text-[42px]">
-          ابدأ من العميل. … . إلى استلام مستحقاتك
-        </h2>
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(55% 45% at 50% 0%, rgba(20,198,152,0.10) 0%, rgba(50,14,142,0.06) 45%, rgba(255,255,255,0) 80%);"></div>
+
+      <div class="relative z-10 max-w-[1200px] mx-auto flex flex-col gap-16">
+
+        <div class="flex flex-col items-center gap-4 text-center">
+          <span class="inline-flex items-center gap-2 bg-g-light border border-g-border rounded-full px-4 py-2 text-sm font-semibold text-g-blue">
+            مسار عمل واحد متصل
+          </span>
+          <h2 class="font-heading font-bold text-[32px] sm:text-[42px] leading-[1.3] text-g-navy max-w-[720px]">
+            ابدأ من العميل … إلى استلام مستحقاتك
+          </h2>
+          <p class="text-g-body text-base sm:text-lg leading-[1.8] max-w-[560px]">
+            خط تقدّم واحد يربط أعمالك من أول تواصل مع العميل حتى تحصيل مستحقاتك.
+          </p>
+        </div>
 
         <!--
-          6-step journey: mobile stacks vertically; desktop forms two rows of three.
-          The same .step-item / .step-connector-fill hooks drive the sequential reveal.
+          6-step journey on one continuous rail: horizontal on tablet/desktop,
+          a vertical stepper of soft cards on mobile. .rail-stop / .rail-fill /
+          .rail-fill-v hooks drive the sequential scroll reveal in home.js.
         -->
-        <div id="steps-track" class="relative grid grid-cols-1 justify-items-center gap-0 md:grid-cols-[minmax(0,1fr)_minmax(48px,96px)_minmax(0,1fr)_minmax(48px,96px)_minmax(0,1fr)] md:gap-y-10">
+        <div id="steps-track" class="relative max-w-105 md:max-w-none mx-auto">
 
-          <!-- Step 1: عميل جديد -->
-          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-1 md:row-start-1" data-step="1">
-            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
-              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">01</span>
+          <!-- Rail track: desktop/tablet horizontal, mobile vertical (behind the cards) -->
+          <!-- Spans exactly from stop 1's circle center to stop 6's circle center (half a 6-col grid cell in from each edge) -->
+          <div class="absolute top-7 sm:top-8 start-[8.3333%] end-[8.3333%] h-1 rounded-full bg-g-border hidden md:block">
+            <div class="rail-fill absolute inset-y-0 start-0 w-0 rounded-full" style="background: linear-gradient(90deg, #157A70 0%, #14C698 55%, #320E8E 100%);"></div>
+          </div>
+          <div class="absolute top-3 bottom-3 start-[38px] w-0.5 rounded-full bg-g-border md:hidden">
+            <div class="rail-fill-v absolute inset-x-0 top-0 h-0 rounded-full" style="background: linear-gradient(180deg, #157A70 0%, #14C698 55%, #320E8E 100%);"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-6 gap-3.5 md:gap-3">
+
+            <!-- Stop 01: عميل جديد -->
+            <div class="rail-stop relative flex md:flex-col items-center gap-4 md:gap-5 rounded-2xl bg-white md:bg-transparent border border-g-border md:border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.05)] md:shadow-none p-3.5 md:p-0 md:text-center">
+              <div class="relative shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-[3px] border-g-green shadow-[0px_8px_16px_-4px_rgba(21,122,112,0.35)] z-10">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 20.25a6 6 0 00-12 0M15.75 8.25a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+                <span class="absolute -top-1.5 -end-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-g-green text-[10px] font-bold text-white ring-2 ring-white">1</span>
+              </div>
+              <div class="flex flex-col gap-0.5 md:gap-1 md:items-center">
+                <h3 class="font-semibold text-base text-g-purple">عميل جديد</h3>
+                <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">سجّل العميل وبياناته.</p>
+              </div>
             </div>
-            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">عميل جديد</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
-              سجّل العميل وبياناته واحتياجاته.
-            </p>
-          </div>
 
-          <!-- Connector 1→2 -->
-          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-2 md:row-start-1 md:mt-10 md:h-0.5 md:w-full md:self-start">
-            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:start-0 md:mx-0 md:h-full md:w-0"></div>
-          </div>
-
-          <!-- Step 2: عرض سعر -->
-          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-3 md:row-start-1" data-step="2">
-            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
-              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">02</span>
+            <!-- Stop 02: عرض سعر -->
+            <div class="rail-stop relative flex md:flex-col items-center gap-4 md:gap-5 rounded-2xl bg-white md:bg-transparent border border-g-border md:border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.05)] md:shadow-none p-3.5 md:p-0 md:text-center">
+              <div class="relative shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-[3px] border-g-green-lt shadow-[0px_8px_16px_-4px_rgba(29,158,146,0.35)] z-10">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-g-green-lt" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.182 9.182a2.25 2.25 0 003.182 0l4.318-4.318a2.25 2.25 0 000-3.182L11.16 3.659A2.25 2.25 0 009.568 3z" /><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h.008v.008H6.75V6.75z" /></svg>
+                <span class="absolute -top-1.5 -end-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-g-green-lt text-[10px] font-bold text-white ring-2 ring-white">2</span>
+              </div>
+              <div class="flex flex-col gap-0.5 md:gap-1 md:items-center">
+                <h3 class="font-semibold text-base text-g-purple">عرض سعر</h3>
+                <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">حوّله لعرض واضح وأرسله.</p>
+              </div>
             </div>
-            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">عرض سعر</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
-              حوّل احتياج العميل إلى عرض واضح، وأرسله للموافقة.
-            </p>
-          </div>
 
-          <!-- Connector 2→3 -->
-          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-4 md:row-start-1 md:mt-10 md:h-0.5 md:w-full md:self-start">
-            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:start-0 md:mx-0 md:h-full md:w-0"></div>
-          </div>
-
-          <!-- Step 3: مشروع -->
-          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-5 md:row-start-1" data-step="3">
-            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
-              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">03</span>
+            <!-- Stop 03: مشروع -->
+            <div class="rail-stop relative flex md:flex-col items-center gap-4 md:gap-5 rounded-2xl bg-white md:bg-transparent border border-g-border md:border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.05)] md:shadow-none p-3.5 md:p-0 md:text-center">
+              <div class="relative shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-[3px] border-g-mint-bright shadow-[0px_8px_16px_-4px_rgba(79,217,196,0.4)] z-10">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V6.75A2.25 2.25 0 014.5 4.5h4.5l2.25 2.25h8.25a2.25 2.25 0 012.25 2.25v3.75M2.25 12.75v4.5A2.25 2.25 0 004.5 19.5h15a2.25 2.25 0 002.25-2.25v-4.5M2.25 12.75h19.5" /></svg>
+                <span class="absolute -top-1.5 -end-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-g-mint-bright text-[10px] font-bold text-white ring-2 ring-white">3</span>
+              </div>
+              <div class="flex flex-col gap-0.5 md:gap-1 md:items-center">
+                <h3 class="font-semibold text-base text-g-purple">مشروع</h3>
+                <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">حوّل العرض لمشروع فعلي.</p>
+              </div>
             </div>
-            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">مشروع</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
-              بعد الموافقة، حوّل العرض إلى مشروع وابدأ التنفيذ.
-            </p>
-          </div>
 
-          <!-- Connector 3→4 -->
-          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-5 md:row-start-2 md:h-12 md:w-1">
-            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:[&.is-filled]:!h-full md:[&.is-filled]:!w-1"></div>
-          </div>
-
-          <!-- Step 4: فاتورة -->
-          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-5 md:row-start-3" data-step="4">
-            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
-              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">04</span>
+            <!-- Stop 04: فاتورة -->
+            <div class="rail-stop relative flex md:flex-col items-center gap-4 md:gap-5 rounded-2xl bg-white md:bg-transparent border border-g-border md:border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.05)] md:shadow-none p-3.5 md:p-0 md:text-center">
+              <div class="relative shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-[3px] border-g-purple-mid shadow-[0px_8px_16px_-4px_rgba(46,78,150,0.35)] z-10">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-g-purple-mid" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 9.75h10.5a2.25 2.25 0 002.25-2.25v-5.25a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 12.75V18a2.25 2.25 0 002.25 2.25z" /></svg>
+                <span class="absolute -top-1.5 -end-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-g-purple-mid text-[10px] font-bold text-white ring-2 ring-white">4</span>
+              </div>
+              <div class="flex flex-col gap-0.5 md:gap-1 md:items-center">
+                <h3 class="font-semibold text-base text-g-purple">فاتورة</h3>
+                <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">أنشئها دون تكرار الإدخال.</p>
+              </div>
             </div>
-            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">فاتورة</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
-              أنشئ الفاتورة دون إعادة إدخال البيانات.
-            </p>
-          </div>
 
-          <!-- Connector 4→5 -->
-          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-4 md:row-start-3 md:mt-10 md:h-0.5 md:w-full md:self-start">
-            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:end-0 md:mx-0 md:h-full md:w-0"></div>
-          </div>
-
-          <!-- Step 5: تحصيل -->
-          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-3 md:row-start-3" data-step="5">
-            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
-              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">05</span>
+            <!-- Stop 05: تحصيل -->
+            <div class="rail-stop relative flex md:flex-col items-center gap-4 md:gap-5 rounded-2xl bg-white md:bg-transparent border border-g-border md:border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.05)] md:shadow-none p-3.5 md:p-0 md:text-center">
+              <div class="relative shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-[3px] border-g-purple shadow-[0px_8px_16px_-4px_rgba(43,10,140,0.35)] z-10">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-g-purple rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.77 59.77 0 0121.485 12 59.77 59.77 0 013.27 20.876L6 12zm0 0h7.5" /></svg>
+                <span class="absolute -top-1.5 -end-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-g-purple text-[10px] font-bold text-white ring-2 ring-white">5</span>
+              </div>
+              <div class="flex flex-col gap-0.5 md:gap-1 md:items-center">
+                <h3 class="font-semibold text-base text-g-purple">تحصيل</h3>
+                <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">تابع حالة الدفع بسهولة.</p>
+              </div>
             </div>
-            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">تحصيل</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
-              أرسلها للعميل وتابع حالة الدفع.
-            </p>
-          </div>
 
-          <!-- Connector 5→6 -->
-          <div class="step-connector relative h-10 w-1 shrink-0 md:col-start-2 md:row-start-3 md:mt-10 md:h-0.5 md:w-full md:self-start">
-            <div class="absolute inset-0 mx-auto h-full w-1 bg-g-border md:mx-0 md:h-0.5 md:w-full"></div>
-            <div class="step-connector-fill absolute inset-x-0 top-0 mx-auto h-0 w-1 bg-g-green transition-[height,width] duration-700 ease-out md:inset-x-auto md:end-0 md:mx-0 md:h-full md:w-0"></div>
-          </div>
-
-          <!-- Step 6: أرباح -->
-          <div class="step-item relative z-10 flex w-full flex-col items-center gap-[11px] md:col-start-1 md:row-start-3" data-step="6">
-            <div class="step-circle flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-g-light bg-white shadow-[0px_8px_10px_-6px_rgba(0,0,0,0.1),0px_20px_25px_-5px_rgba(0,0,0,0.1)] transition-colors duration-500 sm:h-24 sm:w-24">
-              <span class="step-number font-bold text-[30px] leading-none text-g-green transition-colors duration-500 sm:text-[34px]">06</span>
+            <!-- Stop 06: أرباح -->
+            <div class="rail-stop relative flex md:flex-col items-center gap-4 md:gap-5 rounded-2xl bg-white md:bg-transparent border border-g-border md:border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.05)] md:shadow-none p-3.5 md:p-0 md:text-center">
+              <div class="relative shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-[3px] border-g-blue shadow-[0px_8px_16px_-4px_rgba(50,14,142,0.35)] z-10">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-g-blue" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.75V9a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9v9a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18v-3.75m0-1.5h-5.25a2.25 2.25 0 000 4.5H21v-4.5z" /></svg>
+                <span class="absolute -top-1.5 -end-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-g-blue text-[10px] font-bold text-white ring-2 ring-white">6</span>
+              </div>
+              <div class="flex flex-col gap-0.5 md:gap-1 md:items-center">
+                <h3 class="font-semibold text-base text-g-purple">أرباح</h3>
+                <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">اعرف صافي ربحك بلمحة.</p>
+              </div>
             </div>
-            <h3 class="font-semibold text-[22px] leading-[1.4] text-g-purple text-center">أرباح</h3>
-            <p class="font-normal text-base leading-[27.2px] text-g-muted text-center max-w-[260px]">
-              اعرف الإيرادات والمصاريف وصافي ربحك.
-            </p>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>

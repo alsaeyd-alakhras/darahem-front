@@ -43,53 +43,40 @@
   transform: translateY(0);
 }
 
-/* -- How It Works Step Reveal -------------------------------- */
-.step-item {
+/* -- How It Works: Process Rail Reveal (index.html + steps.html) -- */
+.rail-stop {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(16px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
-.step-item.is-active {
+.rail-stop.is-active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.step-circle {
-  background-color: #fff;
-  border-color: var(--color-g-light);
-  transition: background-color 0.4s ease, border-color 0.4s ease;
+.rail-fill {
+  width: 0;
+  transition: width 1.1s ease;
 }
 
-.step-number {
-  color: var(--color-g-green);
+.rail-fill.is-filled {
+  width: 100%;
 }
 
-.step-item.is-active .step-circle {
-  background-color: var(--color-g-green);
-  border-color: var(--color-g-light);
+.rail-fill-v {
+  height: 0;
+  transition: height 1.1s ease;
 }
 
-.step-item.is-active .step-number {
-  color: #fff;
-}
-
-.step-connector-fill.is-filled {
+.rail-fill-v.is-filled {
   height: 100%;
 }
 
-@media (min-width: 48rem) {
-  .step-connector-fill.is-filled {
-    width: 100%;
-    height: 0.125rem;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .step-item,
-  .step-circle,
-  .step-number,
-  .step-connector-fill {
+  .rail-stop,
+  .rail-fill,
+  .rail-fill-v {
     transition-duration: 0ms !important;
   }
 }
@@ -154,35 +141,8 @@ button {
   height: 100%;
 }
 
-/* Concept 2: process rail fill (horizontal + vertical) */
-.rail-stop {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
-
-.rail-stop.is-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.rail-fill {
-  width: 0;
-  transition: width 1.1s ease;
-}
-
-.rail-fill.is-filled {
-  width: 100%;
-}
-
-.rail-fill-v {
-  height: 0;
-  transition: height 1.1s ease;
-}
-
-.rail-fill-v.is-filled {
-  height: 100%;
-}
+/* Concept 2 (process rail) reuses the shared .rail-stop/.rail-fill/.rail-fill-v
+   rules defined above near the How It Works section. */
 
 /* Concept 3: row-wrap chevron connector */
 .ring-row-connector {
