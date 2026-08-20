@@ -252,85 +252,85 @@
         </p>
       </div>
 
-      <div id="steps-track-2" class="relative">
+      <div id="steps-track-2" class="relative max-w-105 md:max-w-none mx-auto">
 
-        <!-- Rail track (desktop/tablet: horizontal · mobile: vertical) -->
+        <!-- Rail track (desktop/tablet: horizontal · mobile: vertical, centered) -->
         <div class="absolute top-7 sm:top-8 start-0 end-0 h-1 rounded-full bg-g-border hidden md:block">
           <div class="rail-fill absolute inset-y-0 start-0 w-0 rounded-full" data-sequence="0.4" style="background: linear-gradient(90deg, #157A70 0%, #14C698 55%, #320E8E 100%);"></div>
         </div>
-        <div class="absolute top-0 bottom-0 start-7 w-1 rounded-full bg-g-border md:hidden">
+        <div class="absolute top-2 bottom-2 start-[26px] w-1 rounded-full bg-g-border md:hidden">
           <div class="rail-fill-v absolute inset-x-0 top-0 h-0 rounded-full" data-sequence="0.4" style="background: linear-gradient(180deg, #157A70 0%, #14C698 55%, #320E8E 100%);"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-10 md:gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-9 md:gap-3">
 
           <!-- Stop 01 -->
-          <div class="rail-stop relative flex md:flex-col items-center md:items-center gap-4 md:gap-5 md:text-center" data-sequence="1">
+          <div class="rail-stop relative flex md:flex-col items-start md:items-center gap-5 md:gap-5 md:text-center" data-sequence="1">
             <div class="relative shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-white border-[3px] border-g-green shadow-[0px_8px_16px_-4px_rgba(21,122,112,0.35)] z-10">
               <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><use href="#i-user" /></svg>
               <span class="absolute -top-2 -end-2 flex items-center justify-center w-6 h-6 rounded-full bg-g-green text-[11px] font-bold text-white">1</span>
             </div>
-            <div class="flex flex-col gap-1 md:items-center">
+            <div class="flex flex-col gap-1 pt-2.5 md:pt-0 md:items-center">
               <h3 class="font-semibold text-base text-g-purple">عميل جديد</h3>
               <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">سجّل العميل وبياناته.</p>
             </div>
           </div>
 
           <!-- Stop 02 -->
-          <div class="rail-stop relative flex md:flex-col items-center md:items-center gap-4 md:gap-5 md:text-center" data-sequence="2">
+          <div class="rail-stop relative flex md:flex-col items-start md:items-center gap-5 md:gap-5 md:text-center" data-sequence="2">
             <div class="relative shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-white border-[3px] border-g-green-lt shadow-[0px_8px_16px_-4px_rgba(29,158,146,0.35)] z-10">
               <svg class="w-6 h-6 text-g-green-lt" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><use href="#i-tag" /></svg>
               <span class="absolute -top-2 -end-2 flex items-center justify-center w-6 h-6 rounded-full bg-g-green-lt text-[11px] font-bold text-white">2</span>
             </div>
-            <div class="flex flex-col gap-1 md:items-center">
+            <div class="flex flex-col gap-1 pt-2.5 md:pt-0 md:items-center">
               <h3 class="font-semibold text-base text-g-purple">عرض سعر</h3>
               <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">حوّله لعرض واضح وأرسله.</p>
             </div>
           </div>
 
           <!-- Stop 03 -->
-          <div class="rail-stop relative flex md:flex-col items-center md:items-center gap-4 md:gap-5 md:text-center" data-sequence="3">
+          <div class="rail-stop relative flex md:flex-col items-start md:items-center gap-5 md:gap-5 md:text-center" data-sequence="3">
             <div class="relative shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-white border-[3px] border-g-mint-bright shadow-[0px_8px_16px_-4px_rgba(79,217,196,0.4)] z-10">
               <svg class="w-6 h-6 text-g-green" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><use href="#i-folder" /></svg>
               <span class="absolute -top-2 -end-2 flex items-center justify-center w-6 h-6 rounded-full bg-g-mint-bright text-[11px] font-bold text-white">3</span>
             </div>
-            <div class="flex flex-col gap-1 md:items-center">
+            <div class="flex flex-col gap-1 pt-2.5 md:pt-0 md:items-center">
               <h3 class="font-semibold text-base text-g-purple">مشروع</h3>
               <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">حوّل العرض لمشروع فعلي.</p>
             </div>
           </div>
 
           <!-- Stop 04 -->
-          <div class="rail-stop relative flex md:flex-col items-center md:items-center gap-4 md:gap-5 md:text-center" data-sequence="4">
+          <div class="rail-stop relative flex md:flex-col items-start md:items-center gap-5 md:gap-5 md:text-center" data-sequence="4">
             <div class="relative shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-white border-[3px] border-g-purple-mid shadow-[0px_8px_16px_-4px_rgba(46,78,150,0.35)] z-10">
               <svg class="w-6 h-6 text-g-purple-mid" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><use href="#i-lock" /></svg>
               <span class="absolute -top-2 -end-2 flex items-center justify-center w-6 h-6 rounded-full bg-g-purple-mid text-[11px] font-bold text-white">4</span>
             </div>
-            <div class="flex flex-col gap-1 md:items-center">
+            <div class="flex flex-col gap-1 pt-2.5 md:pt-0 md:items-center">
               <h3 class="font-semibold text-base text-g-purple">فاتورة</h3>
               <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">أنشئها دون تكرار الإدخال.</p>
             </div>
           </div>
 
           <!-- Stop 05 -->
-          <div class="rail-stop relative flex md:flex-col items-center md:items-center gap-4 md:gap-5 md:text-center" data-sequence="5">
+          <div class="rail-stop relative flex md:flex-col items-start md:items-center gap-5 md:gap-5 md:text-center" data-sequence="5">
             <div class="relative shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-white border-[3px] border-g-purple shadow-[0px_8px_16px_-4px_rgba(43,10,140,0.35)] z-10">
               <svg class="w-6 h-6 text-g-purple rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><use href="#i-plane" /></svg>
               <span class="absolute -top-2 -end-2 flex items-center justify-center w-6 h-6 rounded-full bg-g-purple text-[11px] font-bold text-white">5</span>
             </div>
-            <div class="flex flex-col gap-1 md:items-center">
+            <div class="flex flex-col gap-1 pt-2.5 md:pt-0 md:items-center">
               <h3 class="font-semibold text-base text-g-purple">تحصيل</h3>
               <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">تابع حالة الدفع بسهولة.</p>
             </div>
           </div>
 
           <!-- Stop 06 -->
-          <div class="rail-stop relative flex md:flex-col items-center md:items-center gap-4 md:gap-5 md:text-center" data-sequence="6">
+          <div class="rail-stop relative flex md:flex-col items-start md:items-center gap-5 md:gap-5 md:text-center" data-sequence="6">
             <div class="relative shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-white border-[3px] border-g-blue shadow-[0px_8px_16px_-4px_rgba(50,14,142,0.35)] z-10">
               <svg class="w-6 h-6 text-g-blue" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><use href="#i-wallet" /></svg>
               <span class="absolute -top-2 -end-2 flex items-center justify-center w-6 h-6 rounded-full bg-g-blue text-[11px] font-bold text-white">6</span>
             </div>
-            <div class="flex flex-col gap-1 md:items-center">
+            <div class="flex flex-col gap-1 pt-2.5 md:pt-0 md:items-center">
               <h3 class="font-semibold text-base text-g-purple">أرباح</h3>
               <p class="text-sm leading-[1.6] text-g-muted md:max-w-[150px]">اعرف صافي ربحك بلمحة.</p>
             </div>
