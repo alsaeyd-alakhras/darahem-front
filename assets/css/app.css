@@ -117,3 +117,66 @@
 button {
   cursor: pointer;
 }
+/* -- Steps Preview Page Reveal -------------------------------- */
+.steps-preview-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.steps-preview-item.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.steps-preview-line-fill {
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: transform 0.7s ease;
+}
+
+.steps-preview-line-fill.is-filled {
+  transform: scaleY(1);
+}
+
+.steps-preview-path-fill {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.7s ease;
+}
+
+.steps-preview-path-fill.is-filled {
+  stroke-dashoffset: 0;
+}
+
+.circle-v2-ring {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.circle-v2-step:hover .circle-v2-ring,
+.circle-v2-step.is-active .circle-v2-ring {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@media (min-width: 48rem) {
+  .steps-preview-line-fill {
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+
+  .steps-preview-line-fill.is-filled {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steps-preview-item,
+  .steps-preview-line-fill,
+  .steps-preview-path-fill,
+  .circle-v2-ring {
+    transition-duration: 0ms !important;
+  }
+}

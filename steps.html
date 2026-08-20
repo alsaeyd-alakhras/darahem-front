@@ -1,0 +1,239 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أزلينت — معاينة خطوات العمل</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@600;700;800&family=Readex+Pro:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
+  <link rel="stylesheet" href="./assets/css/output.css" />
+
+  <style>
+    .concept-label {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-g-dark antialiased overflow-x-hidden font-sans">
+
+  <svg class="hidden" aria-hidden="true">
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.125a6.375 6.375 0 10-6 0M15.75 6.75h3m0 0h3m-3 0v3m0-3v-3M9 12.75a3 3 0 100-6 3 3 0 000 6zm0 2.25c-2.485 0-4.5 1.12-4.5 2.5v.25h9v-.25c0-1.38-2.015-2.5-4.5-2.5z" /></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.182 9.182a2.25 2.25 0 003.182 0l4.318-4.318a2.25 2.25 0 000-3.182L11.16 3.659A2.25 2.25 0 009.568 3zM6.75 6.75h.008v.008H6.75V6.75z" /></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V6.75A2.25 2.25 0 014.5 4.5h4.5l2.25 2.25h8.25a2.25 2.25 0 012.25 2.25v3.75M2.25 12.75v4.5A2.25 2.25 0 004.5 19.5h15a2.25 2.25 0 002.25-2.25v-4.5M2.25 12.75h19.5" /></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 3h6m2.25 5.25H6.75A2.25 2.25 0 014.5 18V6A2.25 2.25 0 016.75 3.75h7.5L19.5 9v9a2.25 2.25 0 01-2.25 2.25zM14.25 3.75V9h5.25" /></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L6 12zm0 0h7.5" /></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.75V9A2.25 2.25 0 0018.75 6.75H5.25A2.25 2.25 0 003 9v9a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18v-3.75m0-1.5h-5.25A2.25 2.25 0 0013.5 15v0a2.25 2.25 0 002.25 2.25H21v-4.5zM16.5 15h.008" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3.75l7.5 3v5.25c0 4.2-3.1 7.55-7.5 8.25-4.4-.7-7.5-4.05-7.5-8.25V6.75l7.5-3z" /></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4 14h7l-1 8 10-13h-7l0-7z" /></symbol>
+  </svg>
+
+  <!-- ════════════════════════════════════════
+       Intro banner — internal comparison page
+  ════════════════════════════════════════ -->
+  <div class="bg-g-dark text-white py-4 px-6 text-center text-sm font-medium">
+    صفحة معاينة داخلية لثلاثة تصاميم جديدة لقسم "كيف تعمل أزلينت" في الصفحة الرئيسية. اختر المفهوم 1 أو 2 أو 3، أو امزج عناصر منها لتطبيقها لاحقًا على index.html.
+  </div>
+
+  <!-- ════════════════════════════════════════
+       Concept 1 — Connected Card Journey
+  ════════════════════════════════════════ -->
+  <div class="concept-label bg-g-purple text-white text-center text-xs font-bold py-2 tracking-wide">المفهوم 1 — رحلة بطاقات مترابطة</div>
+  <section class="relative overflow-hidden bg-g-light px-5 py-20 sm:px-10">
+    <div class="absolute top-[-180px] end-[-140px] h-[420px] w-[420px] rounded-full bg-g-mint-bright/20 blur-[90px] pointer-events-none"></div>
+    <div class="absolute bottom-[-180px] start-[-140px] h-[380px] w-[380px] rounded-full bg-g-orange/15 blur-[100px] pointer-events-none"></div>
+
+    <div class="relative z-10 mx-auto flex max-w-[1200px] flex-col gap-14">
+      <header class="mx-auto flex max-w-[760px] flex-col items-center gap-4 text-center">
+        <span class="inline-flex rounded-full border border-g-green/20 bg-white px-4 py-2 text-xs font-bold text-g-green shadow-sm">مفهوم غني ومناسب للواجهة الرئيسية</span>
+        <h2 class="font-semibold text-[34px] leading-[1.35] text-g-navy sm:text-[42px]">ابدأ من العميل. … . إلى استلام مستحقاتك</h2>
+        <p class="max-w-[640px] text-base leading-[1.8] text-g-body sm:text-lg">نفس رحلة العميل إلى الدفع، لكن داخل بطاقات واضحة تربط بين الأدوات خطوة بخطوة.</p>
+      </header>
+
+      <div id="steps-track-1" class="relative">
+        <svg class="pointer-events-none absolute inset-x-0 top-0 hidden h-full w-full rtl:scale-x-[-1] lg:block" viewBox="0 0 1200 600" fill="none" aria-hidden="true" preserveAspectRatio="none">
+          <path d="M185 245C90 300 90 390 190 430" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14" />
+          <path class="steps-preview-path-fill" data-sequence="3.5" pathLength="1" d="M185 245C90 300 90 390 190 430" stroke="#157A70" stroke-width="4" stroke-linecap="round" />
+          <path d="M1000 455C1110 385 1110 165 1000 105" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14" />
+          <path class="steps-preview-path-fill" data-sequence="6.5" pathLength="1" d="M1000 455C1110 385 1110 165 1000 105" stroke="#2B0A8C" stroke-width="4" stroke-linecap="round" />
+        </svg>
+
+        <div class="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
+          <article class="steps-preview-item group relative z-10 flex min-h-[250px] flex-col gap-5 rounded-[8px] border border-g-border border-s-4 border-s-g-green bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.08),0_4px_6px_-4px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(21,122,112,0.45)]" data-sequence="1">
+            <div class="flex items-start justify-between gap-4"><span class="grid size-14 shrink-0 place-items-center rounded-full bg-g-mint-soft text-g-green"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-user-plus" /></svg></span><span class="rounded-full bg-g-light2 px-3 py-1 text-sm font-bold text-g-purple">01</span></div>
+            <div class="flex flex-col gap-2 text-start"><h3 class="text-[22px] font-semibold leading-[1.4] text-g-purple transition-colors duration-200 group-hover:text-g-green">عميل جديد</h3><p class="text-base leading-[27.2px] text-g-muted">سجّل العميل وبياناته واحتياجاته.</p></div>
+            <div class="absolute end-[-22px] top-1/2 z-20 hidden h-8 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-g-border bg-white shadow-sm lg:flex"><span class="steps-preview-line-fill absolute inset-0 rounded-full bg-g-green/15" data-sequence="1.5"></span><svg class="relative size-4 text-g-green rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" /></svg></div>
+          </article>
+          <div class="steps-preview-line-fill mx-auto h-8 w-1 rounded-full bg-g-green md:hidden" data-sequence="1.5"></div>
+
+          <article class="steps-preview-item group relative z-10 flex min-h-[250px] flex-col gap-5 rounded-[8px] border border-g-border border-s-4 border-s-g-orange bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.08),0_4px_6px_-4px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(240,153,90,0.45)]" data-sequence="2">
+            <div class="flex items-start justify-between gap-4"><span class="grid size-14 shrink-0 place-items-center rounded-full bg-g-light2 text-g-orange"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-tag" /></svg></span><span class="rounded-full bg-g-light2 px-3 py-1 text-sm font-bold text-g-purple">02</span></div>
+            <div class="flex flex-col gap-2 text-start"><h3 class="text-[22px] font-semibold leading-[1.4] text-g-purple transition-colors duration-200 group-hover:text-g-green">عرض سعر</h3><p class="text-base leading-[27.2px] text-g-muted">حوّل احتياج العميل إلى عرض واضح، وأرسله للموافقة.</p></div>
+            <div class="absolute end-[-22px] top-1/2 z-20 hidden h-8 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-g-border bg-white shadow-sm lg:flex"><span class="steps-preview-line-fill absolute inset-0 rounded-full bg-g-orange/20" data-sequence="2.5"></span><svg class="relative size-4 text-g-orange rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" /></svg></div>
+          </article>
+          <div class="steps-preview-line-fill mx-auto h-8 w-1 rounded-full bg-g-orange md:hidden" data-sequence="2.5"></div>
+
+          <article class="steps-preview-item group relative z-10 flex min-h-[250px] flex-col gap-5 rounded-[8px] border border-g-border border-s-4 border-s-g-purple bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.08),0_4px_6px_-4px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(43,10,140,0.42)]" data-sequence="3">
+            <div class="flex items-start justify-between gap-4"><span class="grid size-14 shrink-0 place-items-center rounded-full bg-g-purple/10 text-g-purple"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-folder" /></svg></span><span class="rounded-full bg-g-light2 px-3 py-1 text-sm font-bold text-g-purple">03</span></div>
+            <div class="flex flex-col gap-2 text-start"><h3 class="text-[22px] font-semibold leading-[1.4] text-g-purple transition-colors duration-200 group-hover:text-g-green">مشروع</h3><p class="text-base leading-[27.2px] text-g-muted">بعد الموافقة، حوّل العرض إلى مشروع وابدأ التنفيذ.</p></div>
+          </article>
+          <div class="steps-preview-line-fill mx-auto h-8 w-1 rounded-full bg-g-purple md:hidden" data-sequence="3.5"></div>
+          <article class="steps-preview-item group relative z-10 flex min-h-[250px] flex-col gap-5 rounded-[8px] border border-g-border border-s-4 border-s-g-blue bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.08),0_4px_6px_-4px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(50,14,142,0.42)]" data-sequence="4">
+            <div class="flex items-start justify-between gap-4"><span class="grid size-14 shrink-0 place-items-center rounded-full bg-g-blue/10 text-g-blue"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-doc" /></svg></span><span class="rounded-full bg-g-light2 px-3 py-1 text-sm font-bold text-g-purple">04</span></div>
+            <div class="flex flex-col gap-2 text-start"><h3 class="text-[22px] font-semibold leading-[1.4] text-g-purple transition-colors duration-200 group-hover:text-g-green">فاتورة</h3><p class="text-base leading-[27.2px] text-g-muted">أنشئ الفاتورة دون إعادة إدخال البيانات.</p></div>
+            <div class="absolute end-[-22px] top-1/2 z-20 hidden h-8 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-g-border bg-white shadow-sm lg:flex"><span class="steps-preview-line-fill absolute inset-0 rounded-full bg-g-blue/15" data-sequence="4.5"></span><svg class="relative size-4 text-g-blue rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" /></svg></div>
+          </article>
+          <div class="steps-preview-line-fill mx-auto h-8 w-1 rounded-full bg-g-blue md:hidden" data-sequence="4.5"></div>
+
+          <article class="steps-preview-item group relative z-10 flex min-h-[250px] flex-col gap-5 rounded-[8px] border border-g-border border-s-4 border-s-g-green-lt bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.08),0_4px_6px_-4px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(29,158,146,0.42)]" data-sequence="5">
+            <div class="flex items-start justify-between gap-4"><span class="grid size-14 shrink-0 place-items-center rounded-full bg-g-mint-soft text-g-green-lt"><svg class="size-7 rtl:scale-x-[-1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-plane" /></svg></span><span class="rounded-full bg-g-light2 px-3 py-1 text-sm font-bold text-g-purple">05</span></div>
+            <div class="flex flex-col gap-2 text-start"><h3 class="text-[22px] font-semibold leading-[1.4] text-g-purple transition-colors duration-200 group-hover:text-g-green">تحصيل</h3><p class="text-base leading-[27.2px] text-g-muted">أرسلها للعميل وتابع حالة الدفع.</p></div>
+            <div class="absolute end-[-22px] top-1/2 z-20 hidden h-8 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-g-border bg-white shadow-sm lg:flex"><span class="steps-preview-line-fill absolute inset-0 rounded-full bg-g-green-lt/15" data-sequence="5.5"></span><svg class="relative size-4 text-g-green-lt rtl:scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" /></svg></div>
+          </article>
+          <div class="steps-preview-line-fill mx-auto h-8 w-1 rounded-full bg-g-green-lt md:hidden" data-sequence="5.5"></div>
+
+          <article class="steps-preview-item group relative z-10 flex min-h-[250px] flex-col gap-5 rounded-[8px] border border-g-border border-s-4 border-s-g-mint-bright bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.08),0_4px_6px_-4px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(79,217,196,0.45)]" data-sequence="6">
+            <div class="flex items-start justify-between gap-4"><span class="grid size-14 shrink-0 place-items-center rounded-full bg-g-mint-soft text-g-green"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-wallet" /></svg></span><span class="rounded-full bg-g-light2 px-3 py-1 text-sm font-bold text-g-purple">06</span></div>
+            <div class="flex flex-col gap-2 text-start"><h3 class="text-[22px] font-semibold leading-[1.4] text-g-purple transition-colors duration-200 group-hover:text-g-green">أرباح</h3><p class="text-base leading-[27.2px] text-g-muted">اعرف الإيرادات والمصاريف وصافي ربحك.</p></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-[860px] grid-cols-1 gap-3 sm:grid-cols-3">
+        <div class="flex items-center justify-center gap-2 rounded-full border border-g-border bg-white px-4 py-3 text-sm font-semibold text-g-body shadow-sm"><svg class="size-4 text-g-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><use href="#i-check" /></svg><span>بياناتك آمنة ومحمية</span></div>
+        <div class="flex items-center justify-center gap-2 rounded-full border border-g-border bg-white px-4 py-3 text-sm font-semibold text-g-body shadow-sm"><svg class="size-4 text-g-purple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-shield" /></svg><span>عملية مرنة وسريعة</span></div>
+        <div class="flex items-center justify-center gap-2 rounded-full border border-g-border bg-white px-4 py-3 text-sm font-semibold text-g-body shadow-sm"><svg class="size-4 text-g-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-bolt" /></svg><span>تجربة احترافية متكاملة</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       Concept 2 — Process Rail
+  ════════════════════════════════════════ -->
+  <div class="concept-label bg-g-blue text-white text-center text-xs font-bold py-2 tracking-wide">المفهوم 2 — مسار تقدم مستمر</div>
+  <section class="relative overflow-hidden bg-white px-5 py-20 sm:px-10">
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_50%_at_50%_0%,rgba(20,198,152,0.10)_0%,rgba(50,14,142,0.08)_46%,rgba(255,255,255,0)_82%)]"></div>
+
+    <div class="relative z-10 mx-auto flex max-w-[1240px] flex-col gap-14">
+      <header class="mx-auto flex max-w-[760px] flex-col items-center gap-4 text-center">
+        <span class="inline-flex rounded-full border border-g-blue/15 bg-g-light px-4 py-2 text-xs font-bold text-g-blue">مفهوم خطي وواضح للمسار الكامل</span>
+        <h2 class="font-semibold text-[34px] leading-[1.35] text-g-navy sm:text-[42px]">ابدأ من العميل. … . إلى استلام مستحقاتك</h2>
+        <p class="max-w-[640px] text-base leading-[1.8] text-g-body sm:text-lg">خط تقدم واحد يوضح انتقال العمل من نقطة البداية إلى التحصيل ثم قراءة الربح.</p>
+      </header>
+
+      <div id="steps-track-2" class="relative md:pt-6">
+        <div class="absolute start-6 top-6 bottom-6 w-1 rounded-full bg-g-border md:inset-x-10 md:top-[154px] md:bottom-auto md:h-1.5 md:w-auto">
+          <div class="steps-preview-line-fill absolute inset-0 rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]" data-sequence="1.5"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-6 md:gap-4">
+          <article class="steps-preview-item relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4 md:flex md:min-h-[270px] md:flex-col md:items-center md:gap-5 md:text-center" data-sequence="1">
+            <div class="relative z-10 grid size-12 place-items-center rounded-full border border-g-border bg-white text-g-green shadow-[0_14px_28px_-18px_rgba(21,122,112,0.75)] md:order-2 md:size-16"><svg class="size-5 md:size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-user-plus" /></svg><span class="absolute -top-2 -end-2 grid size-6 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">01</span></div>
+            <div class="flex flex-col gap-2 text-start md:order-1 md:min-h-[104px] md:items-center md:text-center"><h3 class="text-lg font-semibold text-g-purple">عميل جديد</h3><p class="text-sm leading-7 text-g-muted md:max-w-[170px]">سجّل العميل وبياناته واحتياجاته.</p></div>
+          </article>
+
+          <article class="steps-preview-item relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4 md:flex md:min-h-[270px] md:flex-col md:items-center md:gap-5 md:text-center" data-sequence="2">
+            <div class="relative z-10 grid size-12 place-items-center rounded-full border border-g-border bg-white text-g-orange shadow-[0_14px_28px_-18px_rgba(240,153,90,0.75)] md:order-2 md:size-16"><svg class="size-5 md:size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-tag" /></svg><span class="absolute -top-2 -end-2 grid size-6 place-items-center rounded-full bg-g-orange text-[10px] font-bold text-white">02</span></div>
+            <div class="flex flex-col gap-2 text-start md:order-1 md:min-h-[104px] md:items-center md:text-center"><h3 class="text-lg font-semibold text-g-purple">عرض سعر</h3><p class="text-sm leading-7 text-g-muted md:max-w-[170px]">حوّل احتياج العميل إلى عرض واضح، وأرسله للموافقة.</p></div>
+          </article>
+
+          <article class="steps-preview-item relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4 md:flex md:min-h-[270px] md:flex-col md:items-center md:gap-5 md:text-center" data-sequence="3">
+            <div class="relative z-10 grid size-12 place-items-center rounded-full border border-g-border bg-white text-g-purple shadow-[0_14px_28px_-18px_rgba(43,10,140,0.75)] md:order-2 md:size-16"><svg class="size-5 md:size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-folder" /></svg><span class="absolute -top-2 -end-2 grid size-6 place-items-center rounded-full bg-g-purple text-[10px] font-bold text-white">03</span></div>
+            <div class="flex flex-col gap-2 text-start md:order-1 md:min-h-[104px] md:items-center md:text-center"><h3 class="text-lg font-semibold text-g-purple">مشروع</h3><p class="text-sm leading-7 text-g-muted md:max-w-[170px]">بعد الموافقة، حوّل العرض إلى مشروع وابدأ التنفيذ.</p></div>
+          </article>
+
+          <article class="steps-preview-item relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4 md:flex md:min-h-[270px] md:flex-col md:items-center md:gap-5 md:text-center" data-sequence="4">
+            <div class="relative z-10 grid size-12 place-items-center rounded-full border border-g-border bg-white text-g-blue shadow-[0_14px_28px_-18px_rgba(50,14,142,0.75)] md:order-2 md:size-16"><svg class="size-5 md:size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-doc" /></svg><span class="absolute -top-2 -end-2 grid size-6 place-items-center rounded-full bg-g-blue text-[10px] font-bold text-white">04</span></div>
+            <div class="flex flex-col gap-2 text-start md:order-1 md:min-h-[104px] md:items-center md:text-center"><h3 class="text-lg font-semibold text-g-purple">فاتورة</h3><p class="text-sm leading-7 text-g-muted md:max-w-[170px]">أنشئ الفاتورة دون إعادة إدخال البيانات.</p></div>
+          </article>
+
+          <article class="steps-preview-item relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4 md:flex md:min-h-[270px] md:flex-col md:items-center md:gap-5 md:text-center" data-sequence="5">
+            <div class="relative z-10 grid size-12 place-items-center rounded-full border border-g-border bg-white text-g-green-lt shadow-[0_14px_28px_-18px_rgba(29,158,146,0.75)] md:order-2 md:size-16"><svg class="size-5 rtl:scale-x-[-1] md:size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-plane" /></svg><span class="absolute -top-2 -end-2 grid size-6 place-items-center rounded-full bg-g-green-lt text-[10px] font-bold text-white">05</span></div>
+            <div class="flex flex-col gap-2 text-start md:order-1 md:min-h-[104px] md:items-center md:text-center"><h3 class="text-lg font-semibold text-g-purple">تحصيل</h3><p class="text-sm leading-7 text-g-muted md:max-w-[170px]">أرسلها للعميل وتابع حالة الدفع.</p></div>
+          </article>
+
+          <article class="steps-preview-item relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4 md:flex md:min-h-[270px] md:flex-col md:items-center md:gap-5 md:text-center" data-sequence="6">
+            <div class="relative z-10 grid size-12 place-items-center rounded-full border border-g-border bg-white text-g-green shadow-[0_14px_28px_-18px_rgba(21,122,112,0.75)] md:order-2 md:size-16"><svg class="size-5 md:size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-wallet" /></svg><span class="absolute -top-2 -end-2 grid size-6 place-items-center rounded-full bg-g-green text-[10px] font-bold text-white">06</span></div>
+            <div class="flex flex-col gap-2 text-start md:order-1 md:min-h-[104px] md:items-center md:text-center"><h3 class="text-lg font-semibold text-g-purple">أرباح</h3><p class="text-sm leading-7 text-g-muted md:max-w-[170px]">اعرف الإيرادات والمصاريف وصافي ربحك.</p></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       Concept 3 — Refined Circle Timeline
+  ════════════════════════════════════════ -->
+  <div class="concept-label bg-g-green text-white text-center text-xs font-bold py-2 tracking-wide">المفهوم 3 — خط زمني دائري محسّن</div>
+  <section class="bg-g-light2 px-5 py-20 sm:px-10">
+    <div class="mx-auto flex max-w-[1200px] flex-col gap-16">
+      <header class="mx-auto flex max-w-[760px] flex-col items-center gap-4 text-center">
+        <span class="inline-flex rounded-full border border-g-green/20 bg-white px-4 py-2 text-xs font-bold text-g-green shadow-sm">الخيار الآمن الأقرب للتصميم الحالي</span>
+        <h2 class="font-semibold text-[34px] leading-[1.35] text-g-navy sm:text-[42px]">ابدأ من العميل. … . إلى استلام مستحقاتك</h2>
+        <p class="max-w-[640px] text-base leading-[1.8] text-g-body sm:text-lg">نفس بنية الدوائر المتصلة الموجودة حاليًا، مع أيقونات وحلقات تفاعل ومسافات أكثر راحة.</p>
+      </header>
+
+      <div id="steps-track-3" class="relative grid grid-cols-1 justify-items-center gap-0 md:grid-cols-[minmax(0,1fr)_minmax(56px,112px)_minmax(0,1fr)_minmax(56px,112px)_minmax(0,1fr)] md:gap-y-12">
+        <article class="steps-preview-item circle-v2-step relative z-10 flex w-full flex-col items-center gap-4 md:col-start-1 md:row-start-1" data-sequence="1">
+          <div class="relative grid size-24 place-items-center rounded-full border-[5px] border-white bg-white shadow-[0_18px_35px_-24px_rgba(0,36,82,0.55)] sm:size-28"><span class="circle-v2-ring absolute inset-[-7px] rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]"></span><span class="relative grid size-full place-items-center rounded-full bg-white text-g-green"><svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-user-plus" /></svg></span><span class="absolute bottom-1 end-1 grid size-8 place-items-center rounded-full bg-g-green text-xs font-bold text-white shadow-sm">01</span></div>
+          <h3 class="text-center text-[22px] font-semibold leading-[1.4] text-g-purple">عميل جديد</h3><p class="max-w-[260px] text-center text-base leading-[27.2px] text-g-muted">سجّل العميل وبياناته واحتياجاته.</p>
+        </article>
+        <div class="relative h-12 w-1 shrink-0 md:col-start-2 md:row-start-1 md:mt-12 md:h-1.5 md:w-full md:self-start"><div class="absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-border md:mx-0 md:h-1.5 md:w-full"></div><div class="steps-preview-line-fill absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-green md:mx-0 md:h-1.5 md:w-full" data-sequence="1.5"></div></div>
+
+        <article class="steps-preview-item circle-v2-step relative z-10 flex w-full flex-col items-center gap-4 md:col-start-3 md:row-start-1" data-sequence="2">
+          <div class="relative grid size-24 place-items-center rounded-full border-[5px] border-white bg-white shadow-[0_18px_35px_-24px_rgba(0,36,82,0.55)] sm:size-28"><span class="circle-v2-ring absolute inset-[-7px] rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]"></span><span class="relative grid size-full place-items-center rounded-full bg-white text-g-orange"><svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-tag" /></svg></span><span class="absolute bottom-1 end-1 grid size-8 place-items-center rounded-full bg-g-orange text-xs font-bold text-white shadow-sm">02</span></div>
+          <h3 class="text-center text-[22px] font-semibold leading-[1.4] text-g-purple">عرض سعر</h3><p class="max-w-[260px] text-center text-base leading-[27.2px] text-g-muted">حوّل احتياج العميل إلى عرض واضح، وأرسله للموافقة.</p>
+        </article>
+        <div class="relative h-12 w-1 shrink-0 md:col-start-4 md:row-start-1 md:mt-12 md:h-1.5 md:w-full md:self-start"><div class="absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-border md:mx-0 md:h-1.5 md:w-full"></div><div class="steps-preview-line-fill absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-orange md:mx-0 md:h-1.5 md:w-full" data-sequence="2.5"></div></div>
+
+        <article class="steps-preview-item circle-v2-step relative z-10 flex w-full flex-col items-center gap-4 md:col-start-5 md:row-start-1" data-sequence="3">
+          <div class="relative grid size-24 place-items-center rounded-full border-[5px] border-white bg-white shadow-[0_18px_35px_-24px_rgba(0,36,82,0.55)] sm:size-28"><span class="circle-v2-ring absolute inset-[-7px] rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]"></span><span class="relative grid size-full place-items-center rounded-full bg-white text-g-purple"><svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-folder" /></svg></span><span class="absolute bottom-1 end-1 grid size-8 place-items-center rounded-full bg-g-purple text-xs font-bold text-white shadow-sm">03</span></div>
+          <h3 class="text-center text-[22px] font-semibold leading-[1.4] text-g-purple">مشروع</h3><p class="max-w-[260px] text-center text-base leading-[27.2px] text-g-muted">بعد الموافقة، حوّل العرض إلى مشروع وابدأ التنفيذ.</p>
+        </article>
+        <div class="relative h-12 w-1 shrink-0 md:col-start-5 md:row-start-2 md:h-16 md:w-1"><div class="absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-border"></div><div class="steps-preview-line-fill absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-purple" data-sequence="3.5"></div></div>
+
+        <article class="steps-preview-item circle-v2-step relative z-10 flex w-full flex-col items-center gap-4 md:col-start-5 md:row-start-3" data-sequence="4">
+          <div class="relative grid size-24 place-items-center rounded-full border-[5px] border-white bg-white shadow-[0_18px_35px_-24px_rgba(0,36,82,0.55)] sm:size-28"><span class="circle-v2-ring absolute inset-[-7px] rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]"></span><span class="relative grid size-full place-items-center rounded-full bg-white text-g-blue"><svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-doc" /></svg></span><span class="absolute bottom-1 end-1 grid size-8 place-items-center rounded-full bg-g-blue text-xs font-bold text-white shadow-sm">04</span></div>
+          <h3 class="text-center text-[22px] font-semibold leading-[1.4] text-g-purple">فاتورة</h3><p class="max-w-[260px] text-center text-base leading-[27.2px] text-g-muted">أنشئ الفاتورة دون إعادة إدخال البيانات.</p>
+        </article>
+        <div class="relative h-12 w-1 shrink-0 md:col-start-4 md:row-start-3 md:mt-12 md:h-1.5 md:w-full md:self-start"><div class="absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-border md:mx-0 md:h-1.5 md:w-full"></div><div class="steps-preview-line-fill absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-blue md:mx-0 md:h-1.5 md:w-full" data-sequence="4.5"></div></div>
+
+        <article class="steps-preview-item circle-v2-step relative z-10 flex w-full flex-col items-center gap-4 md:col-start-3 md:row-start-3" data-sequence="5">
+          <div class="relative grid size-24 place-items-center rounded-full border-[5px] border-white bg-white shadow-[0_18px_35px_-24px_rgba(0,36,82,0.55)] sm:size-28"><span class="circle-v2-ring absolute inset-[-7px] rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]"></span><span class="relative grid size-full place-items-center rounded-full bg-white text-g-green-lt"><svg class="size-8 rtl:scale-x-[-1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-plane" /></svg></span><span class="absolute bottom-1 end-1 grid size-8 place-items-center rounded-full bg-g-green-lt text-xs font-bold text-white shadow-sm">05</span></div>
+          <h3 class="text-center text-[22px] font-semibold leading-[1.4] text-g-purple">تحصيل</h3><p class="max-w-[260px] text-center text-base leading-[27.2px] text-g-muted">أرسلها للعميل وتابع حالة الدفع.</p>
+        </article>
+        <div class="relative h-12 w-1 shrink-0 md:col-start-2 md:row-start-3 md:mt-12 md:h-1.5 md:w-full md:self-start"><div class="absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-border md:mx-0 md:h-1.5 md:w-full"></div><div class="steps-preview-line-fill absolute inset-0 mx-auto h-full w-1 rounded-full bg-g-green-lt md:mx-0 md:h-1.5 md:w-full" data-sequence="5.5"></div></div>
+
+        <article class="steps-preview-item circle-v2-step relative z-10 flex w-full flex-col items-center gap-4 md:col-start-1 md:row-start-3" data-sequence="6">
+          <div class="relative grid size-24 place-items-center rounded-full border-[5px] border-white bg-white shadow-[0_18px_35px_-24px_rgba(0,36,82,0.55)] sm:size-28"><span class="circle-v2-ring absolute inset-[-7px] rounded-full bg-[linear-gradient(67deg,#320E8E_0%,#14C698_95%)]"></span><span class="relative grid size-full place-items-center rounded-full bg-white text-g-green"><svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><use href="#i-wallet" /></svg></span><span class="absolute bottom-1 end-1 grid size-8 place-items-center rounded-full bg-g-green text-xs font-bold text-white shadow-sm">06</span></div>
+          <h3 class="text-center text-[22px] font-semibold leading-[1.4] text-g-purple">أرباح</h3><p class="max-w-[260px] text-center text-base leading-[27.2px] text-g-muted">اعرف الإيرادات والمصاريف وصافي ربحك.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       Closing banner — selection prompt
+  ════════════════════════════════════════ -->
+  <div class="bg-g-dark text-white py-6 px-6 text-center text-sm font-medium">
+    نهاية المعاينة — أرسل رقم النسخة التي تفضّلها 1 أو 2 أو 3، أو اذكر مزيج العناصر الذي تريد تطبيقه على الصفحة الرئيسية.
+  </div>
+
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/steps.js"></script>
+</body>
+
+</html>
+
+
