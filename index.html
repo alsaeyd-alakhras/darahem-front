@@ -194,32 +194,32 @@
           RTL DOM order (right→left reading): +50K, 200M+, 99%, 24/7
           Dividers: 3 vertical lines at 279/576/870 → between each stat
         -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
 
           <!-- +50K مستقل نشط — color g-purple (fill_7R517F #1C0060) -->
-          <div class="flex flex-col items-center py-4 relative">
+          <div class="flex flex-col items-center py-6 sm:py-4 relative border-b border-black/10 sm:border-b-0">
             <span class="font-semibold text-[42px] leading-[54.6px] text-g-purple">+50K</span>
             <span class="font-medium text-sm leading-[21px] text-g-body mt-1">مستقل نشط</span>
             <!-- Divider at end side -->
-            <div class="absolute end-0 top-[12%] h-[76px] w-px bg-black/10 hidden lg:block"></div>
+            <div class="absolute end-0 top-[12%] h-[76px] w-px bg-black/10 hidden sm:block"></div>
           </div>
 
           <!-- 200M+ تمت معالجتها سنوياً — color g-green (fill_VD8FKR #006C51) -->
-          <div class="flex flex-col items-center py-4 relative">
+          <div class="flex flex-col items-center py-6 sm:py-4 relative border-b border-black/10 sm:border-b-0">
             <span class="font-semibold text-[42px] leading-[54.6px] text-g-green">200M+</span>
             <span class="font-medium text-sm leading-[21px] text-g-body mt-1">تمت معالجتها سنوياً</span>
             <div class="absolute end-0 top-[12%] h-[76px] w-px bg-black/10 hidden lg:block"></div>
           </div>
 
           <!-- 99% رضا العملاء — color g-purple -->
-          <div class="flex flex-col items-center py-4 relative">
+          <div class="flex flex-col items-center py-6 sm:py-4 relative border-b border-black/10 sm:border-b-0">
             <span class="font-semibold text-[42px] leading-[54.6px] text-g-purple">99%</span>
             <span class="font-medium text-sm leading-[21px] text-g-body mt-1">رضا العملاء</span>
-            <div class="absolute end-0 top-[12%] h-[76px] w-px bg-black/10 hidden lg:block"></div>
+            <div class="absolute end-0 top-[12%] h-[76px] w-px bg-black/10 hidden sm:block"></div>
           </div>
 
           <!-- 24/7 دعم فني متميز — color g-green -->
-          <div class="flex flex-col items-center py-4">
+          <div class="flex flex-col items-center py-6 sm:py-4">
             <span class="font-semibold text-[42px] leading-[54.6px] text-g-green">24/7</span>
             <span class="font-medium text-sm leading-[21px] text-g-body mt-1">دعم فني متميز</span>
           </div>
@@ -232,7 +232,7 @@
     <!-- ════════════════════════════════════════
          Section: Problem Solution
     ════════════════════════════════════════ -->
-    <section class="relative bg-white overflow-hidden py-24 px-5 sm:px-10">
+    <section class="relative bg-white overflow-hidden py-16 px-5 sm:px-10">
 
       <div class="max-w-[1200px] mx-auto flex flex-col gap-14">
 
@@ -401,7 +401,7 @@
     <!-- ════════════════════════════════════════
          Section: Pain Points
     ════════════════════════════════════════ -->
-    <section class="bg-white py-24 px-10">
+    <section class="bg-g-light2 py-16 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Section heading block: layout_1KEC8I column align-start gap-16 -->
@@ -496,7 +496,7 @@
     <!-- ════════════════════════════════════════
          Section: Features
     ════════════════════════════════════════ -->
-    <section id="features" class="bg-g-light2 py-24 px-10">
+    <section id="features" class="bg-white py-24 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Section heading -->
@@ -660,7 +660,7 @@
     <!-- ════════════════════════════════════════
          Section: How It Works
     ════════════════════════════════════════ -->
-    <section class="relative bg-white overflow-hidden py-24 px-6 sm:px-10">
+    <section class="relative bg-g-light2 overflow-hidden py-24 px-6 sm:px-10">
 
       <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(55% 45% at 50% 0%, rgba(20,198,152,0.10) 0%, rgba(50,14,142,0.06) 45%, rgba(255,255,255,0) 80%);"></div>
 
@@ -777,7 +777,7 @@
     <!-- ════════════════════════════════════════
          Section: Testimonials
     ════════════════════════════════════════ -->
-    <section class="bg-g-light2 py-24 px-10">
+    <section class="bg-white py-24 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Section heading -->
@@ -871,7 +871,7 @@
     <!-- ════════════════════════════════════════
          Section: Pricing Preview
     ════════════════════════════════════════ -->
-    <section id="pricing" class="bg-white py-20 px-10">
+    <section id="pricing" class="bg-g-light2 py-20 px-10">
       <div class="max-w-[1200px] mx-auto flex flex-col gap-16">
 
         <!-- Heading block: layout_2DXYAH gap-8 -->
@@ -1030,7 +1030,7 @@
     </section>
 
     <!-- Section: FAQ -->
-    <section id="faq" class="bg-g-light2 px-5 py-20">
+    <section id="faq" class="bg-white px-5 py-20">
       <div class="mx-auto max-w-[1000px]">
         <h2 class="mb-12 text-center text-[32px] font-bold text-g-navy sm:text-[40px]">الأسئلة الشائعة</h2>
         <div class="flex flex-col gap-4 md:flex-row md:items-start">
@@ -1150,6 +1150,28 @@
               </button>
               <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
                 يمكنك إدارة اشتراكك وفق شروط الخطة وسياسة الاشتراك المعتمدة في أزلينت.
+              </div>
+            </article>
+
+            <article
+              class="pricing-faq-item rounded-2xl border border-g-border bg-white p-6 transition-all duration-200 hover:shadow-md"
+              data-faq-open="false">
+              <button type="button" class="pricing-faq-trigger flex w-full items-center justify-between gap-4">
+                <span class="text-start text-base font-bold text-g-navy">كيف تساعدني أزلينت في تنظيم عملي وإدارة عملائي؟</span>
+                <span
+                  class="pricing-faq-icon shrink-0 flex size-8 items-center justify-center rounded-full bg-g-light2 transition-all duration-200">
+                  <svg class="pricing-faq-icon-minus hidden size-[14px] text-g-navy" viewBox="0 0 14 2" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <svg class="pricing-faq-icon-plus size-[14px] text-g-muted" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </button>
+              <div class="pricing-faq-answer hidden mt-4 text-sm leading-7 text-g-body">
+                تجمع أزلينت عملاءك ومشاريعك وفواتيرك ومستحقاتك في مكان واحد، لتدير عملك بسهولة ووضوح.
               </div>
             </article>
 
